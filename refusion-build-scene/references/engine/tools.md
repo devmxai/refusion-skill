@@ -1,12 +1,12 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 2, fingerprint `dd84c704678e786c`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `ebf169fb4a007fb1`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
-175 tools in 29 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
+176 tools in 29 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
 ## Families
 
-`anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (2) · `marker` (4) · `mask` (7) · `media` (7) · `motion` (3) · `path` (5) · `project` (3) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `text` (11) · `transition` (6) · `transport` (1) · `vector` (2)
+`anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `motion` (3) · `path` (5) · `project` (3) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `text` (11) · `transition` (6) · `transport` (1) · `vector` (2)
 
 Notes: **asks** means the owner is asked on the device for each call of a remote agent; **not in a scene** means the engine refuses the tool on a layer inside a scene.
 
@@ -14,20 +14,20 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
-| `anim.set_value_at_time` | edit | layer | Set a property's value at a time (absent: the playhead). |  |
-| `anim.insert_keyframe` | edit | layer | Insert a keyframe on a property track, at a time (the edit head when absent) with a value (the property's value there when absent); on a property that is not… |  |
-| `anim.delete_keyframe` | edit | layer | Delete a property's keyframe, named by its composition time (the edit head when absent); the property's other keys stay. |  |
+| `anim.set_value_at_time` | edit | layer | Set a property's value at a time (always stated: an exact time, or `edit_head` for the owner's edit head). |  |
+| `anim.insert_keyframe` | edit | layer | Insert a keyframe on a property track, at a time (always stated: an exact time, or `edit_head` for the owner's edit head) with a value (the property's value… |  |
+| `anim.delete_keyframe` | edit | layer | Delete a property's keyframe, named by its composition time (always stated: an exact time, or `edit_head` for the owner's edit head); the property's other keys… |  |
 | `anim.move_keyframe` | edit | layer | Move a property's keyframe from the composition time `from` to the composition time `to`. |  |
 | `anim.set_spatial_tangents` | edit | layer | Set the spatial tangents of one segment of a position's path: the outgoing tangent of the segment's first keyframe (`out_tangent`) and the incoming tangent of… |  |
 | `anim.shift_time` | edit | layer | Shift every keyframe of a property's track by `delta`, a time that may be negative, so the whole motion happens earlier or later; the keys keep their values. |  |
 | `anim.scale_time` | edit | layer | Scale the times of a property's keyframes about `anchor`, a composition time, by `factor`, a positive fraction: 2 makes the motion twice as long about that… |  |
 | `anim.toggle_keyframing` | edit | layer | Turn keyframing on or off for a property. |  |
-| `anim.set_key_interpolation` | edit | - | Set the interpolation of one or both sides of keyframe `key`, else of the selected keyframes. |  |
-| `anim.set_key_tangent_mode` | edit | - | Set how the two sides of keyframe `key`, else of the selected keyframes, relate in time: apart, continuous (the two sides on one line, so the speed has no… |  |
-| `anim.set_key_ease` | edit | - | Set the speed and influence of one or both sides of keyframe `key`, else of the selected keyframes, as the curve editor's handles do: the speed the value has… |  |
+| `anim.set_key_interpolation` | edit | - | Set the interpolation of one or both sides of keyframe `key` (`key` is always stated: a keyframe's id, or `"selection"` for the selected keyframes (a request… |  |
+| `anim.set_key_tangent_mode` | edit | - | Set how the two sides of keyframe `key` (`key` is always stated: a keyframe's id, or `"selection"` for the selected keyframes (a request that names neither is… |  |
+| `anim.set_key_ease` | edit | - | Set the speed and influence of one or both sides of keyframe `key` (`key` is always stated: a keyframe's id, or `"selection"` for the selected keyframes (a… |  |
 | `anim.set_segment_ease` | edit | - | Give the motion between keyframes a named shape (linear, ease in: starts slowly, ease out: ends slowly, ease in out, hold, back in and out, or a spring, a… |  |
 | `anim.set_segment_bezier` | edit | - | Give the motion between keyframes a cubic Bézier (x1, y1, x2, y2), the form of CSS cubic-bezier(): the curve leaves the first keyframe towards (x1, y1) and… |  |
-| `anim.set_key_spatial_mode` | edit | - | Set how the motion path of a position passes through keyframe `key`, else the selected keyframes: linear (straight), bezier (free handles), continuous (handles… |  |
+| `anim.set_key_spatial_mode` | edit | - | Set how the motion path of a position passes through keyframe `key` (`key` is always stated: a keyframe's id, or `"selection"` for the selected keyframes (a… |  |
 
 ## asset
 
@@ -57,7 +57,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
-| `camera.frame_layer` | edit | layer | Put a camera (the target, else the one that is active at the edit head) where a layer fills its frame, less a margin, as Framing does in Apple Motion. | not in a scene |
+| `camera.frame_layer` | edit | layer | Put a camera (the target, else the one that is active at `time`, always stated: an exact time, or `edit_head` for the owner's edit head) where a layer fills… | not in a scene |
 
 ## caption
 
@@ -65,20 +65,20 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 |---|---|---|---|---|
 | `caption.create` | edit | - | Insert an empty caption layer on a new top track and select it. | not in a scene |
 | `caption.import` | edit | - | Insert a caption layer (see caption.create) with the cues of a subtitle file's text: SubRip (SRT), WebVTT or typed JSON. | not in a scene |
-| `caption.edit` | edit | layer | Change the cues of a caption layer (the target, else the selected layer) in one history step with the revision checked: insert a cue, delete one, replace a… | not in a scene |
-| `caption.bind_source` | edit | layer | Bind a caption layer (the target, else the selected layer) whose document keeps composition time (one made by caption.create without a source, or by… | not in a scene |
-| `caption.add` | edit | layer | Add a sentence to a caption layer (the target, else the selected layer) at the playhead: empty, on from the playhead to where the next sentence begins, at most… | not in a scene |
-| `caption.duplicate` | edit | layer | Copy the chosen sentence (`caption.select`; the sentence of the words when words are chosen) to the playhead of a caption layer (the target, else the selected… | not in a scene |
-| `caption.delete` | edit | layer | Delete what is chosen (`caption.select`) in a caption layer (the target, else the selected layer): the sentences (the time they were on is left empty… | not in a scene |
-| `caption.split` | edit | layer | Split the sentence of a caption layer (the target, else the selected layer) that is on at the playhead between the two words around the playhead: a sentence… | not in a scene |
-| `caption.merge` | edit | layer | Join the chosen sentence of a caption layer (the target, else the selected layer) with the one after it, or all the chosen sentences into the first of them… | not in a scene |
-| `caption.snapshot` | read | layer | Read a caption layer (the target, else the selected layer): its language, its source, its cues (id, window, speaker, text) and the words of all cues (the cue… | not in a scene |
-| `caption.style_catalog` | read | layer | Read the looks a caption layer (the target, else the selected layer) can be given, in the order they are offered: each look's id (`styles`) and name (`names`)… | not in a scene |
-| `caption.trim` | edit | layer | Trim the chosen sentence or word of a caption layer (the target, else the selected layer) at the playhead: `edge` 1 moves its start there, 2 moves its end… | not in a scene |
-| `caption.roles` | read | layer | Read the colours of a caption layer's words by what is being said (the target, else the selected layer) that a person can set: for each row `i`, the role… | not in a scene |
-| `caption.role_set` | edit | layer | Give aspect `aspect` of role `role` of a caption layer (the target, else the selected layer) the colour `color`: a colour of the letters of the words in that… | not in a scene |
-| `caption.role_clear` | edit | layer | Take aspect `aspect` of role `role` of a caption layer (the target, else the selected layer) away: the role sets no such colour any more, so the words in that… | not in a scene |
-| `caption.style_apply` | edit | layer | Give a caption layer (the target, else the selected layer) the look `style`: its family for Latin letters and its family for Arabic letters, its weight, its… | not in a scene |
+| `caption.edit` | edit | layer | Change the cues of a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) in one history step with the revision… | not in a scene |
+| `caption.bind_source` | edit | layer | Bind a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) whose document keeps composition time (one made by… | not in a scene |
+| `caption.add` | edit | layer | Add a sentence to a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) at `time` (always stated: an exact time, or… | not in a scene |
+| `caption.duplicate` | edit | layer | Copy the chosen sentence (`caption.select`; the sentence of the words when words are chosen) to `time` (always stated: an exact time, or `edit_head` for the… | not in a scene |
+| `caption.delete` | edit | layer | Delete what is chosen (`caption.select`) in a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected): the sentences… | not in a scene |
+| `caption.split` | edit | layer | Split the sentence of a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) that is on at `time` (always stated: an… | not in a scene |
+| `caption.merge` | edit | layer | Join the chosen sentence of a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) with the one after it, or all the… | not in a scene |
+| `caption.snapshot` | read | layer | Read a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected): its language, its source, its cues (id, window… | not in a scene |
+| `caption.style_catalog` | read | layer | Read the looks a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) can be given, in the order they are offered… | not in a scene |
+| `caption.trim` | edit | layer | Trim the chosen sentence or word of a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) at `time` (always stated… | not in a scene |
+| `caption.roles` | read | layer | Read the colours of a caption layer's words by what is being said (the target: a layer's id, or `"selection"` for the layer the owner has selected) that a… | not in a scene |
+| `caption.role_set` | edit | layer | Give aspect `aspect` of role `role` of a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) the colour `color`: a… | not in a scene |
+| `caption.role_clear` | edit | layer | Take aspect `aspect` of role `role` of a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) away: the role sets no… | not in a scene |
+| `caption.style_apply` | edit | layer | Give a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) the look `style`: its family for Latin letters and its… | not in a scene |
 
 ## composition
 
@@ -95,12 +95,12 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
 | `effect.catalog` | read | - | Read the effect kinds the engine offers: each one's name, label, category, the version of its algorithm, how many pictures it reads, the space it computes in… |  |
-| `effect.add` | edit | layer | Add an effect of a catalog kind to a layer's chain (the target, else the selected layer), at a position or at the end. |  |
+| `effect.add` | edit | layer | Add an effect of a catalog kind to a layer's chain (the target: a layer's id, or `"selection"` for the layer the owner has selected), at a position or at the… |  |
 | `effect.remove` | edit | layer | Remove an effect from a layer's chain, with its settings and keys. |  |
 | `effect.move` | edit | layer | Move an effect to another place in the layer's chain; the chain applies its effects in order. |  |
 | `effect.set_enabled` | edit | layer | Turn an effect on or off; an off effect stays in the chain with its settings and is not applied. |  |
 | `effect.duplicate` | edit | layer | Copy an effect, with its settings and keys, to the place after it in the chain; the copy has an id of its own. |  |
-| `effect.look` | edit | layer | Add a look, a ready-made chain of effects with its values, to the end of a layer's chain (the target, else the selected layer), as one history step. |  |
+| `effect.look` | edit | layer | Add a look, a ready-made chain of effects with its values, to the end of a layer's chain (the target: a layer's id, or `"selection"` for the layer the owner… |  |
 | `effect.set_region` | edit | layer | Limit an effect to a place of its layer: it shows inside what the masks named cover together (each by its own mode; a mask in the Region mode cuts nothing of… |  |
 
 ## export
@@ -140,10 +140,10 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
-| `inspector.read` | read | layer | Read a layer's inspector (the target, else the selected layer): the items it uses now, in the order they are shown, a section's rows together (`section_codes`… |  |
-| `inspector.catalog` | read | layer | Read what the track's plus can add to a layer (the target, else the selected layer), narrowed by `query` (empty: all): the Appearance items the layer does not… |  |
-| `inspector.add` | call · edit | layer | Add an item of `inspector.catalog` to a layer (the target, else the selected layer), in one history step, with a value that shows: a gradient makes the fill a… |  |
-| `inspector.remove` | call | layer | Take an item of `inspector.read` away from a layer (the target, else the selected layer), in one history step: an effect or a mask (named by `instance`) is… |  |
+| `inspector.read` | read | layer | Read a layer's inspector (the target: a layer's id, or `"selection"` for the layer the owner has selected): the items it uses now, in the order they are shown… |  |
+| `inspector.catalog` | read | layer | Read what the track's plus can add to a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), narrowed by `query` (empty… |  |
+| `inspector.add` | call · edit | layer | Add an item of `inspector.catalog` to a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in one history step, with a… |  |
+| `inspector.remove` | call | layer | Take an item of `inspector.read` away from a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in one history step: an… |  |
 
 ## layer
 
@@ -157,23 +157,23 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `layer.insert_text` | edit | inside a scene | Insert a text layer on a new top track and select it. |  |
 | `layer.insert_background` | edit | inside a scene | Insert a background (a colour or a gradient over the canvas) on a new top track and select it. |  |
 | `layer.set_anchor_preset` | edit | layer | Set a layer's anchor to one of nine places of its box, `preset` 0 to 8 row by row from the top left (4 is the middle). |  |
-| `layer.insert_source` | edit | - | Insert a source already in the media library (`target` is its source id, from `media.library_snapshot`) as a layer at `start` (absent: the edit head). |  |
+| `layer.insert_source` | edit | - | Insert a source already in the media library (`target` is its source id, from `media.library_snapshot`) as a layer at `start` (always stated: an exact time, or… |  |
 | `layer.move` | edit | layer | Move a layer to a composition time and, optionally, another track or a new row at a place in the stack (its row is its place in the picture: a layer on a row… |  |
 | `layer.insert_vector` | edit | - | Insert the drawing of an SVG file as a vector layer: its parts keep their paths, fills and strokes, centred on the canvas (shrunk to fit when larger) on a new… |  |
 | `layer.insert_adjustment` | edit | inside a scene | Insert an adjustment layer on a new top track and select it: it has no picture of its own, its effects act on everything drawn under it over the whole canvas… |  |
-| `layer.set_matte` | edit | layer | Make another layer's picture the track matte of a layer (the target, else the selected layer): the matte layer is drawn as it stands, with its own transform… |  |
-| `layer.clear_matte` | edit | layer | Take a layer's track matte away (the target, else the selected layer); refused when it has none. |  |
-| `layer.set_motion_blur` | edit | layer | Turn motion blur on or off for one of a layer's motions (the target, else the selected layer): its position, scale, rotation, anchor or opacity, each apart… |  |
+| `layer.set_matte` | edit | layer | Make another layer's picture the track matte of a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected): the matte layer is… |  |
+| `layer.clear_matte` | edit | layer | Take a layer's track matte away (the target: a layer's id, or `"selection"` for the layer the owner has selected); refused when it has none. |  |
+| `layer.set_motion_blur` | edit | layer | Turn motion blur on or off for one of a layer's motions (the target: a layer's id, or `"selection"` for the layer the owner has selected): its position, scale… |  |
 | `layer.insert_null` | edit | inside a scene | Insert a null layer on a new top track and select it: a transform that is never drawn (a 100 pixel box shows where it is on the canvas), for other layers to be… |  |
-| `layer.set_parent` | edit | layer | Make another layer the parent of a layer (the target, else the selected layer), or free it. |  |
+| `layer.set_parent` | edit | layer | Make another layer the parent of a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), or free it. |  |
 | `layer.insert_camera` | edit | inside a scene | Insert a camera on a new top track and select it: the view the composition is seen through, a frame the size of the canvas with a transform of its own (it is… |  |
-| `layer.motion` | read | layer | Read how the layer (the target, else the selected layer) comes in and goes out, and what it can: the presets (`presets`, with their names), the functions, and… |  |
-| `layer.motion_set` | edit | layer | Give the layer (the target, else the selected layer) a way of coming in (`phase` 1), going out (`phase` 2) or going round and round all the while it is there… |  |
-| `layer.reseed` | edit | layer | Give the formulas of a layer (the target, else the selected layer) the noise of the layer's own number, in one history step with the revision checked. |  |
-| `layer.motion_clear` | edit | layer | Take the way the layer (the target, else the selected layer) comes in (`phase` 1), goes out (`phase` 2) or goes round (`phase` 3) away, in one history step… |  |
-| `layer.insert_composition` | edit | inside a scene | Put a layer that shows the scene `composition` into the composition the target names (the project's own when absent), on a new top track, from `start` for… |  |
+| `layer.motion` | read | layer | Read how the layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) comes in and goes out, and what it can: the presets… |  |
+| `layer.motion_set` | edit | layer | Give the layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) a way of coming in (`phase` 1), going out (`phase` 2) or going… |  |
+| `layer.reseed` | edit | layer | Give the formulas of a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) the noise of the layer's own number, in one… |  |
+| `layer.motion_clear` | edit | layer | Take the way the layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) comes in (`phase` 1), goes out (`phase` 2) or goes… |  |
+| `layer.insert_composition` | edit | inside a scene | Put a layer that shows the scene `composition` into the composition the target names (the project's own when absent), on a new top track, from `start` (always… |  |
 | `layer.ungroup` | edit | layer | Put the layers of the scene the target layer shows back among the layers of its own composition, and take the layer that showed the scene away: the picture… |  |
-| `layer.precompose` | edit | inside a scene | Make a scene of chosen layers and show it in their place: with neither `from` nor `to`, the layers chosen (the selected layer alone when no other is chosen… |  |
+| `layer.precompose` | edit | inside a scene | Make a scene of chosen layers and show it in their place: with `from` and `to` both `"selection"`, the layers chosen (the selected layer alone when no other is… |  |
 | `layer.add_fill_stop` | edit | layer | Add a stop to the gradient of a background, a shape, a text or a caption layer, or to the colour ramp of an evolving field (up to eight), after another (named… |  |
 | `layer.add_fill_point` | edit | layer | Add a colour point to the points fill of a background or a shape layer after another (named by its id): the new point goes between that one and the next… |  |
 | `layer.remove_fill_point` | edit | layer | Remove a colour point of the points fill of a background or a shape layer, named by its id; it keeps at least one. |  |
@@ -187,13 +187,14 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 |---|---|---|---|---|
 | `library.catalog` | read | - | Read what the engine offers to add, as one list whatever the kind: the effects, the looks (ready-made chains of effects), the transitions, and the ready-made… |  |
 | `library.look` | read | - | Look at what the library's cards show: the engine draws a page of its effects (`kind` 1) or its transitions (`kind` 2) on one sheet, a JPEG for you to look at… |  |
+| `library.restore` | call | layer | Put a motion that was applied from the library back as it was applied. |  |
 
 ## marker
 
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
 | `marker.list` | read | inside a scene | Read the markers of the composition the `target` names (absent: the project's own, or the open scene): for each its id, name, colour (a number of… |  |
-| `marker.add` | edit | layer or scene | Add a marker, in one history step with the revision checked: a time, a length (0 for a point), a name and a colour. |  |
+| `marker.add` | edit | layer or scene | Add a marker, in one history step with the revision checked: a time (always stated: an exact time, or `edit_head` for the owner's edit head), a length (0 for a… |  |
 | `marker.edit` | edit | inside a scene | Change a marker, by its id, in the composition the `target` names (absent: the project's own) and in one history step with the revision checked: where it… |  |
 | `marker.remove` | edit | inside a scene | Take a marker away, by its id, from the composition the `target` names (absent: the project's own), in one history step with the revision checked; an undo… |  |
 
@@ -201,7 +202,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
-| `mask.add` | edit | layer | Add a mask to a layer (the target, else the selected layer): a rectangle or an ellipse in the layer's own space, centred on its content at half its size, with… |  |
+| `mask.add` | edit | layer | Add a mask to a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected): a rectangle or an ellipse in the layer's own space… |  |
 | `mask.remove` | edit | layer | Remove a mask from a layer, with its properties and keys. |  |
 | `mask.move` | edit | layer | Move a mask to another place in the layer's masks; they combine in order. |  |
 | `mask.set_shape` | edit | layer | Give a mask another shape (a rectangle or an ellipse), keeping its position, size and the rest. |  |
@@ -233,7 +234,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
-| `path.insert_node` | edit | layer | Insert a node, with its handles, into a path layer (the target, else the selected layer). |  |
+| `path.insert_node` | edit | layer | Insert a node, with its handles, into a path layer (the target: a layer's id, or `"selection"` for the layer the owner has selected). |  |
 | `path.move_node` | edit | layer | Move node `index` (from zero) of a path layer to `point`, in the layer's own space; its handles keep their offsets from it. |  |
 | `path.set_node_handles` | edit | layer | Give a node of a path layer its two handles, as offsets from the node: equal and opposite for a smooth node, apart for a corner, zero for no curve on that side. |  |
 | `path.delete_node` | edit | layer | Delete node `index` (from zero) of a path layer; the path closes up around the gap, the nodes beside it joined. |  |
@@ -255,10 +256,10 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `property.set` | edit | layer | Set a property's value, of any kind: a static property takes it; an animated one takes it as the key at `time`; a text property (the content, the font family)… |  |
 | `property.set_shown` | edit | layer | Set a number of a layer (a component of a pair as `path.0` or `path.1`) to a value as it is shown, the space the inspector, the sliders and their rulers use: a… |  |
 | `property.set_text` | edit | layer | Set a text property of a layer (the content of a text layer, its font family) to a text. |  |
-| `property.expression` | read | layer | Read the formula that drives a property of a layer (the target, else the selected layer; `path` is the property as `property.schema` lists it), and the… |  |
+| `property.expression` | read | layer | Read the formula that drives a property of a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected; `path` is the property as… |  |
 | `property.expression_set` | edit | layer | Bind a formula to a property of a layer, in one history step with the revision checked: from then on the property is read as the formula's result in the… |  |
 | `property.expression_bake` | edit | layer | Turn the formula of a property of a layer into keys, in one history step with the revision checked: the formula is worked out at the project's frames (every… |  |
-| `property.expression_detach` | edit | layer | Take the formula away from a property of a layer and keep the value it gave at the playhead as the property's value, in one history step with the revision… |  |
+| `property.expression_detach` | edit | layer | Take the formula away from a property of a layer and keep the value it gave at `time` (always stated: an exact time, or `edit_head` for the owner's edit head… |  |
 | `property.expression_clear` | edit | layer | Take the formula away from a property of a layer, in one history step with the revision checked: the property is read as its keys again, with the values they… |  |
 
 ## render
@@ -294,23 +295,23 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
-| `text.document_snapshot` | read | layer | Read the document of a text layer (the target, else the selected layer): its content (UTF-8), its paragraphs (the lines the content is made of, with the line… |  |
-| `text.replace_range` | edit | layer | Replace the bytes `start..end` of a text layer's content (the target, else the selected layer) with `text`, in one history step with the project revision… |  |
-| `text.layout_snapshot` | read | layer | Read how a text layer's text is laid out in its box now (the target, else the selected layer), as the picture lays it out: the box's width and height in… |  |
-| `text.style_set` | edit | layer | Change the style of the bytes `start..end` of a text layer's content (the target, else the selected layer) in one history step with the project revision… |  |
-| `text.anchor_set` | edit | layer | Add, move or remove an anchor of a text layer's document (the target, else the selected layer) in one history step with the revision checked. |  |
-| `text.motion` | read | layer | Read how the words and letters of a text layer or a caption layer (the target, else the selected layer) come in and go out, and what can be offered: the… |  |
-| `text.motion_set` | edit | layer | Give the words or letters of a text layer or a caption layer (the target, else the selected layer) a way of coming in (`phase` 1), going out (`phase` 2) or… |  |
-| `text.motion_clear` | edit | layer | Take the way of coming in (`phase` 1) or going out (`phase` 2) away from the text of a text layer or a caption layer (the target, else the selected layer)… |  |
-| `text.motion_paste` | edit | layer | Give a text layer or a caption layer (the target, else the selected layer) the animation the engine's motion clipboard holds (`text.motion_copy`), over its own… |  |
-| `text.paste` | edit | layer | Replace the bytes `start..end` of a text layer's content (the target, else the selected layer) with what the engine's clipboard holds (text.copy), in one… |  |
-| `text.paragraph_set` | edit | layer | Change what the paragraphs a range of a text layer's content touches (the target, else the selected layer) set of the paragraph layout, in one history step… |  |
+| `text.document_snapshot` | read | layer | Read the document of a text layer (the target: a layer's id, or `"selection"` for the layer the owner has selected): its content (UTF-8), its paragraphs (the… |  |
+| `text.replace_range` | edit | layer | Replace the bytes `start..end` of a text layer's content (the target: a layer's id, or `"selection"` for the layer the owner has selected) with `text`, in one… |  |
+| `text.layout_snapshot` | read | layer | Read how a text layer's text is laid out in its box now (the target: a layer's id, or `"selection"` for the layer the owner has selected), as the picture lays… |  |
+| `text.style_set` | edit | layer | Change the style of the bytes `start..end` of a text layer's content (the target: a layer's id, or `"selection"` for the layer the owner has selected) in one… |  |
+| `text.anchor_set` | edit | layer | Add, move or remove an anchor of a text layer's document (the target: a layer's id, or `"selection"` for the layer the owner has selected) in one history step… |  |
+| `text.motion` | read | layer | Read how the words and letters of a text layer or a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) come in and… |  |
+| `text.motion_set` | edit | layer | Give the words or letters of a text layer or a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) a way of coming… |  |
+| `text.motion_clear` | edit | layer | Take the way of coming in (`phase` 1) or going out (`phase` 2) away from the text of a text layer or a caption layer (the target: a layer's id, or… |  |
+| `text.motion_paste` | edit | layer | Give a text layer or a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) the animation the engine's motion… |  |
+| `text.paste` | edit | layer | Replace the bytes `start..end` of a text layer's content (the target: a layer's id, or `"selection"` for the layer the owner has selected) with what the… |  |
+| `text.paragraph_set` | edit | layer | Change what the paragraphs a range of a text layer's content touches (the target: a layer's id, or `"selection"` for the layer the owner has selected) set of… |  |
 
 ## transition
 
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
-| `transition.add` | edit | layer | Put a transition on the cut where a layer (the target, else the selected layer) ends and the layer that follows it on its row begins: a kind (the default is… |  |
+| `transition.add` | edit | layer | Put a transition on the cut where a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) ends and the layer that follows it… |  |
 | `transition.remove` | edit | layer | Take a transition away (by id, else the one out of the target layer). |  |
 | `transition.set_timing` | edit | layer | Change a transition's length (in frames, at most 5 seconds; one saved longer keeps its length until it is changed), where it lies about its cut, or its… |  |
 | `transition.set_kind` | edit | layer | Make a transition another kind of the catalog. |  |
@@ -327,8 +328,8 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
-| `vector.set_item` | edit | layer | Change the fill colour, the stroke colour or the stroke width of one part of a vector layer (the target, else the selected layer). |  |
-| `vector.items` | read | layer | Read the parts of a vector layer (the target, else the selected layer), in drawing order: each part's name, how many paths and nodes it has, what fills it (a… |  |
+| `vector.set_item` | edit | layer | Change the fill colour, the stroke colour or the stroke width of one part of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner… |  |
+| `vector.items` | read | layer | Read the parts of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in drawing order: each part's name, how… |  |
 
 ## Not offered to an agent (57)
 

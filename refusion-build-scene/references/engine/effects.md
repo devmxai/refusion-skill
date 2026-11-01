@@ -1,6 +1,6 @@
 # Effects
 
-Written by `rpro skill-reference --write` from catalog version 2, fingerprint `dd84c704678e786c`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `ebf169fb4a007fb1`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 An effect is added to a layer with `effect.add`, or with `inspector.add` and the item `fx.effect`. Its settings are properties of the layer, keyed like any other (`fx.<kind>.<setting>[<id>]`), and every effect has a `mix`.
 
@@ -43,7 +43,7 @@ Brightens or darkens the picture in stops, and stretches or flattens its contras
 
 **Use:** The first grade of any picture or clip: rescue a dark shot, give a flat one punch. Animate the exposure for a flash or a fade to dark.
 
-**Found by:** exposure, contrast, brightness, brighten, darken, grade, تعريض, تباين, سطوع, إضاءة, تفتيح, تغميق
+**Found by:** exposure, contrast, brightness, brighten, darken, grade, تعريض, تباين, سطوع, إضاءة, تفتيح, تغميق, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:color.exposure_contrast`
 
@@ -61,7 +61,7 @@ Softens the picture evenly, in light, along either or both axes.
 
 **Use:** Out-of-focus backgrounds, a soft glass behind a text (on an adjustment layer), a blur-in by animating the radius. The picture's edge grows by about three times the radius.
 
-**Found by:** blur, gaussian, soften, defocus, focus, تمويه, ضبابية, غاوسي, نعومة, ضباب, بلر
+**Found by:** blur, gaussian, soften, defocus, focus, تمويه, ضبابية, غاوسي, نعومة, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:blur.gaussian_blur`
 
@@ -80,7 +80,7 @@ Turns the hue about the grey axis and shifts the saturation and the lightness.
 
 **Use:** Recolour a graphic, mute a loud picture, push the colour for a poster look.
 
-**Found by:** hue, saturation, colour, color, vibrance, تشبع, لون, صبغة
+**Found by:** hue, saturation, colour, color, vibrance, تشبع, لون, صبغة, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:color.hue_saturation`
 
@@ -97,7 +97,7 @@ White balance: a warmer or cooler picture, a greener or more magenta one.
 
 **Use:** Match two clips, warm up a sunset, cool a night scene.
 
-**Found by:** temperature, tint, white balance, warm, cool, حرارة, دفء, برودة, توازن الأبيض
+**Found by:** temperature, tint, white balance, warm, cool, حرارة, دفء, برودة, توازن الأبيض, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:color.temperature_tint`
 
@@ -113,7 +113,7 @@ Sets the black and white points, a gamma between them, and the output points, fo
 
 **Use:** Restore a washed-out picture, or crush the blacks for a graphic look.
 
-**Found by:** levels, gamma, black point, white point, histogram, مستويات, جاما, أسود, أبيض
+**Found by:** levels, gamma, black point, white point, histogram, مستويات, جاما, أسود, أبيض, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:color.levels`
 
@@ -132,7 +132,7 @@ Draws the picture toward its own grey.
 
 **Use:** Noir looks, or to take the colour out before a Tint.
 
-**Found by:** black and white, grayscale, greyscale, monochrome, desaturate, أبيض وأسود, رمادي, تدرج رمادي
+**Found by:** black and white, grayscale, greyscale, monochrome, desaturate, أبيض وأسود, رمادي, تدرج رمادي, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:color.black_white`
 
@@ -147,7 +147,7 @@ Reverses the picture's colours.
 
 **Use:** Negative flashes, a white text made from a black one, X-ray looks.
 
-**Found by:** invert, negative, reverse, معكوس, عكس, نيجاتيف
+**Found by:** invert, negative, reverse, معكوس, عكس, نيجاتيف, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:color.invert`
 
@@ -162,7 +162,7 @@ A curve for each colour channel and one for all of them, each through five point
 
 **Use:** Fine grading: lift the shadows, roll off the highlights, cross-process the colour.
 
-**Found by:** curves, tone, contrast, grade, منحنيات, منحنى, تدرج
+**Found by:** curves, tone, contrast, grade, منحنيات, منحنى, تدرج, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:color.curves`
 
@@ -198,7 +198,7 @@ Blurs along one direction, both ways from each pixel.
 
 **Use:** Speed streaks, a whoosh, wind; animate the length for a snap. It is a look, not the layer's motion blur.
 
-**Found by:** directional, motion blur, streak, speed, smear, تمويه اتجاهي, حركة, خطوط سرعة, ضباب, تمويه, بلر
+**Found by:** directional, motion blur, streak, speed, smear, تمويه اتجاهي, حركة, خطوط سرعة, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:blur.directional_blur`
 
@@ -214,7 +214,7 @@ Blurs toward a point, as if zooming through the picture.
 
 **Use:** Impact punches, a rush into a cut, tunnel looks.
 
-**Found by:** zoom blur, radial blur, punch, rush, تمويه شعاعي, تكبير, اندفاع, ضباب, تمويه, بلر
+**Found by:** zoom blur, radial blur, punch, rush, تمويه شعاعي, تكبير, اندفاع, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:blur.zoom_blur`
 
@@ -230,7 +230,7 @@ Blurs about a point along arcs, as if the picture spun.
 
 **Use:** Spinning wheels, whip looks, a dizzy moment.
 
-**Found by:** spin, rotate, radial, whirl, دوران, تمويه دوّار, ضباب, تمويه, بلر
+**Found by:** spin, rotate, radial, whirl, دوران, تمويه دوّار, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:blur.spin_blur`
 
@@ -248,7 +248,7 @@ Repeats the picture in tiles over a larger or smaller output, with mirrored edge
 
 **Use:** Patterns and wallpaper from one small picture; animate the phase to scroll them. A layer's chain holds one.
 
-**Found by:** tile, repeat, pattern, mirror, wallpaper, تكرار, بلاط, نمط, مرآة
+**Found by:** tile, repeat, pattern, mirror, wallpaper, تكرار, بلاط, نمط, مرآة, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:stylize.motion_tile`
 
@@ -271,7 +271,7 @@ A soft shadow of the picture's alpha, moved, softened and coloured, under the pi
 
 **Use:** Lift a cut-out, a text or a card off the page; animate the distance for a pop. It needs transparent edges: on a picture that fills the frame there is nothing to see.
 
-**Found by:** shadow, drop shadow, depth, lift, ظل, عمق, ظل ساقط
+**Found by:** shadow, drop shadow, depth, lift, ظل, عمق, ظل ساقط, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:stylize.drop_shadow`
 
@@ -291,7 +291,7 @@ Spreads the bright parts of the picture by a pyramid of blurs and adds them back
 
 **Use:** Neon, lights, soft dreamy highlights. On a bright picture raise the threshold or the whole frame blooms white.
 
-**Found by:** glow, bloom, neon, light, halo, توهج, نيون, ضوء, هالة, وهج
+**Found by:** glow, bloom, neon, light, halo, توهج, نيون, ضوء, هالة, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:stylize.glow`
 
@@ -312,7 +312,7 @@ Darkens or lightens the edges by an ellipse about a point.
 
 **Use:** Draw the eye to the middle of a full-frame picture or clip. On a cut-out it leaves a grey halo at its rim: leave it off cut-outs.
 
-**Found by:** vignette, edges, darken edges, focus, تعتيم, حواف, فينيت
+**Found by:** vignette, edges, darken edges, focus, تعتيم, حواف, فينيت, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:stylize.vignette`
 
@@ -333,7 +333,7 @@ Holds each colour channel to a number of levels.
 
 **Use:** Poster, comic and retro-print looks; pair it with a Halftone.
 
-**Found by:** posterize, levels, poster, flat colour, بوستر, مستويات, تبسيط ألوان
+**Found by:** posterize, levels, poster, flat colour, بوستر, مستويات, تبسيط ألوان, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:color.posterize`
 
@@ -350,7 +350,7 @@ Draws the picture in cells of one colour each.
 
 **Use:** Pixelate a face or a detail, retro pixel looks, a pixelate transition by animating the cell size.
 
-**Found by:** mosaic, pixelate, pixel, censor, blocks, بكسلة, فسيفساء, تشويش
+**Found by:** mosaic, pixelate, pixel, censor, blocks, بكسلة, فسيفساء, تشويش, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:stylize.mosaic`
 
@@ -367,7 +367,7 @@ Moves the red and the blue of the picture apart: away from a point, or along an 
 
 **Use:** Lens fringing, glitch splits, impact frames; animate the amount for a hit.
 
-**Found by:** chromatic, aberration, rgb split, fringe, glitch, انحراف لوني, تقسيم ألوان, خلل
+**Found by:** chromatic, aberration, rgb split, fringe, glitch, انحراف لوني, تقسيم ألوان, خلل, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:stylize.chromatic_aberration`
 
@@ -387,7 +387,7 @@ Maps the picture's brightness between two colours.
 
 **Use:** Duotone and sepia looks, a brand colour wash.
 
-**Found by:** tint, duotone, sepia, gradient map, colorize, صبغة, لونين, سيبيا
+**Found by:** tint, duotone, sepia, gradient map, colorize, صبغة, لونين, سيبيا, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:color.tint`
 
@@ -406,7 +406,7 @@ Noise on the picture, the same for the same seed and frame, new on each frame wh
 
 **Use:** Film texture, hiding banding, gluing graphics to footage.
 
-**Found by:** grain, noise, film, texture, حبيبات, ضجيج, فيلم, خشونة, سينمائي
+**Found by:** grain, noise, film, texture, حبيبات, ضجيج, فيلم, خشونة, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:stylize.film_grain`
 
@@ -424,7 +424,7 @@ An unsharp mask: the picture plus the difference between it and its blur.
 
 **Use:** Crisp a soft clip or a scaled-up picture; keep the radius small.
 
-**Found by:** sharpen, unsharp, crisp, detail, حدة, توضيح, تفاصيل
+**Found by:** sharpen, unsharp, crisp, detail, حدة, توضيح, تفاصيل, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:stylize.sharpen`
 
@@ -441,7 +441,7 @@ Moves the picture from place to place by a smooth noise; the evolution turns the
 
 **Use:** Liquid, heat haze, a hand-drawn wobble, torn edges; animate the evolution. On a picture that fills the frame it pulls a transparent rim in at the edge (a known defect, EM3).
 
-**Found by:** turbulent, displace, wobble, liquid, distort, wave, heat, تشويه, اهتزاز, سائل, تموج
+**Found by:** turbulent, displace, wobble, liquid, distort, wave, heat, تشويه, اهتزاز, سائل, تموج, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:stylize.turbulent_displace`
 
@@ -461,7 +461,7 @@ Moves the picture across a wave: sine, triangle, sawtooth or square.
 
 **Use:** Flags, water ripples, a wave through a text; animate the phase. It has the same edge defect as Turbulent Displace.
 
-**Found by:** wave, warp, ripple, flag, water, موجة, تموج, ماء, علم
+**Found by:** wave, warp, ripple, flag, water, موجة, تموج, ماء, علم, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:stylize.wave_warp`
 
@@ -481,7 +481,7 @@ Prints the picture as dots, lines or crosses on paper, in one ink or in four at 
 
 **Use:** Newspaper and comic looks. The screen belongs to the layer: put the effect on an adjustment layer for a screen fixed to the canvas. Dots under 6 pixels turn grey on a phone.
 
-**Found by:** halftone, dots, print, comic, newspaper, screen, نقاط, طباعة, نصف تدرج, كوميك, جريدة
+**Found by:** halftone, dots, print, comic, newspaper, screen, نقاط, طباعة, نصف تدرج, كوميك, جريدة, effect, fx, تأثير, مؤثر, افكت
 
 **Add:** `inspector.add item=library kind=fx.effect:stylize.halftone`
 
