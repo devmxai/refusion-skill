@@ -1,12 +1,12 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 2, fingerprint `e065e697413ead02`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 2, fingerprint `18c5e4330715a936`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
-174 tools in 29 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
+175 tools in 29 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
 ## Families
 
-`anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (2) · `marker` (4) · `mask` (7) · `media` (7) · `motion` (3) · `path` (5) · `project` (3) · `property` (9) · `render` (5) · `scene` (4) · `session` (4) · `text` (11) · `transition` (6) · `transport` (1) · `vector` (2)
+`anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (2) · `marker` (4) · `mask` (7) · `media` (7) · `motion` (3) · `path` (5) · `project` (3) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `text` (11) · `transition` (6) · `transport` (1) · `vector` (2)
 
 Notes: **asks** means the owner is asked on the device for each call of a remote agent; **not in a scene** means the engine refuses the tool on a layer inside a scene.
 
@@ -279,6 +279,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `scene.brief` | call | scene | Read the open project in one short answer: its canvas, frame rate and length, its revision and session generation, how many layers there are of each kind, and… |  |
 | `scene.layout` | call | scene | Read where the layers drawn at a composition time are on the canvas, in canvas pixels (the box of each layer's content moved by every transform above it, the… |  |
 | `scene.motion` | call | scene | Read, along the whole composition, where a layer moves far between two frames and is drawn sharp: it then shows as separate copies, not as a movement, and the… |  |
+| `scene.survey` | read | scene | Read how the composition's motion is made, counted from the session and not drawn: what a piece does by habit, before you look at it. |  |
 
 ## session
 

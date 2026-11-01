@@ -2,6 +2,8 @@
 
 These are the things an agent does when nobody is steering it. Each one is not wrong alone; the trouble is doing it everywhere. Before you build, read the list against your plan; before you report, read it against the result.
 
+Count them before you judge them: `scene.survey` reads a piece's habits from the session. Its `measures` and lists answer the table below: `curve_shapes_in_use` and `commonest_shape` (one curve on every move), `arrival_spread` (one duration), `groups` and `largest_group_arriving_together` (everything together), `sides` (all from one side), `between` (the hold, and for a text its words and the seconds they need), `texts_shorter_than_reading`, `arrivals_on_beat`, `first_move` (a move on the first frame), `rest_at_end`, `appear_at_once`. A count is where to look, not a verdict: look at the picture before you change anything.
+
 | The default | Why the result reads as machine-made | Do this instead |
 |---|---|---|
 | One curve on every move (ease out, everywhere) | Nothing has a character; weight and mood are the same for a headline and a footnote. | Vary the shape by role, at least three in a piece ([timing.md](timing.md)). Segments: `anim.set_segment_ease`, `anim.set_segment_bezier`; a motion's own pace: `motion.channel_set`. |

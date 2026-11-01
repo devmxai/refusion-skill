@@ -20,7 +20,7 @@ You change the project that is open in Refusion on the owner's device, through t
 3. **Time it by role.** Hit, settle, hold, release; the hold is where the viewer reads. [timing.md](references/craft/timing.md)
 4. **Make the parts move together.** Order is hierarchy; one grid for what has a beat; a transition continues the motion that leaves. [choreography.md](references/craft/choreography.md)
 5. **Build by units, one batch for one idea.** Design the still first and look at it. `session.validate`, then `session.batch` with `expected_revision`. A group of layers that move together is a scene (`guide.read` topics `units` and `recipes`).
-6. **Look and measure.** `render.look`, `render.strip`, `motion.trace`, `scene.layout`, `render.cost`; then score the piece honestly. [checks.md](references/craft/checks.md)
+6. **Look and measure.** `scene.survey` counts the piece's habits; `render.look`, `render.strip`, `motion.trace`, `scene.layout`, `render.cost` show it; then score the piece honestly. [checks.md](references/craft/checks.md)
 7. **Mend by cause, and say what you did**, including what you could not do or check.
 
 ## What decides quality
