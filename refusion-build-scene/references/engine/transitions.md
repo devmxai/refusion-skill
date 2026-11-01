@@ -1,6 +1,6 @@
 # Transitions
 
-Written by `rpro skill-reference --write` from catalog version 2, fingerprint `18c5e4330715a936`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 2, fingerprint `dd84c704678e786c`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 A transition lies on a cut between two layers: `transition.add` with the kind's code. The settings are besides the length and the curve every transition has.
 
@@ -37,7 +37,7 @@ Dissolve · cost unmeasured · available
 
 Mixes the two pictures straight across, one fading into the other. A new one lasts 1 s.
 
-**Found by:** dissolve.cross_dissolve
+**Found by:** dissolve.cross_dissolve, انتقال, انتقالات
 
 **Add:** `transition.add kind=1 (on a cut between two layers)`
 
@@ -47,7 +47,7 @@ Dissolve · cost unmeasured · available
 
 Mixes the two pictures in light-linear values, so there is no dip of brightness in the middle. A new one lasts 1 s.
 
-**Found by:** dissolve.film_dissolve
+**Found by:** dissolve.film_dissolve, انتقال, انتقالات, فيلم, سينمائي
 
 **Add:** `transition.add kind=2 (on a cut between two layers)`
 
@@ -57,7 +57,7 @@ Dissolve · cost unmeasured · available
 
 Adds the light of the two pictures: each is whole until its half and the sum brightens in the middle. A new one lasts 1 s.
 
-**Found by:** dissolve.additive_dissolve
+**Found by:** dissolve.additive_dissolve, انتقال, انتقالات
 
 **Add:** `transition.add kind=3 (on a cut between two layers)`
 
@@ -67,7 +67,7 @@ Dissolve · cost unmeasured · available
 
 Takes the first picture to a colour (red 0, green 0, blue 0) and the colour to the second, with a hold on the colour. A new one lasts 1 s.
 
-**Found by:** dissolve.dip_to_black
+**Found by:** dissolve.dip_to_black, انتقال, انتقالات
 
 **Add:** `transition.add kind=4 (on a cut between two layers)`
 
@@ -79,7 +79,7 @@ Dissolve · cost unmeasured · available
 
 Takes the first picture to a colour (red 1, green 1, blue 1) and the colour to the second, with a hold on the colour. A new one lasts 1 s.
 
-**Found by:** dissolve.dip_to_white
+**Found by:** dissolve.dip_to_white, انتقال, انتقالات
 
 **Add:** `transition.add kind=5 (on a cut between two layers)`
 
@@ -93,7 +93,7 @@ Push · cost unmeasured · available
 
 It shows both pictures at once with no mix, moves -1 canvas widths across and 0 heights down for each unit of motion, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
 
-**Found by:** motion.push_left
+**Found by:** motion.push_left, انتقال, انتقالات, يسار
 
 **Add:** `transition.add kind=10 (on a cut between two layers)`
 
@@ -105,7 +105,7 @@ Push · cost unmeasured · available
 
 It shows both pictures at once with no mix, moves 1 canvas widths across and 0 heights down for each unit of motion, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
 
-**Found by:** motion.push_right
+**Found by:** motion.push_right, انتقال, انتقالات, يمين
 
 **Add:** `transition.add kind=11 (on a cut between two layers)`
 
@@ -117,7 +117,7 @@ Push · cost unmeasured · available
 
 It shows both pictures at once with no mix, moves 0 canvas widths across and -1 heights down for each unit of motion, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
 
-**Found by:** motion.push_up
+**Found by:** motion.push_up, انتقال, انتقالات
 
 **Add:** `transition.add kind=12 (on a cut between two layers)`
 
@@ -129,7 +129,7 @@ Push · cost unmeasured · available
 
 It shows both pictures at once with no mix, moves 0 canvas widths across and 1 heights down for each unit of motion, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
 
-**Found by:** motion.push_down
+**Found by:** motion.push_down, انتقال, انتقالات
 
 **Add:** `transition.add kind=13 (on a cut between two layers)`
 
@@ -143,7 +143,7 @@ Slide · cost unmeasured · available
 
 It shows both pictures at once with no mix, moves -1 canvas widths across and 0 heights down for each unit of motion, leaves the outgoing picture still, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
 
-**Found by:** motion.slide_left
+**Found by:** motion.slide_left, انتقال, انتقالات, انزلاق, انزلاقية, يسار
 
 **Add:** `transition.add kind=20 (on a cut between two layers)`
 
@@ -155,7 +155,7 @@ Slide · cost unmeasured · available
 
 It shows both pictures at once with no mix, moves 1 canvas widths across and 0 heights down for each unit of motion, leaves the outgoing picture still, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
 
-**Found by:** motion.slide_right
+**Found by:** motion.slide_right, انتقال, انتقالات, انزلاق, انزلاقية, يمين
 
 **Add:** `transition.add kind=21 (on a cut between two layers)`
 
@@ -167,7 +167,7 @@ Slide · cost unmeasured · available
 
 It shows both pictures at once with no mix, moves 0 canvas widths across and -1 heights down for each unit of motion, leaves the outgoing picture still, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
 
-**Found by:** motion.slide_up
+**Found by:** motion.slide_up, انتقال, انتقالات, انزلاق, انزلاقية
 
 **Add:** `transition.add kind=22 (on a cut between two layers)`
 
@@ -179,7 +179,7 @@ Slide · cost unmeasured · available
 
 It shows both pictures at once with no mix, moves 0 canvas widths across and 1 heights down for each unit of motion, leaves the outgoing picture still, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
 
-**Found by:** motion.slide_down
+**Found by:** motion.slide_down, انتقال, انتقالات, انزلاق, انزلاقية
 
 **Add:** `transition.add kind=23 (on a cut between two layers)`
 
@@ -193,7 +193,7 @@ Zoom · cost unmeasured · available
 
 It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, scales by 4 for each unit, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.8 s.
 
-**Found by:** motion.zoom_in
+**Found by:** motion.zoom_in, انتقال, انتقالات, تكبير, تصغير
 
 **Add:** `transition.add kind=30 (on a cut between two layers)`
 
@@ -209,7 +209,7 @@ Zoom · cost unmeasured · available
 
 It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, scales by 0.25 for each unit, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.8 s.
 
-**Found by:** motion.zoom_out
+**Found by:** motion.zoom_out, انتقال, انتقالات, تكبير, تصغير
 
 **Add:** `transition.add kind=31 (on a cut between two layers)`
 
@@ -227,7 +227,7 @@ Spin · cost unmeasured · available
 
 It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, turns 360 degrees clockwise for each unit, is 8% larger at the cut than at the ends, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 1.5 s.
 
-**Found by:** motion.spin
+**Found by:** motion.spin, انتقال, انتقالات, دوران, تدوير
 
 **Add:** `transition.add kind=32 (on a cut between two layers)`
 
@@ -247,7 +247,7 @@ Whip · cost unmeasured · available
 
 It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, moves -2 canvas widths across and 0 heights down for each unit of motion, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.4 s.
 
-**Found by:** motion.whip_left
+**Found by:** motion.whip_left, انتقال, انتقالات, يسار
 
 **Add:** `transition.add kind=40 (on a cut between two layers)`
 
@@ -260,7 +260,7 @@ Whip · cost unmeasured · available
 
 It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, moves 2 canvas widths across and 0 heights down for each unit of motion, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.4 s.
 
-**Found by:** motion.whip_right
+**Found by:** motion.whip_right, انتقال, انتقالات, يمين
 
 **Add:** `transition.add kind=41 (on a cut between two layers)`
 
@@ -273,7 +273,7 @@ Whip · cost unmeasured · available
 
 It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, moves 0 canvas widths across and -2 heights down for each unit of motion, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.4 s.
 
-**Found by:** motion.whip_up
+**Found by:** motion.whip_up, انتقال, انتقالات
 
 **Add:** `transition.add kind=42 (on a cut between two layers)`
 
@@ -286,7 +286,7 @@ Whip · cost unmeasured · available
 
 It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, moves 0 canvas widths across and 2 heights down for each unit of motion, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.4 s.
 
-**Found by:** motion.whip_down
+**Found by:** motion.whip_down, انتقال, انتقالات
 
 **Add:** `transition.add kind=43 (on a cut between two layers)`
 

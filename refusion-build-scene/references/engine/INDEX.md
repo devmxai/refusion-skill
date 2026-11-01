@@ -1,10 +1,10 @@
 # The engine, as it is now
 
-Written by `rpro skill-reference --write` from catalog version 2, fingerprint `18c5e4330715a936`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 2, fingerprint `dd84c704678e786c`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 | what | how many |
 |---|---|
-| tools offered to an agent | 175 (direct 22 · read 36 · edit 117) |
+| tools offered to an agent | 175 (direct 22 · read 36 · edit 117; direct tools that also go in a batch: 1) |
 | tools withheld from an agent, each with its reason | 57 |
 | library: effect | 24 |
 | library: look | 6 |
@@ -26,7 +26,7 @@ Written by `rpro skill-reference --write` from catalog version 2, fingerprint `1
 
 ## How an item is read
 
-- **Use** of a tool: `call` is a tool you call by itself; `read` reads and changes nothing; `edit` is an edit that goes in a `session.batch` item.
+- **Use** of a tool: `call` is a tool you call by itself; `read` reads and changes nothing; `edit` is an edit that goes in a `session.batch` item; `call · edit` is both (a tool you call by itself that is also valid as a batch item).
 - **Target** of a tool: what it names: a `layer`, a `scene` (a composition), `inside a scene` (a tool that works in the scene that holds its layer), or `-` (the project, a source, a key).
 - A library item's **id** is what the engine calls it and never changes; its **Add** line is the tool that adds it.
 - **cost** is `unmeasured` until a phone has measured it: it is not a promise of speed.

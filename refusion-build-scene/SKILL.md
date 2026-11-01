@@ -16,7 +16,7 @@ You change the project that is open in Refusion on the owner's device, through t
 ## The way of working
 
 1. **Direct.** Turn the request into a plan before the first edit: the piece, the canvas, the language, the energy, one idea, one focal element, a direction, and for each element a role, a verb and three numbers (arrives, holds, leaves). [direction.md](references/craft/direction.md)
-2. **Choose the means.** The preset, recipe, look, effect or transition that already does the job, before keys by hand. [choosing.md](references/craft/choosing.md), then [engine/INDEX.md](references/engine/INDEX.md), then `library.catalog` for the build that answers.
+2. **Choose the means.** The preset, recipe, look, effect or transition that already does the job, before keys by hand. [choosing.md](references/craft/choosing.md), then [engine/INDEX.md](references/engine/INDEX.md), then `library.catalog` for the build that answers. Apply a library item with `inspector.add`: `item=library` and `kind` the item's id (its `applies_with` says so); in a batch name the layer. A motion takes the place of what its phase held, and the reply's `replaced` names it.
 3. **Time it by role.** Hit, settle, hold, release; the hold is where the viewer reads. [timing.md](references/craft/timing.md)
 4. **Make the parts move together.** Order is hierarchy; one grid for what has a beat; a transition continues the motion that leaves. [choreography.md](references/craft/choreography.md)
 5. **Build by units, one batch for one idea.** Design the still first and look at it. `session.validate`, then `session.batch` with `expected_revision`. A group of layers that move together is a scene (`guide.read` topics `units` and `recipes`).

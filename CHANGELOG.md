@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.2 (2026-11-01)
+
+- A library item is applied with `inspector.add` (`item=library`, `kind` its id), also as a batch item; a motion takes the place of what its phase held and the reply's `replaced` names it. Inside a batch a caption's motion is over every sentence of the layer.
+- The handshake lists audio mixing and the media pool as available (it said they were not).
+- Search words in Arabic for the effects, looks, transitions and ready-made motion, listed in the library reference.
+- The index is written for the build that carries these changes (175 tools offered, 57 not offered, each with its reason).
+
 ## 0.2.1 (2026-11-01)
 
 - Apache License 2.0, a README with an install table for each assistant, and this changelog.

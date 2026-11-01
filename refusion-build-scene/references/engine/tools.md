@@ -1,6 +1,6 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 2, fingerprint `18c5e4330715a936`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 2, fingerprint `dd84c704678e786c`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 175 tools in 29 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
@@ -142,7 +142,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 |---|---|---|---|---|
 | `inspector.read` | read | layer | Read a layer's inspector (the target, else the selected layer): the items it uses now, in the order they are shown, a section's rows together (`section_codes`… |  |
 | `inspector.catalog` | read | layer | Read what the track's plus can add to a layer (the target, else the selected layer), narrowed by `query` (empty: all): the Appearance items the layer does not… |  |
-| `inspector.add` | call | layer | Add an item of `inspector.catalog` to a layer (the target, else the selected layer), in one history step, with a value that shows: a gradient makes the fill a… |  |
+| `inspector.add` | call · edit | layer | Add an item of `inspector.catalog` to a layer (the target, else the selected layer), in one history step, with a value that shows: a gradient makes the fill a… |  |
 | `inspector.remove` | call | layer | Take an item of `inspector.read` away from a layer (the target, else the selected layer), in one history step: an effect or a mask (named by `instance`) is… |  |
 
 ## layer

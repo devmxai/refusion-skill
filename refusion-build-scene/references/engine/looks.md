@@ -1,6 +1,6 @@
 # Looks
 
-Written by `rpro skill-reference --write` from catalog version 2, fingerprint `18c5e4330715a936`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 2, fingerprint `dd84c704678e786c`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 A look is a chain of effects with their values, added in one step with `effect.look` (or `inspector.add` with the item `fx.look`). Each effect of it is then an ordinary effect.
 
@@ -23,9 +23,9 @@ Liquid · suits video, shape, vector, text, background, scene, adjustment · cos
 
 A ready-made chain of 2 effects, added in one step: Turbulent Displace, Wave Warp.
 
-**Found by:** liquid wobble, liquid
+**Found by:** liquid wobble, liquid, سائل
 
-**Add:** `inspector.add item=fx.look kind=liquid_wobble`
+**Add:** `inspector.add item=library kind=fx.look:liquid_wobble`
 
 ## Print
 
@@ -35,9 +35,9 @@ Print · suits video, shape, vector, text, background, scene, adjustment · cost
 
 A ready-made chain of 2 effects, added in one step: Halftone, Film Grain.
 
-**Found by:** newsprint, print
+**Found by:** newsprint, print, طباعة
 
-**Add:** `inspector.add item=fx.look kind=newsprint`
+**Add:** `inspector.add item=library kind=fx.look:newsprint`
 
 ### Comic print — `fx.look:comic_print`
 
@@ -45,9 +45,9 @@ Print · suits video, shape, vector, text, background, scene, adjustment · cost
 
 A ready-made chain of 2 effects, added in one step: Hue / Saturation, Halftone.
 
-**Found by:** comic print, print
+**Found by:** comic print, print, طباعة
 
-**Add:** `inspector.add item=fx.look kind=comic_print`
+**Add:** `inspector.add item=library kind=fx.look:comic_print`
 
 ## Film
 
@@ -57,9 +57,9 @@ Film · suits video, shape, vector, text, background, scene, adjustment · cost 
 
 A ready-made chain of 4 effects, added in one step: Temperature / Tint, Hue / Saturation, Exposure / Contrast, Film Grain.
 
-**Found by:** vintage film, film
+**Found by:** vintage film, film, فيلم, سينمائي
 
-**Add:** `inspector.add item=fx.look kind=vintage_film`
+**Add:** `inspector.add item=library kind=fx.look:vintage_film`
 
 ## Glitch
 
@@ -69,9 +69,9 @@ Glitch · suits video, shape, vector, text, background, scene, adjustment · cos
 
 A ready-made chain of 1 effects, added in one step: Chromatic Aberration.
 
-**Found by:** glitch split, glitch
+**Found by:** glitch split, glitch, خلل, تشويش
 
-**Add:** `inspector.add item=fx.look kind=glitch_split`
+**Add:** `inspector.add item=library kind=fx.look:glitch_split`
 
 ## Glow
 
@@ -81,7 +81,7 @@ Glow · suits video, shape, vector, text, background, scene, adjustment · cost 
 
 A ready-made chain of 2 effects, added in one step: Gaussian Blur, Glow.
 
-**Found by:** dream glow, glow
+**Found by:** dream glow, glow, توهج, وهج
 
-**Add:** `inspector.add item=fx.look kind=dream_glow`
+**Add:** `inspector.add item=library kind=fx.look:dream_glow`
 

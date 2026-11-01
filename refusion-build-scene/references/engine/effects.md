@@ -1,6 +1,6 @@
 # Effects
 
-Written by `rpro skill-reference --write` from catalog version 2, fingerprint `18c5e4330715a936`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 2, fingerprint `dd84c704678e786c`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 An effect is added to a layer with `effect.add`, or with `inspector.add` and the item `fx.effect`. Its settings are properties of the layer, keyed like any other (`fx.<kind>.<setting>[<id>]`), and every effect has a `mix`.
 
@@ -45,7 +45,7 @@ Brightens or darkens the picture in stops, and stretches or flattens its contras
 
 **Found by:** exposure, contrast, brightness, brighten, darken, grade, تعريض, تباين, سطوع, إضاءة, تفتيح, تغميق
 
-**Add:** `inspector.add item=fx.effect kind=color.exposure_contrast (or effect.add kind=color.exposure_contrast)`
+**Add:** `inspector.add item=library kind=fx.effect:color.exposure_contrast`
 
 - `exposure` (number, stops): -5 to 5, default 0
 - `contrast` (number, percent): -100 to 100, default 0
@@ -61,9 +61,9 @@ Softens the picture evenly, in light, along either or both axes.
 
 **Use:** Out-of-focus backgrounds, a soft glass behind a text (on an adjustment layer), a blur-in by animating the radius. The picture's edge grows by about three times the radius.
 
-**Found by:** blur, gaussian, soften, defocus, focus, تمويه, ضبابية, غاوسي, نعومة
+**Found by:** blur, gaussian, soften, defocus, focus, تمويه, ضبابية, غاوسي, نعومة, ضباب, بلر
 
-**Add:** `inspector.add item=fx.effect kind=blur.gaussian_blur (or effect.add kind=blur.gaussian_blur)`
+**Add:** `inspector.add item=library kind=fx.effect:blur.gaussian_blur`
 
 - `radius` (number, pixels): 0 to 250, default 0
 - `horizontal` (number, percent): 0 to 100, default 100
@@ -82,7 +82,7 @@ Turns the hue about the grey axis and shifts the saturation and the lightness.
 
 **Found by:** hue, saturation, colour, color, vibrance, تشبع, لون, صبغة
 
-**Add:** `inspector.add item=fx.effect kind=color.hue_saturation (or effect.add kind=color.hue_saturation)`
+**Add:** `inspector.add item=library kind=fx.effect:color.hue_saturation`
 
 - `hue` (number, degrees): -180 to 180, default 0
 - `saturation` (number, percent): -100 to 100, default 0
@@ -99,7 +99,7 @@ White balance: a warmer or cooler picture, a greener or more magenta one.
 
 **Found by:** temperature, tint, white balance, warm, cool, حرارة, دفء, برودة, توازن الأبيض
 
-**Add:** `inspector.add item=fx.effect kind=color.temperature_tint (or effect.add kind=color.temperature_tint)`
+**Add:** `inspector.add item=library kind=fx.effect:color.temperature_tint`
 
 - `temperature` (number, percent): -100 to 100, default 0
 - `tint` (number, percent): -100 to 100, default 0
@@ -115,7 +115,7 @@ Sets the black and white points, a gamma between them, and the output points, fo
 
 **Found by:** levels, gamma, black point, white point, histogram, مستويات, جاما, أسود, أبيض
 
-**Add:** `inspector.add item=fx.effect kind=color.levels (or effect.add kind=color.levels)`
+**Add:** `inspector.add item=library kind=fx.effect:color.levels`
 
 - `input_black` (number, none): 0 to 254, default 0
 - `input_white` (number, none): 1 to 255, default 255
@@ -134,7 +134,7 @@ Draws the picture toward its own grey.
 
 **Found by:** black and white, grayscale, greyscale, monochrome, desaturate, أبيض وأسود, رمادي, تدرج رمادي
 
-**Add:** `inspector.add item=fx.effect kind=color.black_white (or effect.add kind=color.black_white)`
+**Add:** `inspector.add item=library kind=fx.effect:color.black_white`
 
 - `amount` (number, percent): 0 to 100, default 100
 - `mix` (number, percent): 0 to 100, default 100
@@ -149,7 +149,7 @@ Reverses the picture's colours.
 
 **Found by:** invert, negative, reverse, معكوس, عكس, نيجاتيف
 
-**Add:** `inspector.add item=fx.effect kind=color.invert (or effect.add kind=color.invert)`
+**Add:** `inspector.add item=library kind=fx.effect:color.invert`
 
 - `amount` (number, percent): 0 to 100, default 100
 - `mix` (number, percent): 0 to 100, default 100
@@ -164,7 +164,7 @@ A curve for each colour channel and one for all of them, each through five point
 
 **Found by:** curves, tone, contrast, grade, منحنيات, منحنى, تدرج
 
-**Add:** `inspector.add item=fx.effect kind=color.curves (or effect.add kind=color.curves)`
+**Add:** `inspector.add item=library kind=fx.effect:color.curves`
 
 - `master_black` (number, percent): 0 to 100, default 0
 - `master_shadow` (number, percent): 0 to 100, default 25
@@ -198,9 +198,9 @@ Blurs along one direction, both ways from each pixel.
 
 **Use:** Speed streaks, a whoosh, wind; animate the length for a snap. It is a look, not the layer's motion blur.
 
-**Found by:** directional, motion blur, streak, speed, smear, تمويه اتجاهي, حركة, خطوط سرعة
+**Found by:** directional, motion blur, streak, speed, smear, تمويه اتجاهي, حركة, خطوط سرعة, ضباب, تمويه, بلر
 
-**Add:** `inspector.add item=fx.effect kind=blur.directional_blur (or effect.add kind=blur.directional_blur)`
+**Add:** `inspector.add item=library kind=fx.effect:blur.directional_blur`
 
 - `length` (number, pixels): 0 to 1000, default 0
 - `angle` (number, degrees): -360 to 360, default 0
@@ -214,9 +214,9 @@ Blurs toward a point, as if zooming through the picture.
 
 **Use:** Impact punches, a rush into a cut, tunnel looks.
 
-**Found by:** zoom blur, radial blur, punch, rush, تمويه شعاعي, تكبير, اندفاع
+**Found by:** zoom blur, radial blur, punch, rush, تمويه شعاعي, تكبير, اندفاع, ضباب, تمويه, بلر
 
-**Add:** `inspector.add item=fx.effect kind=blur.zoom_blur (or effect.add kind=blur.zoom_blur)`
+**Add:** `inspector.add item=library kind=fx.effect:blur.zoom_blur`
 
 - `amount` (number, percent): 0 to 100, default 0
 - `centre` (point, pixels): -10000 to 10000, default 0
@@ -230,9 +230,9 @@ Blurs about a point along arcs, as if the picture spun.
 
 **Use:** Spinning wheels, whip looks, a dizzy moment.
 
-**Found by:** spin, rotate, radial, whirl, دوران, تمويه دوّار
+**Found by:** spin, rotate, radial, whirl, دوران, تمويه دوّار, ضباب, تمويه, بلر
 
-**Add:** `inspector.add item=fx.effect kind=blur.spin_blur (or effect.add kind=blur.spin_blur)`
+**Add:** `inspector.add item=library kind=fx.effect:blur.spin_blur`
 
 - `angle` (number, degrees): 0 to 360, default 0
 - `centre` (point, pixels): -10000 to 10000, default 0
@@ -250,7 +250,7 @@ Repeats the picture in tiles over a larger or smaller output, with mirrored edge
 
 **Found by:** tile, repeat, pattern, mirror, wallpaper, تكرار, بلاط, نمط, مرآة
 
-**Add:** `inspector.add item=fx.effect kind=stylize.motion_tile (or effect.add kind=stylize.motion_tile)`
+**Add:** `inspector.add item=library kind=fx.effect:stylize.motion_tile`
 
 - `centre` (point, pixels): -10000 to 10000, default 0
 - `tile_width` (number, percent): 1 to 10000, default 100
@@ -273,7 +273,7 @@ A soft shadow of the picture's alpha, moved, softened and coloured, under the pi
 
 **Found by:** shadow, drop shadow, depth, lift, ظل, عمق, ظل ساقط
 
-**Add:** `inspector.add item=fx.effect kind=stylize.drop_shadow (or effect.add kind=stylize.drop_shadow)`
+**Add:** `inspector.add item=library kind=fx.effect:stylize.drop_shadow`
 
 - `color` (color, none): 0 to 1, default 0
 - `opacity` (number, percent): 0 to 100, default 50
@@ -291,9 +291,9 @@ Spreads the bright parts of the picture by a pyramid of blurs and adds them back
 
 **Use:** Neon, lights, soft dreamy highlights. On a bright picture raise the threshold or the whole frame blooms white.
 
-**Found by:** glow, bloom, neon, light, halo, توهج, نيون, ضوء, هالة
+**Found by:** glow, bloom, neon, light, halo, توهج, نيون, ضوء, هالة, وهج
 
-**Add:** `inspector.add item=fx.effect kind=stylize.glow (or effect.add kind=stylize.glow)`
+**Add:** `inspector.add item=library kind=fx.effect:stylize.glow`
 
 - `threshold` (number, percent): 0 to 100, default 60
 - `radius` (number, pixels): 0 to 100, default 10
@@ -314,7 +314,7 @@ Darkens or lightens the edges by an ellipse about a point.
 
 **Found by:** vignette, edges, darken edges, focus, تعتيم, حواف, فينيت
 
-**Add:** `inspector.add item=fx.effect kind=stylize.vignette (or effect.add kind=stylize.vignette)`
+**Add:** `inspector.add item=library kind=fx.effect:stylize.vignette`
 
 - `amount` (number, percent): -100 to 100, default 50
 - `size` (number, percent): 5 to 200, default 75
@@ -335,7 +335,7 @@ Holds each colour channel to a number of levels.
 
 **Found by:** posterize, levels, poster, flat colour, بوستر, مستويات, تبسيط ألوان
 
-**Add:** `inspector.add item=fx.effect kind=color.posterize (or effect.add kind=color.posterize)`
+**Add:** `inspector.add item=library kind=fx.effect:color.posterize`
 
 - `levels` (number, none): 2 to 255, default 6
 - `mix` (number, percent): 0 to 100, default 100
@@ -352,7 +352,7 @@ Draws the picture in cells of one colour each.
 
 **Found by:** mosaic, pixelate, pixel, censor, blocks, بكسلة, فسيفساء, تشويش
 
-**Add:** `inspector.add item=fx.effect kind=stylize.mosaic (or effect.add kind=stylize.mosaic)`
+**Add:** `inspector.add item=library kind=fx.effect:stylize.mosaic`
 
 - `cell_width` (number, pixels): 1 to 1000, default 16
 - `cell_height` (number, pixels): 1 to 1000, default 16
@@ -369,7 +369,7 @@ Moves the red and the blue of the picture apart: away from a point, or along an 
 
 **Found by:** chromatic, aberration, rgb split, fringe, glitch, انحراف لوني, تقسيم ألوان, خلل
 
-**Add:** `inspector.add item=fx.effect kind=stylize.chromatic_aberration (or effect.add kind=stylize.chromatic_aberration)`
+**Add:** `inspector.add item=library kind=fx.effect:stylize.chromatic_aberration`
 
 - `amount` (number, pixels): 0 to 200, default 4
 - `mode` (choice, none): 0 to 1, default 0 [Radial, Linear]
@@ -389,7 +389,7 @@ Maps the picture's brightness between two colours.
 
 **Found by:** tint, duotone, sepia, gradient map, colorize, صبغة, لونين, سيبيا
 
-**Add:** `inspector.add item=fx.effect kind=color.tint (or effect.add kind=color.tint)`
+**Add:** `inspector.add item=library kind=fx.effect:color.tint`
 
 - `black` (color, none): 0 to 1, default 0
 - `white` (color, none): 0 to 1, default 0
@@ -406,9 +406,9 @@ Noise on the picture, the same for the same seed and frame, new on each frame wh
 
 **Use:** Film texture, hiding banding, gluing graphics to footage.
 
-**Found by:** grain, noise, film, texture, حبيبات, ضجيج, فيلم, خشونة
+**Found by:** grain, noise, film, texture, حبيبات, ضجيج, فيلم, خشونة, سينمائي
 
-**Add:** `inspector.add item=fx.effect kind=stylize.film_grain (or effect.add kind=stylize.film_grain)`
+**Add:** `inspector.add item=library kind=fx.effect:stylize.film_grain`
 
 - `amount` (number, percent): 0 to 100, default 20
 - `size` (number, pixels): 0.5 to 20, default 1.5
@@ -426,7 +426,7 @@ An unsharp mask: the picture plus the difference between it and its blur.
 
 **Found by:** sharpen, unsharp, crisp, detail, حدة, توضيح, تفاصيل
 
-**Add:** `inspector.add item=fx.effect kind=stylize.sharpen (or effect.add kind=stylize.sharpen)`
+**Add:** `inspector.add item=library kind=fx.effect:stylize.sharpen`
 
 - `amount` (number, percent): 0 to 1000, default 100
 - `radius` (number, pixels): 0 to 50, default 2
@@ -443,7 +443,7 @@ Moves the picture from place to place by a smooth noise; the evolution turns the
 
 **Found by:** turbulent, displace, wobble, liquid, distort, wave, heat, تشويه, اهتزاز, سائل, تموج
 
-**Add:** `inspector.add item=fx.effect kind=stylize.turbulent_displace (or effect.add kind=stylize.turbulent_displace)`
+**Add:** `inspector.add item=library kind=fx.effect:stylize.turbulent_displace`
 
 - `amount` (number, pixels): 0 to 1000, default 20
 - `size` (number, pixels): 1 to 5000, default 100
@@ -463,7 +463,7 @@ Moves the picture across a wave: sine, triangle, sawtooth or square.
 
 **Found by:** wave, warp, ripple, flag, water, موجة, تموج, ماء, علم
 
-**Add:** `inspector.add item=fx.effect kind=stylize.wave_warp (or effect.add kind=stylize.wave_warp)`
+**Add:** `inspector.add item=library kind=fx.effect:stylize.wave_warp`
 
 - `wave` (choice, none): 0 to 3, default 0 [Sine, Triangle, Sawtooth, Square]
 - `height` (number, pixels): 0 to 1000, default 10
@@ -483,7 +483,7 @@ Prints the picture as dots, lines or crosses on paper, in one ink or in four at 
 
 **Found by:** halftone, dots, print, comic, newspaper, screen, نقاط, طباعة, نصف تدرج, كوميك, جريدة
 
-**Add:** `inspector.add item=fx.effect kind=stylize.halftone (or effect.add kind=stylize.halftone)`
+**Add:** `inspector.add item=library kind=fx.effect:stylize.halftone`
 
 - `mode` (choice, none): 0 to 1, default 0 [One ink, Four inks]
 - `shape` (choice, none): 0 to 2, default 0 [Dots, Lines, Crosses]

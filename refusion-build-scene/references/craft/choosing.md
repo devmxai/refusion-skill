@@ -2,6 +2,8 @@
 
 Look here for which item fits the job, then read its numbers in the index. The ids are the engine's and never change; the index ([engine/INDEX.md](../engine/INDEX.md)) says what each does today, and `library.catalog` (with `query`, `kind`, `layer`) is the live list for the build that answers. The choice of *when* is the judgement of this page; the *what it does* is the engine's.
 
+Every id below is applied the same way: `inspector.add` with `item=library` and `kind` the id (`text.motion:1:1`, `layer.edge:recipe:4`, `fx.effect:blur.gaussian_blur`). It is also a batch item: name the layer with `target` or `target_from`. A motion is applied whole and takes the place of what its phase held; the reply's `replaced` names that, and `history.undo` brings it back. Inside a batch a caption's motion is over every sentence of the layer, never the sentences the owner chose on the device.
+
 ## Coming in
 
 | You want | Text (`inspector.add item=text.motion`) | Layer (`inspector.add item=layer.edge`) |
