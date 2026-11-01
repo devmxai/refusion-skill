@@ -1,8 +1,11 @@
 # Refusion skill
 
-A skill that teaches an AI assistant how to build and polish video scenes in the Refusion project that is open on your phone: titles, captions, backgrounds, shapes and animated motion, in Arabic or any language Refusion shapes. It is the way of working. The tools themselves come from the Refusion connector, and the engine teaches the assistant each tool through the connector's own guide, so new features reach the assistant without this skill changing.
+A skill that teaches an AI assistant to design, build and polish video in the Refusion project that is open on your phone: titles, captions, ads and motion graphics, backgrounds, shapes and text (Arabic included), entrances and exits, timing and rhythm, effects, looks and transitions. The tools themselves come from the Refusion connector (or the local `rpro-mcp` and CLI), and the engine teaches the assistant each tool through its own guide.
 
-The skill is one folder, `refusion-build-scene/`, in the open [Agent Skills](https://agentskills.io/specification) format.
+The skill is one folder, `refusion-build-scene/`, in the open [Agent Skills](https://agentskills.io/specification) format. It holds two kinds of file:
+
+- **The craft** (`SKILL.md` and `references/craft/`, `examples/`), written by people: how a piece is directed, timed, choreographed and judged, which preset, recipe, effect or transition fits which job, the defaults an assistant falls into, and how to look at the result.
+- **An index of the engine** (`references/engine/`), written by the Refusion build from the engine itself: the tools an assistant is offered, the effects, looks, transitions, ready-made motion and recipes, with what each does and its settings. No line of it is typed by hand.
 
 ## Use it with Claude
 
@@ -20,7 +23,7 @@ The connector works with any assistant that can add a remote MCP server, and its
 
 ## Keeping it current
 
-The skill stays short on purpose: it holds the way of working and quality rules, never the list of tools, so a new feature in Refusion does not need a new skill. It changes when a new craft needs explaining, and each change is a new release. To update, download the new zip and upload it again.
+The index of the engine is rewritten by the Refusion build (`rpro skill-reference --write`), and the build refuses to be saved while the index is not what the engine says, so a tool, an effect or a preset added in Refusion reaches this skill with the same change. The craft changes when a way of working is learned, and each published change is a new release. To update, download the new zip and upload it again.
 
 ## What it sends
 
