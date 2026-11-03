@@ -1,6 +1,6 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `ebf169fb4a007fb1`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `af18d4dc3cfd181b`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 176 tools in 29 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
@@ -186,7 +186,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
 | `library.catalog` | read | - | Read what the engine offers to add, as one list whatever the kind: the effects, the looks (ready-made chains of effects), the transitions, and the ready-made… |  |
-| `library.look` | read | - | Look at what the library's cards show: the engine draws a page of its effects (`kind` 1) or its transitions (`kind` 2) on one sheet, a JPEG for you to look at… |  |
+| `library.look` | read | - | Look at what the library's cards show: the engine draws a page of its effects (`kind` 1), its transitions (`kind` 2), its kinds of background (`kind` 3) or its… |  |
 | `library.restore` | call | layer | Put a motion that was applied from the library back as it was applied. |  |
 
 ## marker
@@ -331,7 +331,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `vector.set_item` | edit | layer | Change the fill colour, the stroke colour or the stroke width of one part of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner… |  |
 | `vector.items` | read | layer | Read the parts of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in drawing order: each part's name, how… |  |
 
-## Not offered to an agent (57)
+## Not offered to an agent (103)
 
 Do not look for another way to do these: they are the owner's, and each has the engine's reason.
 
@@ -392,3 +392,49 @@ Do not look for another way to do these: they are the owner's, and each has the 
 - `library.media_cancel`: reads or stops a copy of media or a package of the owner's library, which an agent working on the open project has no part in
 - `account.snapshot`: the account of the person using the app and the platform's gate on the app: not the project's, and not an agent's
 - `app.gate`: the account of the person using the app and the platform's gate on the app: not the project's, and not an agent's
+- `studio.state`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.sync`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.project_open`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.project_close`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.models_sync`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.form_open`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.family_pick`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.pictures_open`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.pictures_close`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.viewer_open`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.viewer_state`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.viewer_play`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.viewer_seek`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.viewer_close`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.result_save`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.quote_ask`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.form_set`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.form_close`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.generate_dismiss`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.reference_add`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.reference_remove`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.reference_retry`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.reference_pictures_open`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.reference_pictures_close`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.mode_set`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.prompt_edit`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.prompt_insert`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.list_add`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.list_remove`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.voices_sync`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.voices_state`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.voice_design`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.voice_choose`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.voice_delete`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.voice_listen`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.voice_sample_add`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.voice_sample_remove`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.voice_sample_retry`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.voice_clone`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.choice_listen`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.facet_set`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.project_create`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.project_rename`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.project_archive`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.library_kind`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's
+- `studio.library_more`: the projects and the library of the person's platform account: the person's own, not the open project's, and not an agent's

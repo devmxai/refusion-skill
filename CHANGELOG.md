@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.4 (2026-11-03)
+
+- `inspector.read` (version 3) declares what can be done with the layer or the layers chosen, after the properties, in a new section Actions (`section_codes` 9): the item `scene.create` has editor 16 and makes a scene of the layers chosen, or of the selected layer, as `layer.precompose` does; its reason says what the scene would draw differently, or why it cannot be made. While several layers are chosen the table holds only these actions, where it held every property turned off.
+- `library.preview_open` and `library.look` also draw the kinds of background (`kind` 3; the ids are the `fill_kind` codes `layer.insert_background` takes) and of shape (`kind` 4; the `shape_kind` codes `layer.insert_shape` takes), each as a project of one layer of that kind drawn as a frame of a file is, so an assistant can see what a gradient, a mesh or a star looks like before it places one.
+
 ## 0.2.3 (2026-11-01)
 
 - A tool that acts at an instant needs the time in the call: an exact time `{"num": n, "den": d}`, or `"edit_head"` for the owner's edit head (`time_ref` where a tool takes `time_given`). A layer's `start`, a keyframe, a marker, an asset, a cut, a trim, a re-parent that holds the layer, a camera framing and a caption sentence added, copied, cut or trimmed all take it. A call without one is refused with `time_required`; both together with `time_ambiguous`.
