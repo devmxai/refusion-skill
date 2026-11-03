@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.5 (2026-11-03)
+
+- Nine tools of the creator program (`earn.state`, `earn.sync`, `earn.apply`, `earn.withdraw`, `earn.coupon`, `earn.payout_method`, `earn.payout`, `earn.payout_cancel`, `earn.convert`) are listed under "Not offered to an agent": applying to the program and what it pays are the person's own business with their account. An assistant that asks for one is refused.
+
 ## 0.2.4 (2026-11-03)
 
 - `inspector.read` (version 3) declares what can be done with the layer or the layers chosen, after the properties, in a new section Actions (`section_codes` 9): the item `scene.create` has editor 16 and makes a scene of the layers chosen, or of the selected layer, as `layer.precompose` does; its reason says what the scene would draw differently, or why it cannot be made. While several layers are chosen the table holds only these actions, where it held every property turned off.
