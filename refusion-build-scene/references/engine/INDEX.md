@@ -1,10 +1,10 @@
 # The engine, as it is now
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `c8ba2c0c91e5a78a`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `344a382efff24b47`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 | what | how many |
 |---|---|
-| tools offered to an agent | 176 (direct 23 · read 36 · edit 117; direct tools that also go in a batch: 1) |
+| tools offered to an agent | 179 (direct 23 · read 37 · edit 119; direct tools that also go in a batch: 1) |
 | tools withheld from an agent, each with its reason | 132 |
 | library: effect | 24 |
 | library: look | 6 |
@@ -56,5 +56,8 @@ Start with `workflow`.
 
 ## Tools no page describes
 You are offered these and no page above names them; `tool:<name>` gives each one's parameters.
+- `project.set_color_mix`: Set the space the keys of colours are mixed in across the project (`mix` 0 display, 1 linear, 2 OKLab).
 - `library.catalog`: Read what the engine offers to add, as one list whatever the kind: the effects, the looks (ready-made chains of effects), the transitions, and the ready-made…
 - `library.look`: Look at what the library's cards show: the engine draws a page of its effects (`kind` 1), its transitions (`kind` 2), its kinds of background (`kind` 3) or its…
+- `morph.to`: Make a shape layer (the target: a layer's id, or `"selection"`) morph to another outline: a kind with its numbers, or another shape layer's own geometry.
+- `morph.analyze`: Read what `morph.to` would make of a shape layer (the target: a layer's id, or `"selection"`) and an outline: a kind with its numbers, or another shape layer's…

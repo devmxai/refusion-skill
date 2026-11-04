@@ -1,12 +1,12 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `c8ba2c0c91e5a78a`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `344a382efff24b47`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
-176 tools in 29 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
+179 tools in 30 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
 ## Families
 
-`anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `motion` (3) · `path` (5) · `project` (3) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `text` (11) · `transition` (6) · `transport` (1) · `vector` (2)
+`anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `text` (11) · `transition` (6) · `transport` (1) · `vector` (2)
 
 Notes: **asks** means the owner is asked on the device for each call of a remote agent; **not in a scene** means the engine refuses the tool on a layer inside a scene.
 
@@ -222,6 +222,13 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `media.open_file` | call | - | Open a file inside the open project's folder (or the owner's extra folder) and get the source handle `media.import_source` takes. | asks |
 | `media.look` | read | - | Look at the designer's material: the engine draws the pictures of the pool's sources on one sheet, a JPEG for you to look at, four tiles to a row and up to 12… |  |
 
+## morph
+
+| Tool | Use | Target | What it does | Notes |
+|---|---|---|---|---|
+| `morph.to` | edit | layer | Make a shape layer (the target: a layer's id, or `"selection"`) morph to another outline: a kind with its numbers, or another shape layer's own geometry. |  |
+| `morph.analyze` | read | layer | Read what `morph.to` would make of a shape layer (the target: a layer's id, or `"selection"`) and an outline: a kind with its numbers, or another shape layer's… |  |
+
 ## motion
 
 | Tool | Use | Target | What it does | Notes |
@@ -247,6 +254,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `project.set_settings` | edit | - | Change the project's canvas size (`width` and `height` in pixels) and frame rate (`fps`, an exact fraction such as 30000/1001); refused while the project plays. |  |
 | `project.fit_to_source` | edit | - | Make the project's canvas size and frame rate those of a source in its media library, as the engine reads them: the size the source is shown at (a source… |  |
 | `project.set_motion_blur` | edit | - | Set the project's motion blur: its switch (off, every layer is drawn at the frame's instant whatever its own switches, and each keeps them for when it is on… |  |
+| `project.set_color_mix` | edit | - | Set the space the keys of colours are mixed in across the project (`mix` 0 display, 1 linear, 2 OKLab). |  |
 
 ## property
 
