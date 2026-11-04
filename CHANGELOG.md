@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.8 (2026-11-04)
+
+- Spin, Zoom In, Zoom Out and Whip are rebuilt: Spin turns the picture once (`strength` is the turn in degrees, a multiple of 360), Zoom In and Zoom Out meet at one scale at the change, Whip is one strip of the two pictures touching, panned across with a `strength` punch. The two pictures dissolve across a share of the transition's *time* in the middle of the motion, and the motion blur is a designed shutter (`blur` degrees at the peak, 1440 at most) that is strongest where they dissolve. Spin, Zoom and Whip need a few frames of each layer beyond the cut; `transition.add` overlaps the layers by what is missing unless the policy says otherwise. Zoom In and Zoom Out have a `split` setting (the colour fringe at the change).
+
 ## 0.2.7 (2026-11-04)
 
 - Transitions are read from the engine's definitions: the transition reference lists each kind's settings in their real units (a turn in degrees, a zoom in times, a blur in degrees of shutter), its speed-ramp curves, and, for Spin, Zoom In and Zoom Out, a `flash` setting (the light at the change, in stops). Spin, Zoom and Whip change from one picture to the next across a short dissolve, so each layer needs a few frames beyond the cut; `transition.add` overlaps the layers by what is missing unless the policy says otherwise.

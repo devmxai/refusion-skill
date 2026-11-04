@@ -126,7 +126,7 @@ It shows both pictures at once with no mix, leaves the outgoing picture still, b
 
 Zoom · cost unmeasured · available
 
-It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to scaled by 4, brings the incoming one from scaled by 0.25 to rest, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.5 s.
+It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to scaled by 4, brings the incoming one from scaled by 4 to rest, blurs the motion with a 900 degree shutter and mirrors the picture past its edge. A new one lasts 0.5 s.
 
 **Use:** The picture rushes toward you and the next shot comes out of the blur: an energetic jump, a reveal of a detail, a hype cut. The cut is hidden at the fastest instant.
 
@@ -135,17 +135,18 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 **Add:** `transition.add kind=30 (on a cut between two layers)`
 
 - `strength` (number, times): 1.25 to 16, default 4
-- `blur` (number, degrees): 0 to 720, default 216
+- `blur` (number, degrees): 0 to 1440, default 900
 - `pivot_x` (number, percent): 0 to 100, default 50
 - `pivot_y` (number, percent): 0 to 100, default 50
 - `edge` (choice, none): 0 to 2, default 0 [Mirror, Clamp, Transparent]
 - `flash` (number, none): 0 to 2, default 0.4
+- `split` (number, percent): 0 to 5, default 0.8
 
 ### Zoom Out — `transition:31`
 
 Zoom · cost unmeasured · available
 
-It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to scaled by 0.25, brings the incoming one from scaled by 4 to rest, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.5 s.
+It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to scaled by 0.25, brings the incoming one from scaled by 0.25 to rest, blurs the motion with a 900 degree shutter and mirrors the picture past its edge. A new one lasts 0.5 s.
 
 **Use:** The picture pulls away and the next shot comes out of the blur: a reveal of the whole after a detail, a change of scale. The cut is hidden at the fastest instant.
 
@@ -154,11 +155,12 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 **Add:** `transition.add kind=31 (on a cut between two layers)`
 
 - `strength` (number, times): 1.25 to 16, default 4
-- `blur` (number, degrees): 0 to 720, default 216
+- `blur` (number, degrees): 0 to 1440, default 900
 - `pivot_x` (number, percent): 0 to 100, default 50
 - `pivot_y` (number, percent): 0 to 100, default 50
 - `edge` (choice, none): 0 to 2, default 0 [Mirror, Clamp, Transparent]
 - `flash` (number, none): 0 to 2, default 0.4
+- `split` (number, percent): 0 to 5, default 0.8
 
 ## Spin
 
@@ -166,16 +168,16 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 
 Spin · cost unmeasured · available
 
-It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to turned 360 degrees clockwise and scaled by 1.08, brings the incoming one from turned -360 degrees clockwise and scaled by 1.08 to rest, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.7 s.
+It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to turned 180 degrees clockwise and scaled by 1.08, brings the incoming one from turned -180 degrees clockwise and scaled by 1.08 to rest, blurs the motion with a 720 degree shutter and mirrors the picture past its edge. A new one lasts 0.7 s.
 
-**Use:** The picture turns a full circle with blur and the next one appears in the turn: playful and loud, for fun, kids and social content; too much for serious pieces.
+**Use:** The picture turns a full circle in one continuous camera move, blurred like a real shutter, and the next one is already in the turn: the two pictures dissolve in its middle and share one blur. Playful and loud, for fun, kids and social content; too much for serious pieces.
 
 **Found by:** spin, rotate, turn, twirl, whirl, swirl, circle, دوران, تدوير, لف, دوامة, دائرة, يدور, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
 **Add:** `transition.add kind=32 (on a cut between two layers)`
 
-- `strength` (number, degrees): 45 to 1440, default 360
-- `blur` (number, degrees): 0 to 720, default 216
+- `strength` (number, degrees): 360 to 1440, default 360
+- `blur` (number, degrees): 0 to 1440, default 720
 - `pulse` (number, percent): 0 to 60, default 8
 - `pivot_x` (number, percent): 0 to 100, default 50
 - `pivot_y` (number, percent): 0 to 100, default 50
@@ -189,15 +191,15 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 
 Whip · cost unmeasured · available
 
-It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to -2 canvas widths across and 0 heights down, brings the incoming one from 2 canvas widths across and -0 heights down to rest, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.4 s.
+It shows both pictures at once with no mix, takes the outgoing picture to -1 canvas widths across and 0 heights down, brings the incoming one from 1 canvas widths across and -0 heights down to rest, blurs the motion with a 720 degree shutter and shows nothing past the edge. A new one lasts 0.4 s.
 
-**Use:** A very fast pan with motion blur, as if the camera whipped away, and the next shot arrives out of it: sports, travel and upbeat edits, matched to a beat. The direction chooses the way it whips.
+**Use:** A fast camera swing: the two pictures sit side by side and the frame pans across them with a long blur, so half of one and half of the other are on screen at the middle. Energy for sport, tech, ads and beat cuts.
 
 **Found by:** whip, whip pan, swish, swish pan, fast, quick, speed, pan, left, right, tilt, up, down, سريع, خاطف, سحب سريع, سرعة, بان, يسار, يمين, تيلت, أعلى, أسفل, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
 **Add:** `transition.add kind=40 (on a cut between two layers)`
 
-- `strength` (number, times): 0.5 to 6, default 2
-- `blur` (number, degrees): 0 to 720, default 216
+- `strength` (number, times): 1 to 2.5, default 1.15
+- `blur` (number, degrees): 0 to 1440, default 720
 - `direction` (choice, none): 0 to 3, default 0 [Left, Right, Up, Down]
 
