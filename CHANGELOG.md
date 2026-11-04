@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.6 (2026-11-04)
+
+- A craft page, `storyboard-master-prompt.md`: how to write the master prompt of a storyboard, the one text the Storyboard sheet of Refusion splits into images (the general description, then `Image 1:`, `Image 2:` … each with its complete prompt and, optionally, a `Title:` and a `Narration:` line), what the general description holds, how to write an image that stands alone, how many images a script needs, and a checklist. Setting and generating a storyboard stay the person's.
+
 ## 0.2.5 (2026-11-03)
 
 - Nine tools of the creator program (`earn.state`, `earn.sync`, `earn.apply`, `earn.withdraw`, `earn.coupon`, `earn.payout_method`, `earn.payout`, `earn.payout_cancel`, `earn.convert`) are listed under "Not offered to an agent": applying to the program and what it pays are the person's own business with their account. An assistant that asks for one is refused.
