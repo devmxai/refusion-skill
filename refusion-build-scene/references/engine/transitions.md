@@ -4,7 +4,7 @@ Written by `rpro skill-reference --write` from catalog version 3, fingerprint `a
 
 A transition lies on a cut between two layers: `transition.add` with the kind's code. The settings are besides the length and the curve every transition has.
 
-11 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
+18 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
 
 | Item | Id | Category |
 |---|---|---|
@@ -19,6 +19,13 @@ A transition lies on a cut between two layers: `transition.add` with the kind's 
 | Zoom Out | `transition:31` | Zoom |
 | Spin | `transition:32` | Spin |
 | Whip | `transition:40` | Whip |
+| Wipe | `transition:100` | Wipe |
+| Clock Wipe | `transition:102` | Wipe |
+| Blinds | `transition:103` | Wipe |
+| Iris | `transition:101` | Shape |
+| Shape Reveal | `transition:104` | Shape |
+| Luma Fade | `transition:105` | Dissolve |
+| Noise Dissolve | `transition:106` | Dissolve |
 
 ## Dissolve
 
@@ -209,4 +216,129 @@ It shows both pictures at once with no mix, takes the outgoing picture to -1 can
 - `strength` (number, times): 1 to 2.5, default 1.15
 - `blur` (number, degrees): 0 to 1440, default 720
 - `direction` (choice, none): 0 to 3, default 0 [Left, Right, Up, Down]
+
+## Wipe
+
+### Wipe — `transition:100`
+
+Wipe · cost unmeasured · available
+
+Changes from the first picture to the second along an edge that crosses the canvas in a straight line; the change's edge is soft, and may glow. A new one lasts 0.7 s.
+
+**Use:** The next shot slides over the first behind a straight edge that crosses the frame: a clean, graphic change for lists, before and after, and steps of a story. A soft edge feels calm; a hard one with a glow feels energetic.
+
+**Found by:** wipe, linear wipe, slide in, reveal, edge, line, مسح, مسح خطي, كشف, حافة, خط, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=100 (on a cut between two layers)`
+
+- `angle` (number, degrees): 0 to 345, default 0
+- `softness` (number, percent): 0 to 50, default 6
+- `glow` (number, percent): 0 to 100, default 0
+
+### Clock Wipe — `transition:102`
+
+Wipe · cost unmeasured · available
+
+Changes from the first picture to the second along a hand that turns once round a point, as a clock's does; the change's edge is soft, and may glow. A new one lasts 0.7 s.
+
+**Use:** A hand sweeps once round a point like a clock's, the next shot behind it: for time passing, countdowns and steps. Start it where the eye rests; a hard edge reads as a timer, a soft one as a gentle turn.
+
+**Found by:** clock, clock wipe, radial wipe, sweep, timer, countdown, hand, ساعة, مسح دائري, عقرب, عد تنازلي, مؤقت, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=102 (on a cut between two layers)`
+
+- `start` (number, degrees): 0 to 345, default 270
+- `direction` (choice, none): 0 to 1, default 0 [Clockwise, Counter-clockwise]
+- `centre_x` (number, percent): 0 to 100, default 50
+- `centre_y` (number, percent): 0 to 100, default 50
+- `softness` (number, percent): 0 to 50, default 3
+- `glow` (number, percent): 0 to 100, default 0
+
+### Blinds — `transition:103`
+
+Wipe · cost unmeasured · available
+
+Changes from the first picture to the second along bands across the canvas, each crossed at once; the change's edge is soft, and may glow. A new one lasts 0.7 s.
+
+**Use:** The next shot shows through bands that each open at once, like blinds: a rhythmic, graphic change for upbeat edits and product shots. More bands feel faster.
+
+**Found by:** blinds, venetian blinds, stripes, bands, slats, shutters, ستائر, شرائح, خطوط, أشرطة, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=103 (on a cut between two layers)`
+
+- `angle` (number, degrees): 0 to 345, default 0
+- `count` (number, none): 2 to 40, default 8
+- `softness` (number, percent): 0 to 50, default 4
+- `glow` (number, percent): 0 to 100, default 0
+
+## Shape
+
+### Iris — `transition:101`
+
+Shape · cost unmeasured · available
+
+Changes from the first picture to the second along a circle that opens from a point, or closes to it; the change's edge is soft, and may glow. A new one lasts 0.7 s.
+
+**Use:** A circle opens from a point to show the next shot, or closes to it on the first: the classic iris of silent films, playful today. Put the centre on what the next shot is about.
+
+**Found by:** iris, circle, circle wipe, open, close, spotlight, round, قزحية, دائرة, فتح, إغلاق, بقعة ضوء, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=101 (on a cut between two layers)`
+
+- `direction` (choice, none): 0 to 1, default 0 [Open, Close]
+- `centre_x` (number, percent): 0 to 100, default 50
+- `centre_y` (number, percent): 0 to 100, default 50
+- `softness` (number, percent): 0 to 50, default 4
+- `glow` (number, percent): 0 to 100, default 0
+
+### Shape Reveal — `transition:104`
+
+Shape · cost unmeasured · available
+
+Changes from the first picture to the second along a shape that grows from a point until it covers the canvas; the change's edge is soft, and may glow. A new one lasts 0.7 s.
+
+**Use:** A shape grows from a point until the next shot fills the frame: a star for a celebration, a diamond or a hexagon for a brand, a square for a clean tech look. Turn it and place it on the subject.
+
+**Found by:** shape, shape reveal, star, diamond, square, hexagon, circle, mask, grow, شكل, كشف, نجمة, معين, مربع, سداسي, دائرة, قناع, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=104 (on a cut between two layers)`
+
+- `shape` (choice, none): 0 to 4, default 3 [Circle, Square, Diamond, Star, Hexagon]
+- `rotation` (number, degrees): -180 to 180, default 0
+- `centre_x` (number, percent): 0 to 100, default 50
+- `centre_y` (number, percent): 0 to 100, default 50
+- `softness` (number, percent): 0 to 50, default 3
+- `glow` (number, percent): 0 to 100, default 0
+
+## Dissolve
+
+### Luma Fade — `transition:105`
+
+Dissolve · cost unmeasured · available
+
+Changes from the first picture to the second along the brightness of a picture, its brightest places first; the change's edge is soft, and may glow. A new one lasts 1 s.
+
+**Use:** The next shot appears first in its brightest places and last in its shadows (or the other way): a dreamy, organic dissolve that follows the light of the picture. Best on shots with clear light and dark.
+
+**Found by:** luma, luma fade, luminance, brightness, light, dreamy, fade, إضاءة, سطوع, ضوء, تلاشي, حالم, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=105 (on a cut between two layers)`
+
+- `order` (choice, none): 0 to 1, default 0 [Bright first, Dark first]
+- `softness` (number, percent): 0 to 50, default 20
+
+### Noise Dissolve — `transition:106`
+
+Dissolve · cost unmeasured · available
+
+Changes from the first picture to the second along grains of noise, each changing at its own moment; the change's edge is soft, and may glow. A new one lasts 0.9 s.
+
+**Use:** The next shot appears in grains scattered over the frame, each at its own moment: a textured, slightly gritty dissolve for music, fashion and retro edits. Larger grains read as blotches, small ones as dust.
+
+**Found by:** noise, noise dissolve, grain, pixel dissolve, particles, organic, texture, حبيبات, ضجيج, تلاشي, ملمس, جزيئات, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=106 (on a cut between two layers)`
+
+- `grain` (number, percent): 0.5 to 20, default 3
+- `softness` (number, percent): 0 to 50, default 10
 

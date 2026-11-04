@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.12 (2026-11-05)
+
+- Seven new transitions that change from one shot to the next along a matte, a field the change's edge crosses: Wipe (a straight edge, `angle`), Clock Wipe (a hand that turns once round a point, `start`, `direction`, centre), Blinds (bands each crossed at once, `angle`, `count`), Iris (a circle that opens from a point or closes to it, `direction`, centre), Shape Reveal (a circle, square, diamond, star or hexagon that grows from a point, `shape`, `rotation`, centre), Luma Fade (the next shot appears in its brightest places first, or its darkest, `order`) and Noise Dissolve (grains, `grain`). Each has `softness` (the edge, a percentage of its travel); the wipes, the iris and the shape have `glow` (light along the edge). Add them by their name (`pro.refusion.wipe`, `pro.refusion.clock`, `pro.refusion.blinds`, `pro.refusion.iris`, `pro.refusion.shape_reveal`, `pro.refusion.luma_fade`, `pro.refusion.noise_dissolve`) or their code (100 to 106) with `transition.add`; both pictures are shown across the whole transition, as in a dissolve.
+
 ## 0.2.11 (2026-11-05)
 
 - Spin (version 1.3.0): the turn (`strength`) takes any angle from 45 to 1440 degrees again, not only whole turns; the next picture always ends upright, whatever the turn. A project saved with an earlier version opens with its turn as it was saved.
