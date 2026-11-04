@@ -174,13 +174,13 @@ Spin · cost unmeasured · available
 
 It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to turned 180 degrees clockwise and scaled by 1.08, brings the incoming one from turned -180 degrees clockwise and scaled by 1.08 to rest, blurs the motion with a 720 degree shutter and mirrors the picture past its edge. A new one lasts 0.7 s.
 
-**Use:** The picture turns a full circle in one continuous camera move, blurred like a real shutter, and the next one is already in the turn: the two pictures dissolve in its middle and share one blur. Playful and loud, for fun, kids and social content; too much for serious pieces. The change runs along a fan that opens from one side, so the blur drags the first shot's colours into the next across it.
+**Use:** The picture turns in one continuous camera move (a full circle unless the turn is set to another angle, from 45 degrees), blurred like a real shutter, and the next one is already in the turn: the two pictures dissolve in its middle and share one blur. Playful and loud, for fun, kids and social content; too much for serious pieces. The change runs along a fan that opens from one side, so the blur drags the first shot's colours into the next across it.
 
 **Found by:** spin, rotate, turn, twirl, whirl, swirl, circle, دوران, تدوير, لف, دوامة, دائرة, يدور, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
 **Add:** `transition.add kind=32 (on a cut between two layers)`
 
-- `strength` (number, degrees): 360 to 1440, default 360
+- `strength` (number, degrees): 45 to 1440, default 360
 - `blur` (number, degrees): 0 to 1440, default 720
 - `pulse` (number, percent): 0 to 60, default 8
 - `pivot_x` (number, percent): 0 to 100, default 50

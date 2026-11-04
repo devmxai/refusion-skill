@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.11 (2026-11-05)
+
+- Spin (version 1.3.0): the turn (`strength`) takes any angle from 45 to 1440 degrees again, not only whole turns; the next picture always ends upright, whatever the turn. A project saved with an earlier version opens with its turn as it was saved.
+
 ## 0.2.10 (2026-11-04)
 
 - Spin, Zoom In and Zoom Out (version 1.2.0) change from one shot to the next across a seam, not a mix everywhere at once: the next shot takes the place of the first inside an edge that runs across the canvas while the blur is drawn, so the streaks of the blur carry the first shot's colours across the edge into the next one's, as a smear dragged over two pictures laid side by side does. Zoom In opens an iris from the pivot out (`seam` `iris_out`), Zoom Out closes one from the edges in (`iris_in`), Spin opens a fan from the ray at `seam_angle` degrees (`fan`); the setting `seam` takes `none` for the mix they had before, and `softness` (a percentage of the seam's travel) sets how soft its edge is. A seam is put across the blur's streaks, never along them: an iris for a zoom, a fan for a turn. A project saved by an older version opens with `seam` `none` and draws as it was saved. A transition may now have up to twelve settings.
