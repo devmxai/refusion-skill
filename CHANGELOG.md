@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.10 (2026-11-04)
+
+- Spin, Zoom In and Zoom Out (version 1.2.0) change from one shot to the next across a seam, not a mix everywhere at once: the next shot takes the place of the first inside an edge that runs across the canvas while the blur is drawn, so the streaks of the blur carry the first shot's colours across the edge into the next one's, as a smear dragged over two pictures laid side by side does. Zoom In opens an iris from the pivot out (`seam` `iris_out`), Zoom Out closes one from the edges in (`iris_in`), Spin opens a fan from the ray at `seam_angle` degrees (`fan`); the setting `seam` takes `none` for the mix they had before, and `softness` (a percentage of the seam's travel) sets how soft its edge is. A seam is put across the blur's streaks, never along them: an iris for a zoom, a fan for a turn. A project saved by an older version opens with `seam` `none` and draws as it was saved. A transition may now have up to twelve settings.
+
 ## 0.2.9 (2026-11-04)
 
 - `project.set_color_mix` sets the space the keys of colours are mixed in across the project: 0 the display numbers as they are (what projects before this release mixed in; they keep it), 1 linear light, 2 OKLab (the default of every project made now). Between two keys of a colour the colour passes through that space: in display blue and yellow, green and magenta, red and cyan meet at a dark grey; in OKLab they keep a colour. No key changes. It covers the keys of colour properties only (not the colours between the stops of one gradient, nor the dissolve of a transition). `scene.brief` (version 2) now says which space the project is in (`color_mix`: `display`, `linear` or `perceptual`): read it before judging how a colour moves; switching it is the person's choice.

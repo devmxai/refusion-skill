@@ -1,6 +1,6 @@
 # Transitions
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `344a382efff24b47`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `a48e96e23e5dc5b6`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 A transition lies on a cut between two layers: `transition.add` with the kind's code. The settings are besides the length and the curve every transition has.
 
@@ -128,7 +128,7 @@ Zoom · cost unmeasured · available
 
 It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to scaled by 4, brings the incoming one from scaled by 4 to rest, blurs the motion with a 900 degree shutter and mirrors the picture past its edge. A new one lasts 0.5 s.
 
-**Use:** The picture rushes toward you and the next shot comes out of the blur: an energetic jump, a reveal of a detail, a hype cut. The cut is hidden at the fastest instant.
+**Use:** The picture rushes toward you and the next shot comes out of the blur: an energetic jump, a reveal of a detail, a hype cut. The cut is hidden at the fastest instant. The next shot opens from the middle outward, an edge the blur's streaks cross, so the first shot's colours are dragged into it.
 
 **Found by:** zoom, zoom in, rush, punch in, closer, scale up, dolly, تكبير, تقريب, اقتراب, زووم, اندفاع, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
@@ -141,6 +141,8 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 - `edge` (choice, none): 0 to 2, default 0 [Mirror, Clamp, Transparent]
 - `flash` (number, none): 0 to 2, default 0.4
 - `split` (number, percent): 0 to 5, default 0.8
+- `seam` (choice, none): 0 to 2, default 0 [Iris out, Iris in, Mix]
+- `softness` (number, percent): 2 to 40, default 12
 
 ### Zoom Out — `transition:31`
 
@@ -148,7 +150,7 @@ Zoom · cost unmeasured · available
 
 It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to scaled by 0.25, brings the incoming one from scaled by 0.25 to rest, blurs the motion with a 900 degree shutter and mirrors the picture past its edge. A new one lasts 0.5 s.
 
-**Use:** The picture pulls away and the next shot comes out of the blur: a reveal of the whole after a detail, a change of scale. The cut is hidden at the fastest instant.
+**Use:** The picture pulls away and the next shot comes out of the blur: a reveal of the whole after a detail, a change of scale. The cut is hidden at the fastest instant. The next shot closes in from the edges toward the middle, an edge the blur's streaks cross, so the first shot's colours are dragged into it.
 
 **Found by:** zoom, zoom out, pull back, away, scale down, reveal, wide, تصغير, ابتعاد, زووم, كشف, سحب للخلف, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
@@ -161,6 +163,8 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 - `edge` (choice, none): 0 to 2, default 0 [Mirror, Clamp, Transparent]
 - `flash` (number, none): 0 to 2, default 0.4
 - `split` (number, percent): 0 to 5, default 0.8
+- `seam` (choice, none): 0 to 2, default 1 [Iris out, Iris in, Mix]
+- `softness` (number, percent): 2 to 40, default 12
 
 ## Spin
 
@@ -170,7 +174,7 @@ Spin · cost unmeasured · available
 
 It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to turned 180 degrees clockwise and scaled by 1.08, brings the incoming one from turned -180 degrees clockwise and scaled by 1.08 to rest, blurs the motion with a 720 degree shutter and mirrors the picture past its edge. A new one lasts 0.7 s.
 
-**Use:** The picture turns a full circle in one continuous camera move, blurred like a real shutter, and the next one is already in the turn: the two pictures dissolve in its middle and share one blur. Playful and loud, for fun, kids and social content; too much for serious pieces.
+**Use:** The picture turns a full circle in one continuous camera move, blurred like a real shutter, and the next one is already in the turn: the two pictures dissolve in its middle and share one blur. Playful and loud, for fun, kids and social content; too much for serious pieces. The change runs along a fan that opens from one side, so the blur drags the first shot's colours into the next across it.
 
 **Found by:** spin, rotate, turn, twirl, whirl, swirl, circle, دوران, تدوير, لف, دوامة, دائرة, يدور, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
@@ -184,6 +188,9 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 - `edge` (choice, none): 0 to 3, default 0 [Mirror, Clamp, Cover, Transparent]
 - `direction` (choice, none): 0 to 1, default 0 [Clockwise, Counter-clockwise]
 - `flash` (number, none): 0 to 2, default 0.4
+- `seam` (choice, none): 0 to 1, default 0 [Fan, Mix]
+- `softness` (number, percent): 2 to 40, default 12
+- `seam_angle` (number, degrees): 0 to 360, default 270
 
 ## Whip
 

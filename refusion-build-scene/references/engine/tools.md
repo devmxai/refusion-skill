@@ -1,6 +1,6 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `344a382efff24b47`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `a48e96e23e5dc5b6`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 179 tools in 30 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
