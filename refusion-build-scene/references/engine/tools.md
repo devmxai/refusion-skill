@@ -1,6 +1,6 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `4af08c00a3ffec14`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `c8ba2c0c91e5a78a`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 176 tools in 29 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
@@ -315,8 +315,8 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `transition.remove` | edit | layer | Take a transition away (by id, else the one out of the target layer). |  |
 | `transition.set_timing` | edit | layer | Change a transition's length (in frames, at most 5 seconds; one saved longer keeps its length until it is changed), where it lies about its cut, or its… |  |
 | `transition.set_kind` | edit | layer | Make a transition another kind of the catalog. |  |
-| `transition.set_param` | edit | layer | Change one setting of a transition's kind (its strength, the motion blur, a spin's pulse, pivot, edges and direction, a dip's hold): by the key… |  |
-| `transition.catalog` | read | - | Read the transition kinds the engine offers: each one's name, label, category and the version of its algorithm. |  |
+| `transition.set_param` | edit | layer | Change one setting of a transition's kind (its turn, zoom or distance, the motion blur, a spin's pulse, pivot, edges and direction, a push's, slide's or whip's… |  |
+| `transition.catalog` | read | - | Read the transitions the engine draws, as parallel lists: each one's definition (`ids`, `versions`: what a project saves it by, `id@version`; `fingerprints`… |  |
 
 ## transport
 

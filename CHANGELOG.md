@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.7 (2026-11-04)
+
+- Transitions are read from the engine's definitions: the transition reference lists each kind's settings in their real units (a turn in degrees, a zoom in times, a blur in degrees of shutter), its speed-ramp curves, and, for Spin, Zoom In and Zoom Out, a `flash` setting (the light at the change, in stops). Spin, Zoom and Whip change from one picture to the next across a short dissolve, so each layer needs a few frames beyond the cut; `transition.add` overlaps the layers by what is missing unless the policy says otherwise.
+
 ## 0.2.6 (2026-11-04)
 
 - A craft page, `storyboard-master-prompt.md`: how to write the master prompt of a storyboard, the one text the Storyboard sheet of Refusion splits into images (the general description, then `Image 1:`, `Image 2:` … each with its complete prompt and, optionally, a `Title:` and a `Narration:` line), what the general description holds, how to write an image that stands alone, how many images a script needs, and a checklist. Setting and generating a storyboard stay the person's.

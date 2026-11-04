@@ -39,10 +39,10 @@ One per scene ([choreography.md](choreography.md)). Text: `text.motion:3:11` Wav
 |---|---|
 | It continues | `transition:1` Cross Dissolve · `transition:2` Film Dissolve (no dip of brightness) |
 | A breath, then a new part | `transition:4` Dip to Black · `transition:5` Dip to White |
-| The same surface moves | `transition:10` to `transition:13` Push · `transition:20` to `transition:23` Slide |
+| The same surface moves | `transition:10` Push · `transition:20` Slide (each with its `direction`: left, right, up, down) |
 | Closer, or further | `transition:30` Zoom In · `transition:31` Zoom Out |
 | A turn | `transition:32` Spin |
-| Energy, a camera swing | `transition:40` to `transition:43` Whip |
+| Energy, a camera swing | `transition:40` Whip (with its `direction`) |
 | A flash of light | `transition:3` Additive Dissolve |
 | Wake up | A hard cut: no transition, on a beat |
 

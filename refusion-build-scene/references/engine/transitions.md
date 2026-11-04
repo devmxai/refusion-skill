@@ -1,10 +1,10 @@
 # Transitions
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `4af08c00a3ffec14`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `c8ba2c0c91e5a78a`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 A transition lies on a cut between two layers: `transition.add` with the kind's code. The settings are besides the length and the curve every transition has.
 
-20 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
+11 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
 
 | Item | Id | Category |
 |---|---|---|
@@ -13,21 +13,12 @@ A transition lies on a cut between two layers: `transition.add` with the kind's 
 | Additive Dissolve | `transition:3` | Dissolve |
 | Dip to Black | `transition:4` | Dissolve |
 | Dip to White | `transition:5` | Dissolve |
-| Push Left | `transition:10` | Push |
-| Push Right | `transition:11` | Push |
-| Push Up | `transition:12` | Push |
-| Push Down | `transition:13` | Push |
-| Slide Left | `transition:20` | Slide |
-| Slide Right | `transition:21` | Slide |
-| Slide Up | `transition:22` | Slide |
-| Slide Down | `transition:23` | Slide |
+| Push | `transition:10` | Push |
+| Slide | `transition:20` | Slide |
 | Zoom In | `transition:30` | Zoom |
 | Zoom Out | `transition:31` | Zoom |
 | Spin | `transition:32` | Spin |
-| Whip Left | `transition:40` | Whip |
-| Whip Right | `transition:41` | Whip |
-| Whip Up | `transition:42` | Whip |
-| Whip Down | `transition:43` | Whip |
+| Whip | `transition:40` | Whip |
 
 ## Dissolve
 
@@ -97,119 +88,37 @@ Takes the first picture to a colour (red 1, green 1, blue 1) and the colour to t
 
 ## Push
 
-### Push Left — `transition:10`
+### Push — `transition:10`
 
 Push · cost unmeasured · available
 
-It shows both pictures at once with no mix, moves -1 canvas widths across and 0 heights down for each unit of motion, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
+It shows both pictures at once with no mix, takes the outgoing picture to -1 canvas widths across and 0 heights down, brings the incoming one from 1 canvas widths across and -0 heights down to rest, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.5 s.
 
-**Use:** The whole frame is pushed off by the next picture: a clean sports, news or slideshow change for items in order, steps and places. Left, right, up and down choose the direction of travel.
+**Use:** The whole frame is pushed off by the next picture: a clean sports, news or slideshow change for items in order, steps and places. The direction chooses the way it travels.
 
-**Found by:** push, push left, shove, shift, scroll, pan, next, left, دفع, دفع لليسار, يسار, إزاحة, تمرير, التالي, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+**Found by:** push, push left, shove, shift, scroll, pan, next, left, push right, right, push up, up, push down, down, دفع, دفع لليسار, يسار, إزاحة, تمرير, التالي, دفع لليمين, يمين, دفع للأعلى, أعلى, دفع للأسفل, أسفل, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
 **Add:** `transition.add kind=10 (on a cut between two layers)`
 
-- `blur` (number, percent): 0 to 100, default 25
-
-### Push Right — `transition:11`
-
-Push · cost unmeasured · available
-
-It shows both pictures at once with no mix, moves 1 canvas widths across and 0 heights down for each unit of motion, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
-
-**Use:** The whole frame is pushed off by the next picture: a clean sports, news or slideshow change for items in order, steps and places. Left, right, up and down choose the direction of travel.
-
-**Found by:** push, push right, shove, shift, scroll, pan, next, right, دفع, دفع لليمين, يمين, إزاحة, تمرير, التالي, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
-
-**Add:** `transition.add kind=11 (on a cut between two layers)`
-
-- `blur` (number, percent): 0 to 100, default 25
-
-### Push Up — `transition:12`
-
-Push · cost unmeasured · available
-
-It shows both pictures at once with no mix, moves 0 canvas widths across and -1 heights down for each unit of motion, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
-
-**Use:** The whole frame is pushed off by the next picture: a clean sports, news or slideshow change for items in order, steps and places. Left, right, up and down choose the direction of travel.
-
-**Found by:** push, push up, shove, shift, scroll, pan, next, up, دفع, دفع للأعلى, أعلى, إزاحة, تمرير, التالي, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
-
-**Add:** `transition.add kind=12 (on a cut between two layers)`
-
-- `blur` (number, percent): 0 to 100, default 25
-
-### Push Down — `transition:13`
-
-Push · cost unmeasured · available
-
-It shows both pictures at once with no mix, moves 0 canvas widths across and 1 heights down for each unit of motion, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
-
-**Use:** The whole frame is pushed off by the next picture: a clean sports, news or slideshow change for items in order, steps and places. Left, right, up and down choose the direction of travel.
-
-**Found by:** push, push down, shove, shift, scroll, pan, next, down, دفع, دفع للأسفل, أسفل, إزاحة, تمرير, التالي, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
-
-**Add:** `transition.add kind=13 (on a cut between two layers)`
-
-- `blur` (number, percent): 0 to 100, default 25
+- `blur` (number, degrees): 0 to 720, default 180
+- `direction` (choice, none): 0 to 3, default 0 [Left, Right, Up, Down]
 
 ## Slide
 
-### Slide Left — `transition:20`
+### Slide — `transition:20`
 
 Slide · cost unmeasured · available
 
-It shows both pictures at once with no mix, moves -1 canvas widths across and 0 heights down for each unit of motion, leaves the outgoing picture still, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
+It shows both pictures at once with no mix, leaves the outgoing picture still, brings the incoming one from 1 canvas widths across and -0 heights down to rest, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.5 s.
 
-**Use:** One picture slides over the other, which stays still: lighter than a push, for card-like reveals and layered stories. Left, right, up and down choose the direction of travel.
+**Use:** One picture slides over the other, which stays still: lighter than a push, for card-like reveals and layered stories. The direction chooses the way it travels.
 
-**Found by:** slide, slide left, swipe, cover, reveal, glide, card, left, انزلاق, انزلاق لليسار, سحب, تغطية, كشف, يسار, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+**Found by:** slide, slide left, swipe, cover, reveal, glide, card, left, slide right, right, slide up, up, slide down, down, انزلاق, انزلاق لليسار, سحب, تغطية, كشف, يسار, انزلاق لليمين, يمين, انزلاق للأعلى, أعلى, انزلاق للأسفل, أسفل, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
 **Add:** `transition.add kind=20 (on a cut between two layers)`
 
-- `blur` (number, percent): 0 to 100, default 25
-
-### Slide Right — `transition:21`
-
-Slide · cost unmeasured · available
-
-It shows both pictures at once with no mix, moves 1 canvas widths across and 0 heights down for each unit of motion, leaves the outgoing picture still, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
-
-**Use:** One picture slides over the other, which stays still: lighter than a push, for card-like reveals and layered stories. Left, right, up and down choose the direction of travel.
-
-**Found by:** slide, slide right, swipe, cover, reveal, glide, card, right, انزلاق, انزلاق لليمين, سحب, تغطية, كشف, يمين, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
-
-**Add:** `transition.add kind=21 (on a cut between two layers)`
-
-- `blur` (number, percent): 0 to 100, default 25
-
-### Slide Up — `transition:22`
-
-Slide · cost unmeasured · available
-
-It shows both pictures at once with no mix, moves 0 canvas widths across and -1 heights down for each unit of motion, leaves the outgoing picture still, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
-
-**Use:** One picture slides over the other, which stays still: lighter than a push, for card-like reveals and layered stories. Left, right, up and down choose the direction of travel.
-
-**Found by:** slide, slide up, swipe, cover, reveal, glide, card, up, انزلاق, انزلاق للأعلى, سحب, تغطية, كشف, أعلى, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
-
-**Add:** `transition.add kind=22 (on a cut between two layers)`
-
-- `blur` (number, percent): 0 to 100, default 25
-
-### Slide Down — `transition:23`
-
-Slide · cost unmeasured · available
-
-It shows both pictures at once with no mix, moves 0 canvas widths across and 1 heights down for each unit of motion, leaves the outgoing picture still, blurs the motion with a 180 degree shutter and shows nothing past the edge. A new one lasts 0.67 s.
-
-**Use:** One picture slides over the other, which stays still: lighter than a push, for card-like reveals and layered stories. Left, right, up and down choose the direction of travel.
-
-**Found by:** slide, slide down, swipe, cover, reveal, glide, card, down, انزلاق, انزلاق للأسفل, سحب, تغطية, كشف, أسفل, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
-
-**Add:** `transition.add kind=23 (on a cut between two layers)`
-
-- `blur` (number, percent): 0 to 100, default 25
+- `blur` (number, degrees): 0 to 720, default 180
+- `direction` (choice, none): 0 to 3, default 0 [Left, Right, Up, Down]
 
 ## Zoom
 
@@ -217,7 +126,7 @@ It shows both pictures at once with no mix, moves 0 canvas widths across and 1 h
 
 Zoom · cost unmeasured · available
 
-It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, scales by 4 for each unit, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.8 s.
+It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to scaled by 4, brings the incoming one from scaled by 0.25 to rest, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.5 s.
 
 **Use:** The picture rushes toward you and the next shot comes out of the blur: an energetic jump, a reveal of a detail, a hype cut. The cut is hidden at the fastest instant.
 
@@ -225,17 +134,18 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 
 **Add:** `transition.add kind=30 (on a cut between two layers)`
 
-- `strength` (number, percent): 0 to 100, default 50
-- `blur` (number, percent): 0 to 100, default 30
+- `strength` (number, times): 1.25 to 16, default 4
+- `blur` (number, degrees): 0 to 720, default 216
 - `pivot_x` (number, percent): 0 to 100, default 50
 - `pivot_y` (number, percent): 0 to 100, default 50
 - `edge` (choice, none): 0 to 2, default 0 [Mirror, Clamp, Transparent]
+- `flash` (number, none): 0 to 2, default 0.4
 
 ### Zoom Out — `transition:31`
 
 Zoom · cost unmeasured · available
 
-It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, scales by 0.25 for each unit, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.8 s.
+It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to scaled by 0.25, brings the incoming one from scaled by 4 to rest, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.5 s.
 
 **Use:** The picture pulls away and the next shot comes out of the blur: a reveal of the whole after a detail, a change of scale. The cut is hidden at the fastest instant.
 
@@ -243,11 +153,12 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 
 **Add:** `transition.add kind=31 (on a cut between two layers)`
 
-- `strength` (number, percent): 0 to 100, default 50
-- `blur` (number, percent): 0 to 100, default 30
+- `strength` (number, times): 1.25 to 16, default 4
+- `blur` (number, degrees): 0 to 720, default 216
 - `pivot_x` (number, percent): 0 to 100, default 50
 - `pivot_y` (number, percent): 0 to 100, default 50
 - `edge` (choice, none): 0 to 2, default 0 [Mirror, Clamp, Transparent]
+- `flash` (number, none): 0 to 2, default 0.4
 
 ## Spin
 
@@ -255,7 +166,7 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 
 Spin · cost unmeasured · available
 
-It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, turns 360 degrees clockwise for each unit, is 8% larger at the cut than at the ends, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 1.5 s.
+It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to turned 360 degrees clockwise and scaled by 1.08, brings the incoming one from turned -360 degrees clockwise and scaled by 1.08 to rest, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.7 s.
 
 **Use:** The picture turns a full circle with blur and the next one appears in the turn: playful and loud, for fun, kids and social content; too much for serious pieces.
 
@@ -263,73 +174,30 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 
 **Add:** `transition.add kind=32 (on a cut between two layers)`
 
-- `strength` (number, percent): 0 to 100, default 50
-- `blur` (number, percent): 0 to 100, default 30
+- `strength` (number, degrees): 45 to 1440, default 360
+- `blur` (number, degrees): 0 to 720, default 216
 - `pulse` (number, percent): 0 to 60, default 8
 - `pivot_x` (number, percent): 0 to 100, default 50
 - `pivot_y` (number, percent): 0 to 100, default 50
 - `edge` (choice, none): 0 to 3, default 0 [Mirror, Clamp, Cover, Transparent]
 - `direction` (choice, none): 0 to 1, default 0 [Clockwise, Counter-clockwise]
+- `flash` (number, none): 0 to 2, default 0.4
 
 ## Whip
 
-### Whip Left — `transition:40`
+### Whip — `transition:40`
 
 Whip · cost unmeasured · available
 
-It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, moves -2 canvas widths across and 0 heights down for each unit of motion, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.4 s.
+It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, takes the outgoing picture to -2 canvas widths across and 0 heights down, brings the incoming one from 2 canvas widths across and -0 heights down to rest, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.4 s.
 
-**Use:** A very fast pan with motion blur, as if the camera whipped sideways, and the next shot arrives out of it: sports, travel and upbeat edits, matched to a beat. Left, right, up and down choose the direction.
+**Use:** A very fast pan with motion blur, as if the camera whipped away, and the next shot arrives out of it: sports, travel and upbeat edits, matched to a beat. The direction chooses the way it whips.
 
-**Found by:** whip, whip pan, swish, swish pan, fast, quick, speed, pan, left, سريع, خاطف, سحب سريع, سرعة, بان, يسار, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+**Found by:** whip, whip pan, swish, swish pan, fast, quick, speed, pan, left, right, tilt, up, down, سريع, خاطف, سحب سريع, سرعة, بان, يسار, يمين, تيلت, أعلى, أسفل, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
 **Add:** `transition.add kind=40 (on a cut between two layers)`
 
-- `strength` (number, percent): 0 to 100, default 50
-- `blur` (number, percent): 0 to 100, default 30
-
-### Whip Right — `transition:41`
-
-Whip · cost unmeasured · available
-
-It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, moves 2 canvas widths across and 0 heights down for each unit of motion, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.4 s.
-
-**Use:** A very fast pan with motion blur, as if the camera whipped sideways, and the next shot arrives out of it: sports, travel and upbeat edits, matched to a beat. Left, right, up and down choose the direction.
-
-**Found by:** whip, whip pan, swish, swish pan, fast, quick, speed, pan, right, سريع, خاطف, سحب سريع, سرعة, بان, يمين, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
-
-**Add:** `transition.add kind=41 (on a cut between two layers)`
-
-- `strength` (number, percent): 0 to 100, default 50
-- `blur` (number, percent): 0 to 100, default 30
-
-### Whip Up — `transition:42`
-
-Whip · cost unmeasured · available
-
-It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, moves 0 canvas widths across and -2 heights down for each unit of motion, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.4 s.
-
-**Use:** A very fast pan with motion blur, as if the camera whipped upward, and the next shot arrives out of it: sports, travel and upbeat edits, matched to a beat. Left, right, up and down choose the direction.
-
-**Found by:** whip, whip pan, swish, swish pan, fast, quick, speed, tilt, up, سريع, خاطف, سحب سريع, سرعة, تيلت, أعلى, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
-
-**Add:** `transition.add kind=42 (on a cut between two layers)`
-
-- `strength` (number, percent): 0 to 100, default 50
-- `blur` (number, percent): 0 to 100, default 30
-
-### Whip Down — `transition:43`
-
-Whip · cost unmeasured · available
-
-It shows one picture at a time, cut at the fastest instant of the motion, which the blur hides, moves 0 canvas widths across and 2 heights down for each unit of motion, blurs the motion with a 216 degree shutter and mirrors the picture past its edge. A new one lasts 0.4 s.
-
-**Use:** A very fast pan with motion blur, as if the camera whipped downward, and the next shot arrives out of it: sports, travel and upbeat edits, matched to a beat. Left, right, up and down choose the direction.
-
-**Found by:** whip, whip pan, swish, swish pan, fast, quick, speed, tilt, down, سريع, خاطف, سحب سريع, سرعة, تيلت, أسفل, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
-
-**Add:** `transition.add kind=43 (on a cut between two layers)`
-
-- `strength` (number, percent): 0 to 100, default 50
-- `blur` (number, percent): 0 to 100, default 30
+- `strength` (number, times): 0.5 to 6, default 2
+- `blur` (number, degrees): 0 to 720, default 216
+- `direction` (choice, none): 0 to 3, default 0 [Left, Right, Up, Down]
 
