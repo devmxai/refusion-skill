@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.17 (2026-11-05)
+
+- `transition.catalog` (version 4) names, for each transition, the add-on that brings it when it is installed on this device (`addons`: its id; empty for a built-in and for one only a project carries): what `addon.export` and `addon.remove` take. On the phone, the person shares their transitions as `.rtx` files and opens one sent to them with Refusion, which shows its name, maker, licence and an engine-drawn preview before it is installed.
+
 ## 0.2.16 (2026-11-05)
 
 - Add-ons: a transition of one's own travels as a file. A transition is installed, listed, removed and kept as an add-on, a package (`.rtx`) whose first entry is its manifest (`addon.json`: kind, id, version, name, maker, licence; the format is `schema/addon.schema.json`) and whose entry is its definition (`transition.json`). `addon.inspect` reads a package (a file's handle, or the manifest's and the definition's texts for an agent) and checks it whole, as an install would, and keeps it under a number (`staged`); `addon.install` installs it, with the owner's yes for an agent; `addon.list`, `addon.remove` (the owner's alone) and `addon.export` (to a file the owner chose). They replace `transition.def.validate`, `transition.def.install`, `transition.def.list` and `transition.def.remove`, which are gone; `transition.def.export`, `transition.def.preview` and `transition.def.save_from` stay (`save_from` now keeps the add-on it makes, `staged`, for `addon.install`). A licence is required. Refused with the reason: a truncated or altered file, a project's package, a kind this app does not read, a manifest and a definition that name different versions, the same version with other content, an older version, more than an add-on may hold. `designing-a-transition.md` takes the new path. Authors: `rpro addon pack <folder>` makes the file and checks it.
