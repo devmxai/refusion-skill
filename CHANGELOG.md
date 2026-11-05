@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.18 (2026-11-05)
+
+- A transition add-on may draw its wipe from a picture its package brings: the node `matte.image` (`image`, the picture's place in the package, which `addon.json` lists under `assets` with an `image/` type; `invert`) reveals the incoming shot where the picture is dark first and where it is bright last; `transition.def.schema` describes it. Such a transition is made by an author's package (`rpro addon pack`); a definition given as text alone cannot bring a picture, and `addon.inspect` refuses it with the reason. A project that uses one carries its pictures, so it opens with them on a device that has not installed the add-on.
+
 ## 0.2.17 (2026-11-05)
 
 - `transition.catalog` (version 4) names, for each transition, the add-on that brings it when it is installed on this device (`addons`: its id; empty for a built-in and for one only a project carries): what `addon.export` and `addon.remove` take. On the phone, the person shares their transitions as `.rtx` files and opens one sent to them with Refusion, which shows its name, maker, licence and an engine-drawn preview before it is installed.
