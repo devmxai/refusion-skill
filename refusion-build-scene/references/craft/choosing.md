@@ -43,10 +43,16 @@ One per scene ([choreography.md](choreography.md)). Text: `text.motion:3:11` Wav
 | Closer, or further | `transition:30` Zoom In · `transition:31` Zoom Out |
 | A turn | `transition:32` Spin |
 | Energy, a camera swing | `transition:40` Whip (with its `direction`) |
-| A flash of light | `transition:3` Additive Dissolve |
+| A flash of light | `transition:107` Flash · `transition:109` Light Leak (warm) · `transition:3` Additive Dissolve |
+| Before and after, steps, a list | `transition:100` Wipe · `transition:103` Blinds · `transition:102` Clock Wipe |
+| Into a detail, out of one | `transition:101` Iris · `transition:104` Shape Reveal (centre it on the subject) |
+| Dreamy, soft | `transition:108` Blur Dissolve · `transition:105` Luma Fade · `transition:111` Swirl · `transition:112` Ripple |
+| Digital, broken | `transition:110` Glitch · `transition:106` Noise Dissolve |
 | Wake up | A hard cut: no transition, on a beat |
 
 A transition is added to a cut between two layers with `transition.add`. See [choreography.md](choreography.md) for matching it to the motion that leaves.
+
+None fits and the owner wants one of their own: [designing-a-transition.md](designing-a-transition.md).
 
 ## Looking at a picture or a layer
 

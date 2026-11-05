@@ -57,6 +57,7 @@ Writing the master prompt of a storyboard needs none of this: read [storyboard-m
 | Order, the beat, shapes and transitions together | [choreography.md](references/craft/choreography.md) |
 | Directions to start from | [styles.md](references/craft/styles.md) |
 | Which item for which job | [choosing.md](references/craft/choosing.md) |
+| A transition of the owner's own: the craft and the tools | [designing-a-transition.md](references/craft/designing-a-transition.md) |
 | The defaults to catch in yourself | [lazy-defaults.md](references/craft/lazy-defaults.md) |
 | Looking, measuring, judging, mending | [checks.md](references/craft/checks.md) |
 | Arabic and mixed-direction text | [arabic-and-text.md](references/craft/arabic-and-text.md) |
