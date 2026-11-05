@@ -4,7 +4,7 @@ Written by `rpro skill-reference --write` from catalog version 3, fingerprint `a
 
 A transition lies on a cut between two layers: `transition.add` with the kind's code. The settings are besides the length and the curve every transition has.
 
-18 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
+24 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
 
 | Item | Id | Category |
 |---|---|---|
@@ -26,6 +26,12 @@ A transition lies on a cut between two layers: `transition.add` with the kind's 
 | Shape Reveal | `transition:104` | Shape |
 | Luma Fade | `transition:105` | Dissolve |
 | Noise Dissolve | `transition:106` | Dissolve |
+| Blur Dissolve | `transition:108` | Dissolve |
+| Flash | `transition:107` | Light |
+| Light Leak | `transition:109` | Light |
+| Glitch | `transition:110` | Glitch |
+| Swirl | `transition:111` | Warp |
+| Ripple | `transition:112` | Warp |
 
 ## Dissolve
 
@@ -341,4 +347,100 @@ Changes from the first picture to the second along grains of noise, each changin
 
 - `grain` (number, percent): 0.5 to 20, default 3
 - `softness` (number, percent): 0 to 50, default 10
+
+### Blur Dissolve — `transition:108`
+
+Dissolve · cost unmeasured · available
+
+Mixes the two pictures in light-linear values, so there is no dip of brightness in the middle, blurring them as they cross. A new one lasts 0.9 s.
+
+**Use:** The two shots blur as they dissolve and sharpen again: a soft, dreamy change, as if the lens lost focus and found it on the next shot. For calm edits, memories and changes of place.
+
+**Found by:** blur, blur dissolve, defocus, soft, dreamy, out of focus, fade, ضبابي, تشويش, تلاشي, حالم, ناعم, خارج التركيز, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=108 (on a cut between two layers)`
+
+- `blur` (number, percent): 0.5 to 10, default 3
+
+## Light
+
+### Flash — `transition:107`
+
+Light · cost unmeasured · available
+
+Mixes the two pictures in light-linear values, so there is no dip of brightness in the middle, with a burst of light at the change. A new one lasts 0.6 s.
+
+**Use:** A burst of light hides the change: the first shot brightens to white, the next one comes out of it. For beats, reveals and energetic cuts; a short one reads as a camera flash.
+
+**Found by:** flash, white flash, camera flash, burst, bright, light, pop, وميض, فلاش, ومضة, ضوء, سطوع, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=107 (on a cut between two layers)`
+
+- `strength` (number, none): 0 to 6, default 3
+- `cut` (number, percent): 2 to 100, default 20
+
+### Light Leak — `transition:109`
+
+Light · cost unmeasured · available
+
+Dissolves the two pictures in light under a warm light that sweeps across the frame. A new one lasts 1.2 s.
+
+**Use:** A warm light sweeps across the frame as the shots dissolve, like light leaking into a film camera: nostalgic, warm and cinematic. For travel, weddings, music and memories.
+
+**Found by:** light leak, leak, film, warm, glow, flare, vintage, analog, تسرب ضوئي, ضوء, فيلم, دافئ, توهج, كلاسيكي, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=109 (on a cut between two layers)`
+
+- `strength` (number, percent): 0 to 300, default 180
+
+## Glitch
+
+### Glitch — `transition:110`
+
+Glitch · cost unmeasured · available
+
+Tears the change into slices that jump sideways, the colours read apart, then settles on the second picture. A new one lasts 0.5 s.
+
+**Use:** The picture tears into slices that jump sideways with its colours read apart, then lands on the next shot: a digital, edgy change for tech, gaming, music and fast edits. Keep it short.
+
+**Found by:** glitch, digital, rgb split, error, tear, distortion, cyber, tech, تشويش رقمي, خلل, رقمي, تمزق, تقني, سايبر, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=110 (on a cut between two layers)`
+
+- `strength` (number, percent): 0 to 100, default 70
+- `split` (number, percent): 0 to 100, default 50
+
+## Warp
+
+### Swirl — `transition:111`
+
+Warp · cost unmeasured · available
+
+Twists or ripples both pictures about a point as they dissolve into each other, then lets them settle. A new one lasts 0.9 s.
+
+**Use:** Both shots twist into a whirl about a point as they dissolve, then untwist: a playful, magical change for fun, kids and dream sequences.
+
+**Found by:** swirl, twirl, twist, vortex, spiral, whirlpool, warp, دوامة, التواء, لف, حلزون, إعصار, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=111 (on a cut between two layers)`
+
+- `twist` (number, degrees): 0 to 1440, default 540
+- `centre_x` (number, percent): 0 to 100, default 50
+- `centre_y` (number, percent): 0 to 100, default 50
+
+### Ripple — `transition:112`
+
+Warp · cost unmeasured · available
+
+Twists or ripples both pictures about a point as they dissolve into each other, then lets them settle. A new one lasts 1 s.
+
+**Use:** Rings run out from a point like a stone dropped in water, carrying the change: a soft, liquid transition for dreams, flashbacks and calm reveals.
+
+**Found by:** ripple, wave, water, liquid, rings, dream, warp, تموج, موجة, ماء, سائل, حلقات, حلم, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
+
+**Add:** `transition.add kind=112 (on a cut between two layers)`
+
+- `height` (number, percent): 0 to 10, default 2.5
+- `centre_x` (number, percent): 0 to 100, default 50
+- `centre_y` (number, percent): 0 to 100, default 50
 

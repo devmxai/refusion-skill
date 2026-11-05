@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.13 (2026-11-05)
+
+- Six more transitions: Flash (a burst of light hides the change: `strength` in stops, `cut` the share of the time the change takes about the middle), Blur Dissolve (the shots blur as they cross, `blur` a percentage of the frame's longer side), Light Leak (a warm light sweeps across as they dissolve, `strength`), Glitch (slices that jump sideways with the colours read apart, `strength`, `split`), Swirl (both shots twist about a point, `twist` in degrees, centre) and Ripple (rings run out from a point, `height`, centre). Add them by name (`pro.refusion.flash`, `pro.refusion.blur_dissolve`, `pro.refusion.light_leak`, `pro.refusion.glitch`, `pro.refusion.swirl`, `pro.refusion.ripple`) or code (107 to 112); both shots are shown across the whole transition, and each look is strongest in its middle and gone at its ends.
+
 ## 0.2.12 (2026-11-05)
 
 - Seven new transitions that change from one shot to the next along a matte, a field the change's edge crosses: Wipe (a straight edge, `angle`), Clock Wipe (a hand that turns once round a point, `start`, `direction`, centre), Blinds (bands each crossed at once, `angle`, `count`), Iris (a circle that opens from a point or closes to it, `direction`, centre), Shape Reveal (a circle, square, diamond, star or hexagon that grows from a point, `shape`, `rotation`, centre), Luma Fade (the next shot appears in its brightest places first, or its darkest, `order`) and Noise Dissolve (grains, `grain`). Each has `softness` (the edge, a percentage of its travel); the wipes, the iris and the shape have `glow` (light along the edge). Add them by their name (`pro.refusion.wipe`, `pro.refusion.clock`, `pro.refusion.blinds`, `pro.refusion.iris`, `pro.refusion.shape_reveal`, `pro.refusion.luma_fade`, `pro.refusion.noise_dissolve`) or their code (100 to 106) with `transition.add`; both pictures are shown across the whole transition, as in a dissolve.

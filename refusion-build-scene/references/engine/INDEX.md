@@ -8,7 +8,7 @@ Written by `rpro skill-reference --write` from catalog version 3, fingerprint `a
 | tools withheld from an agent, each with its reason | 132 |
 | library: effect | 24 |
 | library: look | 6 |
-| library: transition | 18 |
+| library: transition | 24 |
 | library: layer_motion | 29 |
 | library: text_motion | 38 |
 | recipes that were run and looked at | 30 |
