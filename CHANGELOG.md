@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.19 (2026-11-05)
+
+- The add-ons of the person's platform account (`addon.account_state`, `addon.account_sync`, `addon.account_upload`, `addon.account_delete`): an add-on installed on a device where someone is signed in is kept in their account (private, never shown to anyone), and every device signed in to it brings it and installs it by the same checks as a file; one removed from the account is taken off the devices; one the person takes off a device is not brought back there until they install it. The quota is the platform's. These are the person's own tools, not an agent's: an add-on an agent installs with the owner's yes is kept in the account by the engine itself.
+
 ## 0.2.18 (2026-11-05)
 
 - A transition add-on may draw its wipe from a picture its package brings: the node `matte.image` (`image`, the picture's place in the package, which `addon.json` lists under `assets` with an `image/` type; `invert`) reveals the incoming shot where the picture is dark first and where it is bright last; `transition.def.schema` describes it. Such a transition is made by an author's package (`rpro addon pack`); a definition given as text alone cannot bring a picture, and `addon.inspect` refuses it with the reason. A project that uses one carries its pictures, so it opens with them on a device that has not installed the add-on.
