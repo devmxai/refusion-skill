@@ -1,11 +1,11 @@
 # The engine, as it is now
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `1c178ed8f51c35c1`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `6fc1c6f528b44440`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 | what | how many |
 |---|---|
 | tools offered to an agent | 185 (direct 25 · read 41 · edit 119; direct tools that also go in a batch: 1) |
-| tools withheld from an agent, each with its reason | 133 |
+| tools withheld from an agent, each with its reason | 134 |
 | library: effect | 24 |
 | library: look | 6 |
 | library: transition | 24 |
@@ -61,3 +61,6 @@ You are offered these and no page above names them; `tool:<name>` gives each one
 - `library.look`: Look at what the library's cards show: the engine draws a page of its effects (`kind` 1), its transitions (`kind` 2), its kinds of background (`kind` 3) or its…
 - `morph.to`: Make a shape layer (the target: a layer's id, or `"selection"`) morph to another outline: a kind with its numbers, or another shape layer's own geometry.
 - `morph.analyze`: Read what `morph.to` would make of a shape layer (the target: a layer's id, or `"selection"`) and an outline: a kind with its numbers, or another shape layer's…
+- `addon.inspect`: Read an add-on's package and check it as `addon.install` would, installing nothing: the package whole (its framing, every entry's hash, its end record: a…
+- `addon.install`: Install the add-on `addon.inspect` kept: its package is kept in the app's folder of add-ons as it was read, and what it brings is offered with the built-ins…
+- `addon.list`: Read the add-ons held that are not built in, as parallel lists: each one's kind, id, version, fingerprint, name, maker, licence, where it is from (`installed`…

@@ -1,14 +1,22 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `1c178ed8f51c35c1`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `6fc1c6f528b44440`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
-185 tools in 30 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
+185 tools in 31 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
 ## Families
 
-`anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `text` (11) · `transition` (12) · `transport` (1) · `vector` (2)
+`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `text` (11) · `transition` (9) · `transport` (1) · `vector` (2)
 
 Notes: **asks** means the owner is asked on the device for each call of a remote agent; **not in a scene** means the engine refuses the tool on a layer inside a scene.
+
+## addon
+
+| Tool | Use | Target | What it does | Notes |
+|---|---|---|---|---|
+| `addon.inspect` | read | - | Read an add-on's package and check it as `addon.install` would, installing nothing: the package whole (its framing, every entry's hash, its end record: a… |  |
+| `addon.install` | call | - | Install the add-on `addon.inspect` kept: its package is kept in the app's folder of add-ons as it was read, and what it brings is offered with the built-ins… | asks |
+| `addon.list` | read | - | Read the add-ons held that are not built in, as parallel lists: each one's kind, id, version, fingerprint, name, maker, licence, where it is from (`installed`… |  |
 
 ## anim
 
@@ -325,9 +333,6 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `transition.set_kind` | edit | layer | Make a transition another kind of the catalog. |  |
 | `transition.set_param` | edit | layer | Change one setting of a transition's kind (its turn, zoom or distance, the motion blur, a spin's pulse, pivot, edges and direction, a push's, slide's or whip's… |  |
 | `transition.catalog` | read | - | Read the transitions the engine draws, as parallel lists: each one's definition (`ids`, `versions`: what a project saves it by, `id@version`; `fingerprints`… |  |
-| `transition.def.validate` | read | - | Read a transition definition's text and check it as `transition.def.install` would, writing nothing: that it reads (the format, each formula, the settings it… |  |
-| `transition.def.install` | call | - | Install a transition definition on this device, from its text: it is kept in the app's folder of transitions, offered with the built-ins from now on… | asks |
-| `transition.def.list` | read | - | Read the transition definitions held that are not built in, as parallel lists: each one's id, version, fingerprint, code and name, where it is from… |  |
 | `transition.def.export` | read | - | Read the text of a transition definition held, a built-in's too, exactly as the engine read it, with its id, version, fingerprint and where it is from: to keep… |  |
 | `transition.def.preview` | call | - | Draw a transition definition, installed or not, on a transition of the open project, as `render.strip` draws: a lossless PNG sheet of `frames` frames from the… |  |
 | `transition.def.save_from` | read | - | Make a definition of one's own from a transition of the open project as it is set: the definition it is drawn by, with the transition's settings as its… |  |
@@ -345,7 +350,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `vector.set_item` | edit | layer | Change the fill colour, the stroke colour or the stroke width of one part of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner… |  |
 | `vector.items` | read | layer | Read the parts of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in drawing order: each part's name, how… |  |
 
-## Not offered to an agent (133)
+## Not offered to an agent (134)
 
 Do not look for another way to do these: they are the owner's, and each has the engine's reason.
 
@@ -391,7 +396,8 @@ Do not look for another way to do these: they are the owner's, and each has the 
 - `timeline.strip`: a view of the owner's interface (what the canvas shows or catches, the timeline's compact view, a slider's ruler, the bottom bar), not part of the project: the…
 - `timeline.step_frame`: the transport and the playhead are the owner's: playing, pausing and seeking move what the owner is looking at, and are not an edit that a history step can…
 - `timeline.seek_to_key`: the transport and the playhead are the owner's: playing, pausing and seeking move what the owner is looking at, and are not an edit that a history step can…
-- `transition.def.remove`: takes a transition the owner installed off the device, for every project: the owner's library, emptied by the owner (an agent installs, with the owner's yes…
+- `addon.remove`: takes an add-on the owner installed off the device, for every project: the owner's library, emptied by the owner (an agent installs, with the owner's yes for…
+- `addon.export`: writes an add-on's file at a place the owner chose with the system's picker: an agent has no picker and never names a path (it reads an add-on's definition…
 - `library.create`: opens, creates, saves, renames, copies or closes a project of the owner's library, or sets how the session saves: the owner's own work, not an edit of the…
 - `library.open`: opens, creates, saves, renames, copies or closes a project of the owner's library, or sets how the session saves: the owner's own work, not an edit of the…
 - `library.list`: reads or stops a copy of media or a package of the owner's library, which an agent working on the open project has no part in
