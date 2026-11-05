@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.15 (2026-11-05)
+
+- The end of a scrub lands on the picture the scrub last showed: `transport.scrub_end`, and a pan that ends (`timeline.pan_end`, at once or after its carry), put the playhead on the first frame of the instant that picture shows, when it is within 0.4 s of where the scrub was (farther, where it was), and that instant is then shown at its exact frame, so the picture does not jump back or forward at the release. The transport reports where it landed. To be at an exact time, use `transport.seek`.
+
 ## 0.2.14 (2026-11-05)
 
 - Transitions of one's own. `transition.def.export` reads the text of any transition the engine holds (a built-in's too); `transition.def.validate` checks a definition's text as an install would and says how it stands (`standing`: `new`, `newer` than the one held, or the `same`), writing nothing; `transition.def.list` reads the definitions that are not built in, where each is from (`installed`, `embedded` in a project, `placeholder`) and how many transitions of the open project use it. `transition.def.install` asks the owner on the device for each definition (its name and version) and installs it on their yes; `transition.def.remove` is the owner's alone. An installed definition is added by its id like a built-in, and a project that uses one carries its text, so it opens with it on a device that does not have it. A project naming a definition this engine has nowhere opens with that transition shown as a cut (the cut's own frame half of each picture) and saves it back as it was read; one saved by the version held with other content is drawn by the one held and said so. Refused with a reason: an id in `pro.refusion.`, a definition that declares a code, a former code or name or replaces something, a version older than the one held, the same version with other content (raise the version), more than 256 KiB.
