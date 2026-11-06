@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.21 (2026-11-06)
+
+- Camera shots, as a dialogue between two is filmed: `camera.frame_layer` (version 4) takes `shot` `cut` or `move` (and `length` for a move; the engine's one second when absent): the camera is cut at `time` into a piece of its own on its row, named `Shot: ` and the layer's name, that holds the layer framed (`cut`) or moves to it from the shot before, easing in and out in a straight line (`move`); nothing before `time` changes. `margin` is now optional (the engine's 0.08). Refused for a shot: `layer_not_showing`, `camera_moves_after`, `camera_driven`, `move_past_camera_end`, `unknown_shot`, `length_without_move`. The report says the shot, the piece, the camera it was cut from, where it begins and where the framing is reached.
+- A Sequence's length is made of what is seen or heard: a camera, a null or an adjustment layer that runs past the last clip no longer makes it (or its file) longer. `layer.insert_camera` (version 3) without a `duration` runs to the end of the composition (`start` 0 for the whole project), and a camera that ends at the Sequence's end follows it as clips come and go.
+- A layer inserted past the end makes the Sequence as long as it at once; a project opened gets its length before anything reads it.
+- The canvas is the stage: a camera's frame is kept on its composition's canvas (never larger than it, held inside, zoomed in the least when turned), in the picture, the file and the editor alike; values past it are drawn kept on it and `transport.snapshot`'s `camera_notice` says `camera_on_stage`; the canvas gestures and `camera.frame_layer` (version 5) write values that keep it there. `layer.insert_camera` is version 4. A world larger than the screen is built as a scene with a larger canvas and its own camera.
+
 ## 0.2.20 (2026-11-06)
 
 - `layer.insert_source` (version 3): with no `track` and no `new_row`, a video or a photo goes on the main track (the bottom row, which has no gaps) at the cut nearest `start` (before the clip `start` falls in when it is in its first half, after it otherwise; after the last clip), and the clips from there make way; put in at `edit_head`, it takes the edit head to its end, so pictures put in one after another follow in order. A sound keeps its rows. To lay a picture over another (an overlay), name `track` or `new_row`.
