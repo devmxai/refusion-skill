@@ -1,10 +1,10 @@
 # The engine, as it is now
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `f03794740415ddf2`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `c0dbf61d1eee1c8b`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 | what | how many |
 |---|---|
-| tools offered to an agent | 185 (direct 25 · read 41 · edit 119; direct tools that also go in a batch: 1) |
+| tools offered to an agent | 186 (direct 25 · read 41 · edit 120; direct tools that also go in a batch: 1) |
 | tools withheld from an agent, each with its reason | 139 |
 | library: effect | 24 |
 | library: look | 6 |
@@ -57,6 +57,7 @@ Start with `workflow`.
 ## Tools no page describes
 You are offered these and no page above names them; `tool:<name>` gives each one's parameters.
 - `project.set_color_mix`: Set the space the keys of colours are mixed in across the project (`mix` 0 display, 1 linear, 2 OKLab).
+- `timeline.close_gap`: Close a gap of the main track (the bottom row, which holds the project's pictures one after another), in one history step with the revision checked: the clips…
 - `library.catalog`: Read what the engine offers to add, as one list whatever the kind: the effects, the looks (ready-made chains of effects), the transitions, and the ready-made…
 - `library.look`: Look at what the library's cards show: the engine draws a page of its effects (`kind` 1), its transitions (`kind` 2), its kinds of background (`kind` 3) or its…
 - `morph.to`: Make a shape layer (the target: a layer's id, or `"selection"`) morph to another outline: a kind with its numbers, or another shape layer's own geometry.

@@ -1,12 +1,12 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `f03794740415ddf2`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `c0dbf61d1eee1c8b`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
-185 tools in 31 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
+186 tools in 32 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
 ## Families
 
-`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `text` (11) · `transition` (9) · `transport` (1) · `vector` (2)
+`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
 
 Notes: **asks** means the owner is asked on the device for each call of a remote agent; **not in a scene** means the engine refuses the tool on a layer inside a scene.
 
@@ -322,6 +322,12 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `text.motion_paste` | edit | layer | Give a text layer or a caption layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) the animation the engine's motion… |  |
 | `text.paste` | edit | layer | Replace the bytes `start..end` of a text layer's content (the target: a layer's id, or `"selection"` for the layer the owner has selected) with what the… |  |
 | `text.paragraph_set` | edit | layer | Change what the paragraphs a range of a text layer's content touches (the target: a layer's id, or `"selection"` for the layer the owner has selected) set of… |  |
+
+## timeline
+
+| Tool | Use | Target | What it does | Notes |
+|---|---|---|---|---|
+| `timeline.close_gap` | edit | - | Close a gap of the main track (the bottom row, which holds the project's pictures one after another), in one history step with the revision checked: the clips… |  |
 
 ## transition
 

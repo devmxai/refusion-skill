@@ -25,7 +25,7 @@ Reading time check: the headline has three words, so about two seconds of hold f
 1. `media.library_snapshot` first: the logo and any picture the designer brought.
 2. One batch for the ground (a background layer with colour points), set the beat grid on the scene (`beat.set`), read the times (`beat.grid`).
 3. One batch for the headline, one for the English line, one for the badge as a unit (a scene), with `session.validate` before each `session.batch`.
-4. Place the logo on beat 8 with `layer.insert_source` and `layer.move`.
+4. Place the logo on beat 8 with `layer.insert_source` on a row of its own above the others (`new_row: 0`: a picture put in with no row goes on the main track, in line with the clips there) and `layer.move`.
 
 ## The check
 

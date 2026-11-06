@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.20 (2026-11-06)
+
+- `layer.insert_source` (version 3): with no `track` and no `new_row`, a video or a photo goes on the main track (the bottom row, which has no gaps) at the cut nearest `start` (before the clip `start` falls in when it is in its first half, after it otherwise; after the last clip), and the clips from there make way; put in at `edit_head`, it takes the edit head to its end, so pictures put in one after another follow in order. A sound keeps its rows. To lay a picture over another (an overlay), name `track` or `new_row`.
+- `timeline.close_gap` (new): closes a gap of the main track at a time (exact, or `edit_head`): the clips after it come back by its length, nothing else moves. A clip lifted from the main track to a row above now stays a layer at its time and nothing else moves (the main track keeps a gap there, which the layer covers); deleting or shortening a clip of the main track still closes up behind it.
+- A Sequence's length is now the end of its last layer, on any row: it grows and it shrinks with every edit and is taken when a project opens, so the play stops on the last frame and an export has no black at its end. A scene (Composition) keeps the length it was given.
+- Playback: a video covered by an opaque full-frame picture above it is not decoded (and not marked as waiting on the timeline); the decoders of the layers that take the display are made ready before they do, the changes of coverage included.
+
 ## 0.2.19 (2026-11-05)
 
 - The add-ons of the person's platform account (`addon.account_state`, `addon.account_sync`, `addon.account_upload`, `addon.account_delete`): an add-on installed on a device where someone is signed in is kept in their account (private, never shown to anyone), and every device signed in to it brings it and installs it by the same checks as a file; one removed from the account is taken off the devices; one the person takes off a device is not brought back there until they install it. The quota is the platform's. These are the person's own tools, not an agent's: an add-on an agent installs with the owner's yes is kept in the account by the engine itself.
