@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.25 (2026-11-07)
+
+- A video in a shape: `slot.fill` takes a video of the library too. It plays inside the shape from its start at the project's pace, with no sound, takes the shape's motion, effects and framing, and holds its last frame past its own end. `fill.kind` says `Video` (9). What `slot.set` says a shape takes (`accepts`) is what is wanted and refuses nothing; `slot_video_later` and `slot_refuses_image` are gone, and a video that declares no length is refused with `source_has_no_length`. Projects with a video in a shape are schema 69.
+
 ## 0.2.24 (2026-11-07)
 
 - Replace on any shape: `slot.fill` takes any shape as it is (an imported picture is one), with nothing marked first. The first Replace makes it an asset named after its layer, keeps what it showed for `slot.clear`, and lays the picture to cover it. `slot.set`'s name, description and must-fill are optional: they say which shapes are the assets, and lock nothing. `not_replaceable` is for a layer that is not a shape.
