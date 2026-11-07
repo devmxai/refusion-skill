@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.28 (2026-11-07)
+
+- A recipe as a file: a `.rfr` the person taps in WhatsApp, Files or their downloads opens with Refusion and is built as a pasted one is, with the same refusals. Whatever the file's name, the engine says what an opened file is from its first bytes (`file.identify`, the person's own tool, never an agent's): an add-on, a project's package or a recipe (a JSON object, or one in a chat's code fence); anything else is refused with its reason. `templates-and-recipes.md` says to give a recipe as a file where the chat can.
+
 ## 0.2.27 (2026-11-07)
 
 - The app speaks Arabic too: `app.language` (a tool of the person at the interface, never an agent's) chooses English or Arabic, kept on the device; before any choice the engine follows the device's language. `account.snapshot` says the language in use (`language`) and the languages offered (`language_ids`, `language_names`). The engine's words for people follow it (the account's doors and settings, the home bar, the plans' names, features, grants and dates); a refusal's code and a tool's text stay English, so nothing an agent reads changes.
