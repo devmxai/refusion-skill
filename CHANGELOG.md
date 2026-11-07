@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.27 (2026-11-07)
+
+- The app speaks Arabic too: `app.language` (a tool of the person at the interface, never an agent's) chooses English or Arabic, kept on the device; before any choice the engine follows the device's language. `account.snapshot` says the language in use (`language`) and the languages offered (`language_ids`, `language_names`). The engine's words for people follow it (the account's doors and settings, the home bar, the plans' names, features, grants and dates); a refusal's code and a tool's text stay English, so nothing an agent reads changes.
+
 ## 0.2.26 (2026-11-07)
 
 - Recipes: a scene or a template written as text by an agent with no connection (a chat), which the person pastes into Refusion (Paste recipe on the home screen) or a connected agent builds with `recipe.run`. A recipe is `{"refusion_recipe": 1, name, width, height, fps, duration, items}` whose items are `session.batch` items (`target_from` names an earlier item's layer); it edits the project's content only (no file, source, font, fetch or deletion), is checked whole first, and a refused one leaves nothing, with words that name the item, its tool and the engine's reason. New craft page `templates-and-recipes.md` (assets are named shapes; recipes), and `examples/coffee-ad.rfr`, which the build checks with `rpro recipe check`.
