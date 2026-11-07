@@ -1,6 +1,6 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `720c3a5026495c14`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `51595b0460d9c8fa`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 191 tools in 33 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
@@ -311,8 +311,8 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
-| `slot.set` | edit | layer | Make a shape layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) a media slot, or change what its slot says, in one history… |  |
-| `slot.fill` | edit | layer | Fill a media slot (the target: a layer's id, or `"selection"` for the layer the owner has selected) with a picture of the project's media library, in one… |  |
+| `slot.set` | edit | layer | Say what a shape (the target: a layer's id, or `"selection"` for the layer the owner has selected) is for in a template, or change what it says, in one history… |  |
+| `slot.fill` | edit | layer | Replace what a shape (the target: a layer's id, or `"selection"` for the layer the owner has selected) shows with a picture of the project's media library… |  |
 | `slot.clear` | edit | layer | Empty a media slot (the target: a layer's id, or `"selection"` for the layer the owner has selected), in one history step with the revision checked: its… |  |
 | `slot.remove` | edit | layer | Take the slot role off a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in one history step with the revision… |  |
 | `slot.list` | read | - | Read every media slot of the project (its own composition and its scenes), so an agent or a person knows what a template asks for and what is still empty, as… |  |
