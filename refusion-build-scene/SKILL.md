@@ -1,6 +1,6 @@
 ---
 name: refusion-build-scene
-description: Design, build and polish video in the Refusion project that is open on the owner's device, with the engine's own tools: titles, captions, ads and motion graphics, backgrounds, shapes and text (Arabic included), entrances and exits, timing and rhythm, effects, looks and transitions. Use when asked to make, change, animate, time, review or fix anything in an open Refusion project, or to choose between its effects, presets and transitions. Also use it to write the master prompt of a Refusion storyboard (many pictures in one style from one text), which needs no connection to the engine. It carries the craft (direction, timing, choreography, checks) and an index of the engine kept current by the build; the engine's guide teaches each tool.
+description: Design, build and polish video in the Refusion project that is open on the owner's device, with the engine's own tools: titles, captions, ads and motion graphics, backgrounds, shapes and text (Arabic included), entrances and exits, timing and rhythm, effects, looks and transitions. Use when asked to make, change, animate, time, review or fix anything in an open Refusion project, or to choose between its effects, presets and transitions. Also use it to write the master prompt of a Refusion storyboard (many pictures in one style from one text), or a recipe that builds a whole scene or template the person pastes into Refusion; neither needs a connection to the engine. It carries the craft (direction, timing, choreography, checks) and an index of the engine kept current by the build; the engine's guide teaches each tool.
 ---
 
 # Refusion: design first, then build, then look
@@ -9,7 +9,7 @@ You change the project that is open in Refusion on the owner's device, through t
 
 ## Reach the engine
 
-Writing the master prompt of a storyboard needs none of this: read [storyboard-master-prompt.md](references/craft/storyboard-master-prompt.md) and hand the person the text; they paste it into Refusion's Storyboard sheet.
+Writing the master prompt of a storyboard needs none of this: read [storyboard-master-prompt.md](references/craft/storyboard-master-prompt.md) and hand the person the text; they paste it into Refusion's Storyboard sheet. Building a whole scene with no connection (a chat) needs none of it either: write a recipe, as [templates-and-recipes.md](references/craft/templates-and-recipes.md) says, and the person pastes it into Refusion (Paste recipe).
 
 - Through the Refusion connector (a remote assistant), or on the owner's machine through `rpro-mcp` or the CLI (`rpro call <tool> key=value`). The tools are the same. Names here are dotted (`scene.brief`); a client may show them with underscores or a prefix.
 - The owner must have **Agent link** (the connector) or **Clients** (local) turned on and a project open. If a tool says the bridge is unavailable, or a call answers `device_offline`, ask them to turn it on; do not look for another way in.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.26 (2026-11-07)
+
+- Recipes: a scene or a template written as text by an agent with no connection (a chat), which the person pastes into Refusion (Paste recipe on the home screen) or a connected agent builds with `recipe.run`. A recipe is `{"refusion_recipe": 1, name, width, height, fps, duration, items}` whose items are `session.batch` items (`target_from` names an earlier item's layer); it edits the project's content only (no file, source, font, fetch or deletion), is checked whole first, and a refused one leaves nothing, with words that name the item, its tool and the engine's reason. New craft page `templates-and-recipes.md` (assets are named shapes; recipes), and `examples/coffee-ad.rfr`, which the build checks with `rpro recipe check`.
+
 ## 0.2.25 (2026-11-07)
 
 - A video in a shape: `slot.fill` takes a video of the library too. It plays inside the shape from its start at the project's pace, with no sound, takes the shape's motion, effects and framing, and holds its last frame past its own end. `fill.kind` says `Video` (9). What `slot.set` says a shape takes (`accepts`) is what is wanted and refuses nothing; `slot_video_later` and `slot_refuses_image` are gone, and a video that declares no length is refused with `source_has_no_length`. Projects with a video in a shape are schema 69.

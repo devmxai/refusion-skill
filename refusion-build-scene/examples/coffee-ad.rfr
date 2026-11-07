@@ -1,0 +1,724 @@
+{
+ "refusion_recipe": 1,
+ "name": "Coffee ad",
+ "width": 1080,
+ "height": 1920,
+ "fps": {
+  "num": 30,
+  "den": 1
+ },
+ "duration": {
+  "num": 8,
+  "den": 1
+ },
+ "items": [
+  {
+   "tool": "layer.insert_background",
+   "args": {
+    "fill_kind": 1
+   }
+  },
+  {
+   "tool": "layer.insert_shape",
+   "args": {
+    "start": {
+     "num": 0,
+     "den": 1
+    },
+    "duration": {
+     "num": 8,
+     "den": 1
+    },
+    "shape_kind": 0
+   }
+  },
+  {
+   "tool": "layer.insert_shape",
+   "args": {
+    "start": {
+     "num": 1,
+     "den": 2
+    },
+    "duration": {
+     "num": 15,
+     "den": 2
+    },
+    "shape_kind": 1
+   }
+  },
+  {
+   "tool": "layer.insert_shape",
+   "args": {
+    "start": {
+     "num": 3,
+     "den": 2
+    },
+    "duration": {
+     "num": 13,
+     "den": 2
+    },
+    "shape_kind": 0
+   }
+  },
+  {
+   "tool": "layer.insert_text",
+   "args": {
+    "start": {
+     "num": 1,
+     "den": 1
+    },
+    "duration": {
+     "num": 7,
+     "den": 1
+    }
+   }
+  },
+  {
+   "tool": "layer.insert_text",
+   "args": {
+    "start": {
+     "num": 5,
+     "den": 2
+    },
+    "duration": {
+     "num": 11,
+     "den": 2
+    }
+   }
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "shape.size",
+    "value": {
+     "vec2": [
+      600,
+      740
+     ]
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "shape.corner_tl",
+    "value": {
+     "scalar": 70
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "shape.corner_tr",
+    "value": {
+     "scalar": 70
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "shape.corner_br",
+    "value": {
+     "scalar": 70
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "shape.corner_bl",
+    "value": {
+     "scalar": 70
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "color.color",
+    "value": {
+     "color": [
+      0.78,
+      0.52,
+      0.32,
+      1.0
+     ]
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.position",
+    "time": {
+     "num": 0,
+     "den": 1
+    },
+    "value": {
+     "vec2": [
+      540,
+      1300
+     ]
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.position",
+    "time": {
+     "num": 6,
+     "den": 5
+    },
+    "value": {
+     "vec2": [
+      540,
+      760
+     ]
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.scale",
+    "time": {
+     "num": 0,
+     "den": 1
+    },
+    "value": {
+     "vec2": [
+      70,
+      70
+     ]
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.scale",
+    "time": {
+     "num": 6,
+     "den": 5
+    },
+    "value": {
+     "vec2": [
+      100,
+      100
+     ]
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.rotation",
+    "time": {
+     "num": 0,
+     "den": 1
+    },
+    "value": {
+     "scalar": -12
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.rotation",
+    "time": {
+     "num": 6,
+     "den": 5
+    },
+    "value": {
+     "scalar": 0
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.rotation",
+    "time": {
+     "num": 4,
+     "den": 1
+    },
+    "value": {
+     "scalar": 4
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.rotation",
+    "time": {
+     "num": 79,
+     "den": 10
+    },
+    "value": {
+     "scalar": -3
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.opacity",
+    "time": {
+     "num": 0,
+     "den": 1
+    },
+    "value": {
+     "scalar": 0
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.opacity",
+    "time": {
+     "num": 1,
+     "den": 2
+    },
+    "value": {
+     "scalar": 100
+    }
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "effect.add",
+   "args": {
+    "kind": "stylize.drop_shadow"
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "shape.size",
+    "value": {
+     "vec2": [
+      230,
+      230
+     ]
+    }
+   },
+   "target_from": 2
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "color.color",
+    "value": {
+     "color": [
+      0.98,
+      0.93,
+      0.84,
+      1.0
+     ]
+    }
+   },
+   "target_from": 2
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "transform.position",
+    "value": {
+     "vec2": [
+      200,
+      250
+     ]
+    }
+   },
+   "target_from": 2
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.scale",
+    "time": {
+     "num": 1,
+     "den": 2
+    },
+    "value": {
+     "vec2": [
+      0,
+      0
+     ]
+    }
+   },
+   "target_from": 2
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.scale",
+    "time": {
+     "num": 6,
+     "den": 5
+    },
+    "value": {
+     "vec2": [
+      110,
+      110
+     ]
+    }
+   },
+   "target_from": 2
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.scale",
+    "time": {
+     "num": 3,
+     "den": 2
+    },
+    "value": {
+     "vec2": [
+      100,
+      100
+     ]
+    }
+   },
+   "target_from": 2
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.rotation",
+    "time": {
+     "num": 1,
+     "den": 2
+    },
+    "value": {
+     "scalar": -90
+    }
+   },
+   "target_from": 2
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.rotation",
+    "time": {
+     "num": 79,
+     "den": 10
+    },
+    "value": {
+     "scalar": 270
+    }
+   },
+   "target_from": 2
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "shape.size",
+    "value": {
+     "vec2": [
+      380,
+      380
+     ]
+    }
+   },
+   "target_from": 3
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "shape.corner_tl",
+    "value": {
+     "scalar": 44
+    }
+   },
+   "target_from": 3
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "shape.corner_tr",
+    "value": {
+     "scalar": 44
+    }
+   },
+   "target_from": 3
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "shape.corner_br",
+    "value": {
+     "scalar": 44
+    }
+   },
+   "target_from": 3
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "shape.corner_bl",
+    "value": {
+     "scalar": 44
+    }
+   },
+   "target_from": 3
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "color.color",
+    "value": {
+     "color": [
+      0.35,
+      0.22,
+      0.16,
+      1.0
+     ]
+    }
+   },
+   "target_from": 3
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.position",
+    "time": {
+     "num": 3,
+     "den": 2
+    },
+    "value": {
+     "vec2": [
+      1450,
+      1600
+     ]
+    }
+   },
+   "target_from": 3
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.position",
+    "time": {
+     "num": 12,
+     "den": 5
+    },
+    "value": {
+     "vec2": [
+      800,
+      1600
+     ]
+    }
+   },
+   "target_from": 3
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.rotation",
+    "time": {
+     "num": 3,
+     "den": 2
+    },
+    "value": {
+     "scalar": 28
+    }
+   },
+   "target_from": 3
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.rotation",
+    "time": {
+     "num": 12,
+     "den": 5
+    },
+    "value": {
+     "scalar": 6
+    }
+   },
+   "target_from": 3
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.rotation",
+    "time": {
+     "num": 79,
+     "den": 10
+    },
+    "value": {
+     "scalar": 0
+    }
+   },
+   "target_from": 3
+  },
+  {
+   "tool": "property.set_text",
+   "args": {
+    "path": "content.text",
+    "text": "Morning Brew"
+   },
+   "target_from": 4
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "font.size",
+    "value": {
+     "scalar": 110
+    }
+   },
+   "target_from": 4
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "transform.position",
+    "value": {
+     "vec2": [
+      540,
+      1290
+     ]
+    }
+   },
+   "target_from": 4
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.opacity",
+    "time": {
+     "num": 1,
+     "den": 1
+    },
+    "value": {
+     "scalar": 0
+    }
+   },
+   "target_from": 4
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.opacity",
+    "time": {
+     "num": 8,
+     "den": 5
+    },
+    "value": {
+     "scalar": 100
+    }
+   },
+   "target_from": 4
+  },
+  {
+   "tool": "property.set_text",
+   "args": {
+    "path": "content.text",
+    "text": "Order now"
+   },
+   "target_from": 5
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "font.size",
+    "value": {
+     "scalar": 70
+    }
+   },
+   "target_from": 5
+  },
+  {
+   "tool": "property.set",
+   "args": {
+    "path": "transform.position",
+    "value": {
+     "vec2": [
+      290,
+      1560
+     ]
+    }
+   },
+   "target_from": 5
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.opacity",
+    "time": {
+     "num": 5,
+     "den": 2
+    },
+    "value": {
+     "scalar": 0
+    }
+   },
+   "target_from": 5
+  },
+  {
+   "tool": "anim.insert_keyframe",
+   "args": {
+    "path": "transform.opacity",
+    "time": {
+     "num": 3,
+     "den": 1
+    },
+    "value": {
+     "scalar": 100
+    }
+   },
+   "target_from": 5
+  },
+  {
+   "tool": "slot.set",
+   "args": {
+    "name": "Coffee cup",
+    "description": "your cup or drink, seen from the front",
+    "must_fill": 1
+   },
+   "target_from": 1
+  },
+  {
+   "tool": "slot.set",
+   "args": {
+    "name": "Logo",
+    "description": "your logo, best on a plain background"
+   },
+   "target_from": 2
+  },
+  {
+   "tool": "slot.set",
+   "args": {
+    "name": "Product shot",
+    "description": "a second picture or video: a pastry, a bag of beans, the shop"
+   },
+   "target_from": 3
+  }
+ ]
+}

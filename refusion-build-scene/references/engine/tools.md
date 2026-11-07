@@ -1,6 +1,6 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `c50108843b122bf5`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `ffb4bed36b0fd1a6`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 191 tools in 33 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
@@ -366,7 +366,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `vector.set_item` | edit | layer | Change the fill colour, the stroke colour or the stroke width of one part of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner… |  |
 | `vector.items` | read | layer | Read the parts of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in drawing order: each part's name, how… |  |
 
-## Not offered to an agent (139)
+## Not offered to an agent (140)
 
 Do not look for another way to do these: they are the owner's, and each has the engine's reason.
 
@@ -388,6 +388,7 @@ Do not look for another way to do these: they are the owner's, and each has the 
 - `layer.set_motion_path`: a view of the owner's interface (what the canvas shows or catches, the timeline's compact view, a slider's ruler, the bottom bar), not part of the project: the…
 - `context.nav`: a view of the owner's interface (what the canvas shows or catches, the timeline's compact view, a slider's ruler, the bottom bar), not part of the project: the…
 - `text.motion_copy`: the owner's selection or clipboard (what they chose to edit, what they copied): an agent builds a text or a motion with the edit tools instead
+- `recipe.run`: opens, creates, saves, renames, copies or closes a project of the owner's library, or sets how the session saves: the owner's own work, not an edit of the…
 - `gallery.access`: the device's gallery of the person's videos and pictures, reached by the system's permission and the person's own choice, one item at a time: not an agent's to…
 - `gallery.request_access`: the device's gallery of the person's videos and pictures, reached by the system's permission and the person's own choice, one item at a time: not an agent's to…
 - `gallery.list`: the device's gallery of the person's videos and pictures, reached by the system's permission and the person's own choice, one item at a time: not an agent's to…
