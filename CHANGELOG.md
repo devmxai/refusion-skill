@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.23 (2026-11-07)
+
+- Media slots, for templates: `slot.set` makes a shape a place kept for the owner's own picture, with a name, a description, what it takes, whether it must be filled, a group and an order, proportions, a focus and how a picture sits. `slot.fill` puts a picture of the project's library in. Only the content changes: the shape's keys, effects, masks, matte, parent, motion and timing are what the picture takes. `slot.clear` gives the designed look back as it was, and `slot.remove` makes it a plain shape again. `slot.list` reads every slot of the project and its scenes, and `missing` counts those that must be filled and are empty. The framing inside the frame is the layer's `paint.offset`, `paint.scale` and `paint.rotation`. A video is refused (`slot_video_later`) for now. In the editor, an empty slot shows a dashed frame with a picture sign. `slot.fill` also replaces the picture of an ordinary picture layer (an imported picture): only the picture changes, laid to cover its box; `not_replaceable` for a layer that is neither. `export.presets` (version 4) names the slots that must be filled and are empty (`empty_slots`, `empty_slot_names`, `empty_slots_notice`); they never stop an export.
+
 ## 0.2.22 (2026-11-07)
 
 - File names: a transition's add-on file is now `.rft` (the `file_name` of `addon.export`) and a project's package `.rfp`, one short family of Refusion's own. A file an older build named `.rtx` or `.rproj` is read as it always was, since the engine knows a file by its content, never by its name.

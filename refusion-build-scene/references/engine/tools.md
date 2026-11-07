@@ -1,12 +1,12 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `1c2069c6aff64e61`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `720c3a5026495c14`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
-186 tools in 32 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
+191 tools in 33 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
 ## Families
 
-`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
+`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `slot` (5) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
 
 Notes: **asks** means the owner is asked on the device for each call of a remote agent; **not in a scene** means the engine refuses the tool on a layer inside a scene.
 
@@ -306,6 +306,16 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `session.batch` | call | - | Apply several edits as one transaction: in order, all or none, one revision, one report per item. |  |
 | `session.validate` | call | - | Run a batch and undo it: the reports it would give or the first item that stops it, with the project and its revision unchanged. |  |
 | `session.events` | read | - | Read what changed in the session after a sequence number: kind, revision, generation and cause of each event, never state. |  |
+
+## slot
+
+| Tool | Use | Target | What it does | Notes |
+|---|---|---|---|---|
+| `slot.set` | edit | layer | Make a shape layer (the target: a layer's id, or `"selection"` for the layer the owner has selected) a media slot, or change what its slot says, in one history… |  |
+| `slot.fill` | edit | layer | Fill a media slot (the target: a layer's id, or `"selection"` for the layer the owner has selected) with a picture of the project's media library, in one… |  |
+| `slot.clear` | edit | layer | Empty a media slot (the target: a layer's id, or `"selection"` for the layer the owner has selected), in one history step with the revision checked: its… |  |
+| `slot.remove` | edit | layer | Take the slot role off a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in one history step with the revision… |  |
+| `slot.list` | read | - | Read every media slot of the project (its own composition and its scenes), so an agent or a person knows what a template asks for and what is still empty, as… |  |
 
 ## text
 
