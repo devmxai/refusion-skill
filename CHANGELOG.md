@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.22 (2026-11-07)
+
+- File names: a transition's add-on file is now `.rft` (the `file_name` of `addon.export`) and a project's package `.rfp`, one short family of Refusion's own. A file an older build named `.rtx` or `.rproj` is read as it always was, since the engine knows a file by its content, never by its name.
+
 ## 0.2.21 (2026-11-06)
 
 - Camera shots, as a dialogue between two is filmed: `camera.frame_layer` (version 4) takes `shot` `cut` or `move` (and `length` for a move; the engine's one second when absent): the camera is cut at `time` into a piece of its own on its row, named `Shot: ` and the layer's name, that holds the layer framed (`cut`) or moves to it from the shot before, easing in and out in a straight line (`move`); nothing before `time` changes. `margin` is now optional (the engine's 0.08). Refused for a shot: `layer_not_showing`, `camera_moves_after`, `camera_driven`, `move_past_camera_end`, `unknown_shot`, `length_without_move`. The report says the shot, the piece, the camera it was cut from, where it begins and where the framing is reached.

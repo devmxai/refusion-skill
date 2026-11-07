@@ -23,7 +23,7 @@ Write from the nearest built-in, never from nothing:
 
 A changed definition takes a new version (1.0.0 to 1.1.0), in the manifest and the definition alike: the same version with other content is refused, so a project made with the first one never changes under the owner without saying so.
 
-An author with files writes the same two texts into a folder and makes the add-on's file with `rpro addon pack <folder>` (it is checked as an install checks it); the file (`.rtx`) is what travels between devices.
+An author with files writes the same two texts into a folder and makes the add-on's file with `rpro addon pack <folder>` (it is checked as an install checks it); the file (`.rft`) is what travels between devices. A file an older build named `.rtx` is read as ever: the engine knows a file by its content, never by its name.
 
 ## From a transition the owner has set
 
