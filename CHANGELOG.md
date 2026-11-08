@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.31 (2026-11-08)
+
+- `colour.probe` and `colour.probe_close` (the person's own, never an agent's): the colour grading plan's measurement of this device, the cost of 8-bit against 16-bit passes and of a grade in one pass, a banding picture, and whether the device has a 10-bit HEVC encoder.
+
 ## 0.2.30 (2026-11-08)
 
 - The library brings a picture, a video or a sound the account generated into the open project (`shelf.use`, the person's own, never an agent's): its file is taken to the device and copied into the project, then imported and placed at the edit head as one step of its own, told by a notice. `shelf.state` says which items are on their way (`item_busy`), and `shelf.use` says when its change comes later (`later`). The studio's viewer (`studio.viewer_open`, the person's own) also opens a result of the account's library, and one whose file the device does not hold yet, taking it while it waits; its reply says the name and the type a save takes and where the save stands.

@@ -1,6 +1,6 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `313d769b41e0a2e4`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `8595f2835f9051a3`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 191 tools in 33 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
@@ -366,7 +366,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `vector.set_item` | edit | layer | Change the fill colour, the stroke colour or the stroke width of one part of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner… |  |
 | `vector.items` | read | layer | Read the parts of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in drawing order: each part's name, how… |  |
 
-## Not offered to an agent (144)
+## Not offered to an agent (146)
 
 Do not look for another way to do these: they are the owner's, and each has the engine's reason.
 
@@ -395,6 +395,8 @@ Do not look for another way to do these: they are the owner's, and each has the 
 - `shelf.pictures_open`: the library of the person's account (the results it generated, its own add-ons) and what the person takes from it into the open project: the person's own, not…
 - `shelf.pictures_close`: the library of the person's account (the results it generated, its own add-ons) and what the person takes from it into the open project: the person's own, not…
 - `shelf.use`: the library of the person's account (the results it generated, its own add-ons) and what the person takes from it into the open project: the person's own, not…
+- `colour.probe`: a measurement of the device's GPU the person asks for and looks at, which holds the GPU for some seconds: the person's own, not an agent's
+- `colour.probe_close`: a measurement of the device's GPU the person asks for and looks at, which holds the GPU for some seconds: the person's own, not an agent's
 - `gallery.access`: the device's gallery of the person's videos and pictures, reached by the system's permission and the person's own choice, one item at a time: not an agent's to…
 - `gallery.request_access`: the device's gallery of the person's videos and pictures, reached by the system's permission and the person's own choice, one item at a time: not an agent's to…
 - `gallery.list`: the device's gallery of the person's videos and pictures, reached by the system's permission and the person's own choice, one item at a time: not an agent's to…

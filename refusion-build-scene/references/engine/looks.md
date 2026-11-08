@@ -1,6 +1,6 @@
 # Looks
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `313d769b41e0a2e4`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `8595f2835f9051a3`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 A look is a chain of effects with their values, added in one step with `effect.look` (or `inspector.add` with the item `fx.look`). Each effect of it is then an ordinary effect.
 
