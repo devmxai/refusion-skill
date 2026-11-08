@@ -1,12 +1,12 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `90a2bc6f9ebebe7b`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `9ae0c39b5a2353ba`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
-192 tools in 34 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
+193 tools in 34 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
 ## Families
 
-`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `grade` (1) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `slot` (5) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
+`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `grade` (2) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `slot` (5) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
 
 Notes: **asks** means the owner is asked on the device for each call of a remote agent; **not in a scene** means the engine refuses the tool on a layer inside a scene.
 
@@ -135,6 +135,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
 | `grade.paste` | edit | layer | Give a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), or with `every` each layer of the composition that takes a… |  |
+| `grade.lut_clear` | edit | layer | Take the look-up table off a layer's grade (the target); its other numbers stay. |  |
 
 ## guide
 
@@ -372,7 +373,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `vector.set_item` | edit | layer | Change the fill colour, the stroke colour or the stroke width of one part of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner… |  |
 | `vector.items` | read | layer | Read the parts of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in drawing order: each part's name, how… |  |
 
-## Not offered to an agent (147)
+## Not offered to an agent (148)
 
 Do not look for another way to do these: they are the owner's, and each has the engine's reason.
 
@@ -395,6 +396,7 @@ Do not look for another way to do these: they are the owner's, and each has the 
 - `context.nav`: a view of the owner's interface (what the canvas shows or catches, the timeline's compact view, a slider's ruler, the bottom bar), not part of the project: the…
 - `text.motion_copy`: the owner's selection or clipboard (what they chose to edit, what they copied): an agent builds a text or a motion with the edit tools instead
 - `grade.copy`: the owner's selection or clipboard (what they chose to edit, what they copied): an agent builds a text or a motion with the edit tools instead
+- `grade.lut_set`: not declared an agent's tool: a new tool is withheld until `agent_use_of` names it (a default, not a decision)
 - `recipe.run`: opens, creates, saves, renames, copies or closes a project of the owner's library, or sets how the session saves: the owner's own work, not an edit of the…
 - `shelf.state`: the library of the person's account (the results it generated, its own add-ons) and what the person takes from it into the open project: the person's own, not…
 - `shelf.ask`: the library of the person's account (the results it generated, its own add-ons) and what the person takes from it into the open project: the person's own, not…

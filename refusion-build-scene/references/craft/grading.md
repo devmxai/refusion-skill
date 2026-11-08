@@ -26,6 +26,8 @@ Each number's property path is the layer's, then grade, then the number (the lay
 
 The engine runs a grade in one pass, in this order: white balance (temperature, tint), exposure, then contrast and the four tones in a log scale (ACEScct), then vibrance and saturation. That is why contrast behaves as it does in DaVinci Resolve: it turns about mid grey, so it adds punch without darkening the picture or blowing the sky.
 
+A look-up table (`.cube`) is a look someone made: `grade.lut_set` ends the grade with one the owner picked, drawn after the grade's other numbers, and `look_amount` blends it in (a creative table is usually best between 40 and 80). Grade the shot first, then the table on top; a table made for Log footage needs a Log shot.
+
 A wheel is subtle: a puck a tenth of the way out is a visible tint. Push the shadows a little toward blue and the highlights a little toward orange for the classic split; keep the middle (gamma) for skin.
 
 ## Grading as a colourist does

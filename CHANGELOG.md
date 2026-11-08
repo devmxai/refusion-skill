@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.35 (2026-11-08)
+
+- Look-up tables: `grade.lut_set` ends a layer's grade with the table of a `.cube` file (a handle from the person's pick; 3D up to 65 points a side, or 1D), checked whole and carried by the project; `grade.lut_clear` takes it off; `look_amount` (0 to 100, default 100) is how much of it shows. `inspector.read` puts it in the colour sheet's tab 7 Looks (editor 18, the item labelled with the table's title).
+
 ## 0.2.34 (2026-11-08)
 
 - The grade's wheels: `lift`, `gamma`, `gain` and `offset` (pairs: where the puck is in its wheel, each axis -1 to 1) and each one's lightness (`lift_master` and the rest, -100 to 100). `property.set` sets a puck with a pair; `property.drag_*` on a puck's whole path drags it in two dimensions, and `property.drag_*`'s reply carries the second axis (`value_y`). `inspector.read` puts the wheels in the colour sheet's tab 6 Wheels, one item each (editor 17), and gives the ring's colours (`wheel_ring`).
