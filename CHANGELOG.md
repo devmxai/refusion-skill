@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.29 (2026-11-08)
+
+- The library is one page of the engine's (`shelf.*`, the person's own, never an agent's): My (what the account generated, its own transitions) and Store (not offered yet). `studio.library_kind` and `studio.library_more` are retired with the old page (they were never an agent's), and `studio.state` no longer carries the library's lists.
+
 ## 0.2.28 (2026-11-07)
 
 - A recipe as a file: a `.rfr` the person taps in WhatsApp, Files or their downloads opens with Refusion and is built as a pasted one is, with the same refusals. Whatever the file's name, the engine says what an opened file is from its first bytes (`file.identify`, the person's own tool, never an agent's): an add-on, a project's package or a recipe (a JSON object, or one in a chat's code fence); anything else is refused with its reason. `templates-and-recipes.md` says to give a recipe as a file where the chat can.
