@@ -63,6 +63,7 @@ Writing the master prompt of a storyboard needs none of this: read [storyboard-m
 | The defaults to catch in yourself | [lazy-defaults.md](references/craft/lazy-defaults.md) |
 | Looking, measuring, judging, mending | [checks.md](references/craft/checks.md) |
 | Arabic and mixed-direction text | [arabic-and-text.md](references/craft/arabic-and-text.md) |
+| A layer's light and colour: its grade, and grading as a colourist does | [grading.md](references/craft/grading.md) |
 | Writing the master prompt of a storyboard (many pictures in one style, from one text) | [storyboard-master-prompt.md](references/craft/storyboard-master-prompt.md) |
 | What the engine offers now | [INDEX](references/engine/INDEX.md) · [tools](references/engine/tools.md) · [effects](references/engine/effects.md) · [looks](references/engine/looks.md) · [transitions](references/engine/transitions.md) · [motion](references/engine/motion.md) · [recipes](references/engine/recipes.md) |
 | A worked plan | [hit, settle, hold, release](examples/hit-settle-hold-release.md) · [a five second ad](examples/fast-ad-title.md) · [a calm lower third](examples/calm-lower-third.md) |

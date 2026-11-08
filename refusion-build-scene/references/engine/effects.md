@@ -1,17 +1,15 @@
 # Effects
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `8595f2835f9051a3`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `dc2ee0054ab2cfef`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 An effect is added to a layer with `effect.add`, or with `inspector.add` and the item `fx.effect`. Its settings are properties of the layer, keyed like any other (`fx.<kind>.<setting>[<id>]`), and every effect has a `mix`.
 
-24 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
+22 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
 
 | Item | Id | Category |
 |---|---|---|
-| Exposure / Contrast | `fx.effect:color.exposure_contrast` | Color |
 | Gaussian Blur | `fx.effect:blur.gaussian_blur` | Blur |
 | Hue / Saturation | `fx.effect:color.hue_saturation` | Color |
-| Temperature / Tint | `fx.effect:color.temperature_tint` | Color |
 | Levels | `fx.effect:color.levels` | Color |
 | Black & White | `fx.effect:color.black_white` | Color |
 | Invert | `fx.effect:color.invert` | Color |
@@ -32,24 +30,6 @@ An effect is added to a layer with `effect.add`, or with `inspector.add` and the
 | Turbulent Displace | `fx.effect:stylize.turbulent_displace` | Stylize |
 | Wave Warp | `fx.effect:stylize.wave_warp` | Stylize |
 | Halftone | `fx.effect:stylize.halftone` | Stylize |
-
-## Color
-
-### Exposure / Contrast — `fx.effect:color.exposure_contrast`
-
-Color · suits video, shape, vector, text, background, scene, adjustment · cost unmeasured · available
-
-Brightens or darkens the picture in stops, and stretches or flattens its contrast about the middle grey.
-
-**Use:** The first grade of any picture or clip: rescue a dark shot, give a flat one punch. Animate the exposure for a flash or a fade to dark.
-
-**Found by:** exposure, contrast, brightness, brighten, darken, grade, تعريض, تباين, سطوع, إضاءة, تفتيح, تغميق, effect, fx, تأثير, مؤثر, افكت
-
-**Add:** `inspector.add item=library kind=fx.effect:color.exposure_contrast`
-
-- `exposure` (number, stops): -5 to 5, default 0
-- `contrast` (number, percent): -100 to 100, default 0
-- `mix` (number, percent): 0 to 100, default 100
 
 ## Blur
 
@@ -87,22 +67,6 @@ Turns the hue about the grey axis and shifts the saturation and the lightness.
 - `hue` (number, degrees): -180 to 180, default 0
 - `saturation` (number, percent): -100 to 100, default 0
 - `lightness` (number, percent): -100 to 100, default 0
-- `mix` (number, percent): 0 to 100, default 100
-
-### Temperature / Tint — `fx.effect:color.temperature_tint`
-
-Color · suits video, shape, vector, text, background, scene, adjustment · cost unmeasured · available
-
-White balance: a warmer or cooler picture, a greener or more magenta one.
-
-**Use:** Match two clips, warm up a sunset, cool a night scene.
-
-**Found by:** temperature, tint, white balance, warm, cool, حرارة, دفء, برودة, توازن الأبيض, effect, fx, تأثير, مؤثر, افكت
-
-**Add:** `inspector.add item=library kind=fx.effect:color.temperature_tint`
-
-- `temperature` (number, percent): -100 to 100, default 0
-- `tint` (number, percent): -100 to 100, default 0
 - `mix` (number, percent): 0 to 100, default 100
 
 ### Levels — `fx.effect:color.levels`

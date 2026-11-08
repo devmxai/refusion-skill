@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.32 (2026-11-08)
+
+- A layer's grade (`grade.*` properties on a video, a picture or an adjustment layer): exposure, contrast and its pivot, highlights, shadows, whites, blacks, temperature, tint, vibrance and saturation, set with `property.set` and keyed like any property, drawn in one pass before the layer's effects. A new craft page, [grading.md](refusion-build-scene/references/craft/grading.md).
+- `color.exposure_contrast` and `color.temperature_tint` are retired: the grade does them. They are no longer in `effect.catalog`, and `effect.add` refuses them (`effect_retired`, naming the grade's numbers to use instead). A project that has one keeps it, drawn and edited as before.
+
 ## 0.2.31 (2026-11-08)
 
 - `colour.probe` and `colour.probe_close` (the person's own, never an agent's): the colour grading plan's measurement of this device, the cost of 8-bit against 16-bit passes and of a grade in one pass, a banding picture, and whether the device has a 10-bit HEVC encoder.
