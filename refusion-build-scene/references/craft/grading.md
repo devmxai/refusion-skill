@@ -4,21 +4,21 @@ A layer's grade is how its picture is lit and coloured: one object on a video, a
 
 ## The numbers
 
-| Path | What it does | Range, default |
+| Number | What it does | Range, default |
 |---|---|---|
-| `grade.exposure` | The light, in stops: +1 doubles it. | -5 to 5, 0 |
-| `grade.contrast` | Spreads the tones from the pivot (a positive value) or draws them to it. | -100 to 100, 0 |
-| `grade.pivot` | Where contrast turns, in the log scale; 0.4135 is mid grey. Moves nothing alone. | 0 to 1, 0.4135 |
-| `grade.highlights` | The bright tones, short of white. | -100 to 100, 0 |
-| `grade.shadows` | The dark tones, short of black. | -100 to 100, 0 |
-| `grade.whites` | The brightest part. | -100 to 100, 0 |
-| `grade.blacks` | The darkest part. | -100 to 100, 0 |
-| `grade.temperature` | Cooler (blue, negative) to warmer (yellow, positive), keeping the brightness. | -100 to 100, 0 |
-| `grade.tint` | Green (negative) to magenta (positive). | -100 to 100, 0 |
-| `grade.vibrance` | Saturation that lifts the dullest colours most and spares skin and saturated ones. | -100 to 100, 0 |
-| `grade.saturation` | All colours toward or away from grey. | -100 to 100, 0 |
+| `exposure` | The light, in stops: +1 doubles it. | -5 to 5, 0 |
+| `contrast` | Spreads the tones from the pivot (a positive value) or draws them to it. | -100 to 100, 0 |
+| `pivot` | Where contrast turns, in the log scale; 0.4135 is mid grey. Moves nothing alone. | 0 to 1, 0.4135 |
+| `highlights` | The bright tones, short of white. | -100 to 100, 0 |
+| `shadows` | The dark tones, short of black. | -100 to 100, 0 |
+| `whites` | The brightest part. | -100 to 100, 0 |
+| `blacks` | The darkest part. | -100 to 100, 0 |
+| `temperature` | Cooler (blue, negative) to warmer (yellow, positive), keeping the brightness. | -100 to 100, 0 |
+| `tint` | Green (negative) to magenta (positive). | -100 to 100, 0 |
+| `vibrance` | Saturation that lifts the dullest colours most and spares skin and saturated ones. | -100 to 100, 0 |
+| `saturation` | All colours toward or away from grey. | -100 to 100, 0 |
 
-A path names the layer: `layer.<id>.grade.exposure`. A layer has no grade until one of its numbers is set; a grade at its defaults draws nothing and costs nothing.
+Each number's property path is the layer's, then grade, then the number (the layer 5's exposure is layer.5.grade.exposure). A layer has no grade until one of its numbers is set; a grade at its defaults draws nothing and costs nothing.
 
 ## The order
 
@@ -32,6 +32,7 @@ The engine runs a grade in one pass, in this order: white balance (temperature, 
 4. **Colour last.** Vibrance before saturation: it fills dull colours and leaves skin alone. Saturation above 30 makes skin orange and skies electric.
 5. **Match the shots.** Shots of one scene should look like one place: grade one, then bring the others to it with the same numbers moved a little, not with new looks.
 6. **One look for a scene:** an adjustment layer over its shots, graded once, rather than the same numbers on every clip.
+7. **Match by copying.** `grade.paste` gives one clip's grade to another (`every`: to every clip), keys and all, in one step; the owner copies with `grade.copy` from the colour sheet. Then adjust what differs.
 
 ## What not to do
 

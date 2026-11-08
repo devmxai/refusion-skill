@@ -58,8 +58,8 @@ None fits and the owner wants one of their own: [designing-a-transition.md](desi
 
 | You want | Use |
 |---|---|
-| A first grade: lift a dark shot, give a flat one punch | the layer's grade: `grade.exposure`, `grade.contrast`, the four tones ([grading.md](grading.md)) · `fx.effect:color.curves` · `fx.effect:color.levels` |
-| Warmer or cooler | the layer's grade: `grade.temperature`, `grade.tint` ([grading.md](grading.md)) |
+| A first grade: lift a dark shot, give a flat one punch | the layer's grade: `exposure`, `contrast`, the four tones ([grading.md](grading.md)) · `fx.effect:color.curves` · `fx.effect:color.levels` |
+| Warmer or cooler | the layer's grade: `temperature`, `tint` ([grading.md](grading.md)) |
 | Stronger or weaker colour | `fx.effect:color.hue_saturation` · `fx.effect:color.tint` · `fx.effect:color.black_white` |
 | Soften, or a blur-in | `fx.effect:blur.gaussian_blur` (animate its radius) |
 | Speed or focus | `fx.effect:blur.directional_blur` · `fx.effect:blur.zoom_blur` · `fx.effect:blur.spin_blur` |

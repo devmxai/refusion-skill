@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.33 (2026-11-08)
+
+- `grade.copy` (the owner's clipboard, withheld from agents) and `grade.paste`: a layer's grade, or some of its sections (`sections`, 4 the light, 8 the colour), given to another layer or with `every` to every clip that takes one, keys and all, in one history step. `grade.compare` (the owner's compare key) shows a layer without its grade while it is held.
+- `inspector.read` names the panel each tab is in (`tab_panels`: 0 the inspector, 1 the colour sheet, whose tabs 5 Light and 4 Color are the grade's sections), why a layer has nothing in a panel (`panel_reasons`), and which of the colour sheet's sections hold an edit (`tab_edited`).
+
 ## 0.2.32 (2026-11-08)
 
 - A layer's grade (`grade.*` properties on a video, a picture or an adjustment layer): exposure, contrast and its pivot, highlights, shadows, whites, blacks, temperature, tint, vibrance and saturation, set with `property.set` and keyed like any property, drawn in one pass before the layer's effects. A new craft page, [grading.md](refusion-build-scene/references/craft/grading.md).

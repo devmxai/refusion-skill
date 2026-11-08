@@ -1,11 +1,11 @@
 # The engine, as it is now
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `dc2ee0054ab2cfef`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `bd325189f9082be8`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 | what | how many |
 |---|---|
-| tools offered to an agent | 191 (direct 25 · read 42 · edit 124; direct tools that also go in a batch: 1) |
-| tools withheld from an agent, each with its reason | 146 |
+| tools offered to an agent | 192 (direct 25 · read 42 · edit 125; direct tools that also go in a batch: 1) |
+| tools withheld from an agent, each with its reason | 147 |
 | library: effect | 22 |
 | library: look | 6 |
 | library: transition | 24 |
@@ -57,6 +57,7 @@ Start with `workflow`.
 ## Tools no page describes
 You are offered these and no page above names them; `tool:<name>` gives each one's parameters.
 - `project.set_color_mix`: Set the space the keys of colours are mixed in across the project (`mix` 0 display, 1 linear, 2 OKLab).
+- `grade.paste`: Give a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), or with `every` each layer of the composition that takes a…
 - `timeline.close_gap`: Close a gap of the main track (the bottom row, which holds the project's pictures one after another), in one history step with the revision checked: the clips…
 - `slot.set`: Say what a shape (the target: a layer's id, or `"selection"` for the layer the owner has selected) is for in a template, or change what it says, in one history…
 - `slot.fill`: Replace what a shape (the target: a layer's id, or `"selection"` for the layer the owner has selected) shows with a picture or a video of the project's media…
