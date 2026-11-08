@@ -17,12 +17,16 @@ A layer's grade is how its picture is lit and coloured: one object on a video, a
 | `tint` | Green (negative) to magenta (positive). | -100 to 100, 0 |
 | `vibrance` | Saturation that lifts the dullest colours most and spares skin and saturated ones. | -100 to 100, 0 |
 | `saturation` | All colours toward or away from grey. | -100 to 100, 0 |
+| `lift`, `gamma`, `gain`, `offset` | The wheels: a pair each, where the puck is (x the blue-yellow axis, y the red-cyan one, each -1 to 1). Lift tints the shadows, gamma the middle, gain the highlights, offset everything. | (0, 0) |
+| `lift_master` and the other three | Each wheel's lightness: lift lowers or raises the black end, gamma the middle, gain the white end, offset everything. | -100 to 100, 0 |
 
 Each number's property path is the layer's, then grade, then the number (the layer 5's exposure is layer.5.grade.exposure). A layer has no grade until one of its numbers is set; a grade at its defaults draws nothing and costs nothing.
 
 ## The order
 
 The engine runs a grade in one pass, in this order: white balance (temperature, tint), exposure, then contrast and the four tones in a log scale (ACEScct), then vibrance and saturation. That is why contrast behaves as it does in DaVinci Resolve: it turns about mid grey, so it adds punch without darkening the picture or blowing the sky.
+
+A wheel is subtle: a puck a tenth of the way out is a visible tint. Push the shadows a little toward blue and the highlights a little toward orange for the classic split; keep the middle (gamma) for skin.
 
 ## Grading as a colourist does
 
