@@ -98,6 +98,10 @@ A grade has four selections (`grade.select1_…` to `grade.select4_…`): each h
 - A sky deeper: hold the blue (width 40 to 60), then saturation +20 to +40, exposure -0.3, a hue shift of a few degrees. Look at the
   person after it: skin should not move.
 - Prefer a selection to the mixer when one object should change and its hue is shared by others in other lightness.
+- **A part of the picture:** `grade.selection_window` (`shape` 1 a circle, 2 a rectangle) limits a selection to a window on the
+  content; with its colour ranges at their defaults the selection is the window alone. A face brighter: a circle over it
+  (`selectN_window_x`/`_y` where the face is, `_width`/`_height` about its size, `_softness` 40 to 60), then `selectN_exposure`
+  +0.3 to +0.6. A vignette of your own: a large soft circle, inverted, with exposure -0.5.
 
 ## Grading as a colourist does
 

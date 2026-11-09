@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.37 (2026-11-09)
+
+- A selection's window: `grade.selection_window` gives selection 1 to 4 a circle or a rectangle on the layer's content (or none), holding its inside or its outside; it is placed and sized with `grade.selectN_window_x`, `_y` (per cent of the content), `_width`, `_height` (per cent of the content's height), `_rotation` and `_softness`. The selection holds a colour where its key and its window both hold it. `grade.window_begin` (the owner's finger on the picture) is withheld from agents. `inspector.read` gives each selection's window (`grade_windows`).
+
 ## 0.2.36 (2026-11-09)
 
 - `inspector.read` names each tab's drawing (`tab_glyphs`), and a video layer's inspector has the curve it was shot with as an item of its Transform tab (`clip.input`, editor 22; set with `grade.input_set`). The grade's numbers carry the drawing of what they do as their glyph.

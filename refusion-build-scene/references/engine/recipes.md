@@ -1,6 +1,6 @@
 # Recipes that were run
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `27ab39d2d5312bce`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `d937eaaccd8aa21d`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 Each is a batch that was run on a project and looked at before it was written. Read one with `guide.read` and the topic `recipes:<name>`; change its words and numbers, and look again.
 
