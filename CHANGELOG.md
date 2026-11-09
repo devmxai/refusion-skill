@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.39 (2026-11-09)
+
+- The film's halation and bloom (the Film tab): `halation_amount`, `halation_threshold`, `halation_size` (the highlights' light scattered back red, close round them) and `bloom_amount`, `bloom_threshold`, `bloom_size` (their light spread wide in their own colours), set with `property.set` on the grade; drawn after the grade and before the vignette and grain.
+
 ## 0.2.38 (2026-11-09)
 
 - The grade's film (stage 9, the Film tab 13): `grade.vignette_amount` (-100 the edges to black … 100 to white), `vignette_midpoint`, `vignette_roundness`, `vignette_feather`, on the layer's content; `grade.grain_amount`, `grain_size`, `grain_roughness`, `grain_colour`, a grain anchored to the content that changes every frame. Drawn after the grade, so the grain lies over everything. `stylize.film_grain` and `stylize.vignette` are retired: `effect.add` refuses them (`effect_retired`) and names these numbers; a project that has one keeps drawing it.
