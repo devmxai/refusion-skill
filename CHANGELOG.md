@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.41 (2026-11-09)
+
+- The pool's choice: `media.library_snapshot` gives each source its place in the choice the owner made on the device (`chosen`, 1 the first chosen, 0 not chosen). `media.choose` and `media.place` (the Media sheet's long touch and keys: several sources placed one after another in the order chosen, one history step, the last one selected) are withheld from agents; an agent places several with one batch of `layer.insert_source`.
+
 ## 0.2.40 (2026-11-09)
 
 - The film's detail (the Film tab): `clarity` (-100 to 100, the middle-sized shapes' contrast) and `texture` (the fine detail's), set with `property.set` on the grade; drawn first in the film, in display values. `stylize.sharpen` is retired: `effect.add` refuses it (`effect_retired`) and names texture; a project that has one keeps drawing it.
