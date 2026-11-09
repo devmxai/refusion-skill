@@ -1,10 +1,10 @@
 # The engine, as it is now
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `9511ee7fd7751931`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `f3503ac999036b71`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 | what | how many |
 |---|---|
-| tools offered to an agent | 202 (direct 25 · read 46 · edit 131; direct tools that also go in a batch: 1) |
+| tools offered to an agent | 205 (direct 25 · read 46 · edit 134; direct tools that also go in a batch: 1) |
 | tools withheld from an agent, each with its reason | 157 |
 | library: effect | 16 |
 | library: look | 6 |
@@ -56,6 +56,9 @@ Start with `workflow`.
 
 ## Tools no page describes
 You are offered these and no page above names them; `tool:<name>` gives each one's parameters.
+- `layer.row_up`: Move a layer (the target, or the selected one) up one row, at the same time, in one history step: a layer that shares its row with others is given a new row…
+- `layer.swap`: Change places between a layer (the target, or the selected one) and its neighbour on its row: the clip after it when `later`, else the clip before it.
+- `layer.row_down`: Move a layer (the target, or the selected one) down one row, at the same time, in one history step: a layer that shares its row with others is given a new row…
 - `project.set_color_mix`: Set the space the keys of colours are mixed in across the project (`mix` 0 display, 1 linear, 2 OKLab).
 - `grade.paste`: Give a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), or with `every` each layer of the composition that takes a…
 - `grade.look_clear`: Take the look off a layer's grade (the target), a look of the library (`grade.look_set`) or a look-up table (`grade.lut_set`); the grade's own numbers and…

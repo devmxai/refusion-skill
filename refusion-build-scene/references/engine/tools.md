@@ -1,12 +1,12 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `9511ee7fd7751931`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `f3503ac999036b71`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
-202 tools in 35 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
+205 tools in 35 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
 ## Families
 
-`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `grade` (10) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `scope` (1) · `session` (4) · `slot` (5) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
+`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `grade` (10) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (34) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `scope` (1) · `session` (4) · `slot` (5) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
 
 Notes: **asks** means the owner is asked on the device for each call of a remote agent; **not in a scene** means the engine refuses the tool on a layer inside a scene.
 
@@ -181,6 +181,9 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `layer.insert_background` | edit | inside a scene | Insert a background (a colour or a gradient over the canvas) on a new top track and select it. |  |
 | `layer.set_anchor_preset` | edit | layer | Set a layer's anchor to one of nine places of its box, `preset` 0 to 8 row by row from the top left (4 is the middle). |  |
 | `layer.insert_source` | edit | - | Insert a source already in the media library (`target` is its source id, from `media.library_snapshot`) as a layer at `start` (always stated: an exact time, or… |  |
+| `layer.row_up` | edit | layer | Move a layer (the target, or the selected one) up one row, at the same time, in one history step: a layer that shares its row with others is given a new row… |  |
+| `layer.swap` | edit | layer | Change places between a layer (the target, or the selected one) and its neighbour on its row: the clip after it when `later`, else the clip before it. |  |
+| `layer.row_down` | edit | layer | Move a layer (the target, or the selected one) down one row, at the same time, in one history step: a layer that shares its row with others is given a new row… |  |
 | `layer.move` | edit | layer | Move a layer to a composition time and, optionally, another track or a new row at a place in the stack (its row is its place in the picture: a layer on a row… |  |
 | `layer.insert_vector` | edit | - | Insert the drawing of an SVG file as a vector layer: its parts keep their paths, fills and strokes, centred on the canvas (shrunk to fit when larger) on a new… |  |
 | `layer.insert_adjustment` | edit | inside a scene | Insert an adjustment layer on a new top track and select it: it has no picture of its own, its effects act on everything drawn under it over the whole canvas… |  |

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.42 (2026-11-09)
+
+- `layer.swap` (`later`: with the clip after it, else the one before): a layer and its neighbour on its row change places, the pair keeping its span and the gap between them; refused with no clip that side (`no_neighbour`). `layer.row_down`: a layer one row down, never under the main track (`row_down_bottom`); a picture just above the main track goes back into it, at its own time when that stretch is free, else at the nearest cut.
+- `layer.row_up`: a layer one row up (in front), at the same time, one history step: a new row just above its own when it shares its row, its row above the next one when it is alone; refused for a layer alone in the top row (`row_up_top`). A row holds one family of layers (pictures, text, elements, sound): moving a layer onto a row of another family opens a new row beside it, and an edit that would make two layers of one row cover each other is refused (`row_overlap`).
+
 ## 0.2.41 (2026-11-09)
 
 - The pool's choice: `media.library_snapshot` gives each source its place in the choice the owner made on the device (`chosen`, 1 the first chosen, 0 not chosen). `media.choose` and `media.place` (the Media sheet's long touch and keys: several sources placed one after another in the order chosen, one history step, the last one selected) are withheld from agents; an agent places several with one batch of `layer.insert_source`.
