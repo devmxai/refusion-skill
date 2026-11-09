@@ -101,7 +101,14 @@ A grade has four selections (`grade.select1_…` to `grade.select4_…`): each h
 - **A part of the picture:** `grade.selection_window` (`shape` 1 a circle, 2 a rectangle) limits a selection to a window on the
   content; with its colour ranges at their defaults the selection is the window alone. A face brighter: a circle over it
   (`selectN_window_x`/`_y` where the face is, `_width`/`_height` about its size, `_softness` 40 to 60), then `selectN_exposure`
-  +0.3 to +0.6. A vignette of your own: a large soft circle, inverted, with exposure -0.5.
+  +0.3 to +0.6. For a vignette use the film's (below), not a window.
+
+## The film
+
+The last stage, set with `property.set` on the grade's numbers: `vignette_amount` (-15 to -35 draws the eye in; past -50 it shows), `vignette_midpoint` (where it begins),
+`vignette_roundness`, `vignette_feather` (soft, 50 to 80); `grain_amount` (8 to 20 reads as film on a phone; more is a look),
+`grain_size`, `grain_roughness`, `grain_colour` (0 for black and white film). The grain changes every frame and lies over everything.
+Balance and match measure the picture without the film, so add it last.
 
 ## Grading as a colourist does
 

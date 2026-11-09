@@ -4,7 +4,7 @@ Written by `rpro skill-reference --write` from catalog version 3, fingerprint `d
 
 An effect is added to a layer with `effect.add`, or with `inspector.add` and the item `fx.effect`. Its settings are properties of the layer, keyed like any other (`fx.<kind>.<setting>[<id>]`), and every effect has a `mix`.
 
-19 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
+17 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
 
 | Item | Id | Category |
 |---|---|---|
@@ -17,12 +17,10 @@ An effect is added to a layer with `effect.add`, or with `inspector.add` and the
 | Motion Tile | `fx.effect:stylize.motion_tile` | Stylize |
 | Drop Shadow | `fx.effect:stylize.drop_shadow` | Stylize |
 | Glow | `fx.effect:stylize.glow` | Stylize |
-| Vignette | `fx.effect:stylize.vignette` | Stylize |
 | Posterize | `fx.effect:color.posterize` | Color |
 | Mosaic | `fx.effect:stylize.mosaic` | Stylize |
 | Chromatic Aberration | `fx.effect:stylize.chromatic_aberration` | Stylize |
 | Tint | `fx.effect:color.tint` | Color |
-| Film Grain | `fx.effect:stylize.film_grain` | Stylize |
 | Sharpen | `fx.effect:stylize.sharpen` | Stylize |
 | Turbulent Displace | `fx.effect:stylize.turbulent_displace` | Stylize |
 | Wave Warp | `fx.effect:stylize.wave_warp` | Stylize |
@@ -195,25 +193,6 @@ Spreads the bright parts of the picture by a pyramid of blurs and adds them back
 - `glow_only` (toggle, none): 0 to 1, default 0
 - `mix` (number, percent): 0 to 100, default 100
 
-### Vignette — `fx.effect:stylize.vignette`
-
-Stylize · suits video, shape, background, scene, adjustment · cost unmeasured · available
-
-Darkens or lightens the edges by an ellipse about a point.
-
-**Use:** Draw the eye to the middle of a full-frame picture or clip. On a cut-out it leaves a grey halo at its rim: leave it off cut-outs.
-
-**Found by:** vignette, edges, darken edges, focus, تعتيم, حواف, فينيت, effect, fx, تأثير, مؤثر, افكت
-
-**Add:** `inspector.add item=library kind=fx.effect:stylize.vignette`
-
-- `amount` (number, percent): -100 to 100, default 50
-- `size` (number, percent): 5 to 200, default 75
-- `roundness` (number, percent): 0 to 100, default 0
-- `feather` (number, percent): 0 to 100, default 50
-- `centre` (point, pixels): -10000 to 10000, default 0
-- `mix` (number, percent): 0 to 100, default 100
-
 ## Color
 
 ### Posterize — `fx.effect:color.posterize`
@@ -288,24 +267,6 @@ Maps the picture's brightness between two colours.
 - `mix` (number, percent): 0 to 100, default 100
 
 ## Stylize
-
-### Film Grain — `fx.effect:stylize.film_grain`
-
-Stylize · suits video, shape, vector, text, background, scene, adjustment · cost unmeasured · available
-
-Noise on the picture, the same for the same seed and frame, new on each frame when animated.
-
-**Use:** Film texture, hiding banding, gluing graphics to footage.
-
-**Found by:** grain, noise, film, texture, حبيبات, ضجيج, فيلم, خشونة, effect, fx, تأثير, مؤثر, افكت
-
-**Add:** `inspector.add item=library kind=fx.effect:stylize.film_grain`
-
-- `amount` (number, percent): 0 to 100, default 20
-- `size` (number, pixels): 0.5 to 20, default 1.5
-- `seed` (number, none): 0 to 10000, default 0
-- `animated` (toggle, none): 0 to 1, default 1
-- `mix` (number, percent): 0 to 100, default 100
 
 ### Sharpen — `fx.effect:stylize.sharpen`
 

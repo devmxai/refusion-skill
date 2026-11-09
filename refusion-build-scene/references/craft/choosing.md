@@ -65,8 +65,8 @@ None fits and the owner wants one of their own: [designing-a-transition.md](desi
 | Speed or focus | `fx.effect:blur.directional_blur` · `fx.effect:blur.zoom_blur` · `fx.effect:blur.spin_blur` |
 | Lift a card off the ground | `fx.effect:stylize.drop_shadow` |
 | Glow | `fx.effect:stylize.glow` (look at it: it hides faults and makes text soft) |
-| Frame the eye | `fx.effect:stylize.vignette` |
-| Texture or age | `fx.effect:stylize.film_grain` · `fx.look:vintage_film` |
+| Frame the eye | the grade's vignette (`vignette_amount`, in the Film tab; see grading.md) |
+| Texture or age | the grade's grain (`grain_amount`) · `fx.look:vintage_film` |
 | A hit of digital damage | `fx.effect:stylize.chromatic_aberration` · `fx.look:glitch_split` |
 | Print, comic, newspaper | `fx.effect:stylize.halftone` · `fx.look:newsprint` · `fx.look:comic_print` |
 | Wobble, liquid, heat | `fx.effect:stylize.wave_warp` · `fx.effect:stylize.turbulent_displace` · `fx.look:liquid_wobble` |

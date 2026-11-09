@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.38 (2026-11-09)
+
+- The grade's film (stage 9, the Film tab 13): `grade.vignette_amount` (-100 the edges to black … 100 to white), `vignette_midpoint`, `vignette_roundness`, `vignette_feather`, on the layer's content; `grade.grain_amount`, `grain_size`, `grain_roughness`, `grain_colour`, a grain anchored to the content that changes every frame. Drawn after the grade, so the grain lies over everything. `stylize.film_grain` and `stylize.vignette` are retired: `effect.add` refuses them (`effect_retired`) and names these numbers; a project that has one keeps drawing it.
+
 ## 0.2.37 (2026-11-09)
 
 - A selection's window: `grade.selection_window` gives selection 1 to 4 a circle or a rectangle on the layer's content (or none), holding its inside or its outside; it is placed and sized with `grade.selectN_window_x`, `_y` (per cent of the content), `_width`, `_height` (per cent of the content's height), `_rotation` and `_softness`. The selection holds a colour where its key and its window both hold it. `grade.window_begin` (the owner's finger on the picture) is withheld from agents. `inspector.read` gives each selection's window (`grade_windows`).

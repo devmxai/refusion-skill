@@ -28,7 +28,7 @@ A direction makes type, colour, motion and transitions agree. Pick one, or name 
 - **Motion:** restrained; reveal by line or by a marker rather than by bounce. `recipes:line-title` reveals a title with a line; `recipes:highlighter` sweeps a marker over a word; `text.motion:recipe:11` (Track in) opens letter spacing.
 - **Means:** `text.motion:1:1` (Fade), `text.motion:recipe:4` (Typewriter) for a short line only; the holds are long because the text is long.
 - **Transitions:** `transition:2` (Film Dissolve), `transition:4` (Dip to Black) between sections.
-- **Edge:** `fx.look:vintage_film` or `fx.effect:stylize.film_grain` lightly, if the subject asks for a period feel.
+- **Edge:** `fx.look:vintage_film`, or the grade's grain (its `grain_amount`, lightly), if the subject asks for a period feel.
 - **Avoid:** kinetic effects on body text, more than one highlight in view.
 
 ## 4. Geometric brand motion
