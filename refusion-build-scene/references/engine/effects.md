@@ -4,7 +4,7 @@ Written by `rpro skill-reference --write` from catalog version 3, fingerprint `d
 
 An effect is added to a layer with `effect.add`, or with `inspector.add` and the item `fx.effect`. Its settings are properties of the layer, keyed like any other (`fx.<kind>.<setting>[<id>]`), and every effect has a `mix`.
 
-17 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
+16 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
 
 | Item | Id | Category |
 |---|---|---|
@@ -21,7 +21,6 @@ An effect is added to a layer with `effect.add`, or with `inspector.add` and the
 | Mosaic | `fx.effect:stylize.mosaic` | Stylize |
 | Chromatic Aberration | `fx.effect:stylize.chromatic_aberration` | Stylize |
 | Tint | `fx.effect:color.tint` | Color |
-| Sharpen | `fx.effect:stylize.sharpen` | Stylize |
 | Turbulent Displace | `fx.effect:stylize.turbulent_displace` | Stylize |
 | Wave Warp | `fx.effect:stylize.wave_warp` | Stylize |
 | Halftone | `fx.effect:stylize.halftone` | Stylize |
@@ -267,23 +266,6 @@ Maps the picture's brightness between two colours.
 - `mix` (number, percent): 0 to 100, default 100
 
 ## Stylize
-
-### Sharpen — `fx.effect:stylize.sharpen`
-
-Stylize · suits video, shape, background, scene, adjustment · cost unmeasured · available
-
-An unsharp mask: the picture plus the difference between it and its blur.
-
-**Use:** Crisp a soft clip or a scaled-up picture; keep the radius small.
-
-**Found by:** sharpen, unsharp, crisp, detail, حدة, توضيح, تفاصيل, effect, fx, تأثير, مؤثر, افكت
-
-**Add:** `inspector.add item=library kind=fx.effect:stylize.sharpen`
-
-- `amount` (number, percent): 0 to 1000, default 100
-- `radius` (number, pixels): 0 to 50, default 2
-- `threshold` (number, percent): 0 to 100, default 0
-- `mix` (number, percent): 0 to 100, default 100
 
 ### Turbulent Displace — `fx.effect:stylize.turbulent_displace`
 

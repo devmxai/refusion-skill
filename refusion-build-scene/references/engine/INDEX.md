@@ -6,7 +6,7 @@ Written by `rpro skill-reference --write` from catalog version 3, fingerprint `d
 |---|---|
 | tools offered to an agent | 202 (direct 25 · read 46 · edit 131; direct tools that also go in a batch: 1) |
 | tools withheld from an agent, each with its reason | 157 |
-| library: effect | 17 |
+| library: effect | 16 |
 | library: look | 6 |
 | library: transition | 24 |
 | library: layer_motion | 29 |

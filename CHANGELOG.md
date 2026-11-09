@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.40 (2026-11-09)
+
+- The film's detail (the Film tab): `clarity` (-100 to 100, the middle-sized shapes' contrast) and `texture` (the fine detail's), set with `property.set` on the grade; drawn first in the film, in display values. `stylize.sharpen` is retired: `effect.add` refuses it (`effect_retired`) and names texture; a project that has one keeps drawing it.
+
 ## 0.2.39 (2026-11-09)
 
 - The film's halation and bloom (the Film tab): `halation_amount`, `halation_threshold`, `halation_size` (the highlights' light scattered back red, close round them) and `bloom_amount`, `bloom_threshold`, `bloom_size` (their light spread wide in their own colours), set with `property.set` on the grade; drawn after the grade and before the vignette and grain.

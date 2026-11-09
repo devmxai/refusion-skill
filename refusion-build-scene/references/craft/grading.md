@@ -108,7 +108,8 @@ A grade has four selections (`grade.select1_…` to `grade.select4_…`): each h
 The last stage, set with `property.set` on the grade's numbers: `vignette_amount` (-15 to -35 draws the eye in; past -50 it shows), `vignette_midpoint` (where it begins),
 `vignette_roundness`, `vignette_feather` (soft, 50 to 80); `grain_amount` (8 to 20 reads as film on a phone; more is a look),
 `grain_size`, `grain_roughness`, `grain_colour` (0 for black and white film). The grain changes every frame and lies over everything.
-Halation (`halation_amount` 15 to 40) puts a red rim round bright lights, as film does: for night streets, neon, sun through a window. Bloom
+Detail comes first: `clarity` +10 to +30 gives faces and landscapes body (negative softens skin, a dreamy look), `texture` +10 to +25
+crisps fine detail (negative smooths skin without blurring edges); past 50 both show halos. Halation (`halation_amount` 15 to 40) puts a red rim round bright lights, as film does: for night streets, neon, sun through a window. Bloom
 (`bloom_amount` 10 to 30) lets highlights glow softly; past 50 it is a dream look. Raise their thresholds to keep them on the brightest
 parts only. Balance and match measure the picture without the film, so add it last.
 
