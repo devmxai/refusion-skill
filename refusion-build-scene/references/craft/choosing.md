@@ -58,9 +58,9 @@ None fits and the owner wants one of their own: [designing-a-transition.md](desi
 
 | You want | Use |
 |---|---|
-| A first grade: lift a dark shot, give a flat one punch | the layer's grade: `exposure`, `contrast`, the four tones ([grading.md](grading.md)) · `fx.effect:color.curves` · `fx.effect:color.levels` |
+| A first grade: lift a dark shot, give a flat one punch | the layer's grade: `exposure`, `contrast`, the four tones, then its curves for finer shaping ([grading.md](grading.md)) |
 | Warmer or cooler | the layer's grade: `temperature`, `tint` ([grading.md](grading.md)) |
-| Stronger or weaker colour | `fx.effect:color.hue_saturation` · `fx.effect:color.tint` · `fx.effect:color.black_white` |
+| Stronger or weaker colour | the layer's grade: `vibrance`, `saturation`, one colour's with the mixer ([grading.md](grading.md)) · `fx.effect:color.tint` · `fx.effect:color.black_white` |
 | Soften, or a blur-in | `fx.effect:blur.gaussian_blur` (animate its radius) |
 | Speed or focus | `fx.effect:blur.directional_blur` · `fx.effect:blur.zoom_blur` · `fx.effect:blur.spin_blur` |
 | Lift a card off the ground | `fx.effect:stylize.drop_shadow` |

@@ -1,12 +1,12 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `9ae0c39b5a2353ba`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `27ab39d2d5312bce`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
-193 tools in 34 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
+201 tools in 35 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
 ## Families
 
-`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `grade` (2) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `session` (4) · `slot` (5) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
+`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `grade` (9) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (31) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `scope` (1) · `session` (4) · `slot` (5) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
 
 Notes: **asks** means the owner is asked on the device for each call of a remote agent; **not in a scene** means the engine refuses the tool on a layer inside a scene.
 
@@ -135,7 +135,14 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
 | `grade.paste` | edit | layer | Give a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), or with `every` each layer of the composition that takes a… |  |
-| `grade.lut_clear` | edit | layer | Take the look-up table off a layer's grade (the target); its other numbers stay. |  |
+| `grade.look_clear` | edit | layer | Take the look off a layer's grade (the target), a look of the library (`grade.look_set`) or a look-up table (`grade.lut_set`); the grade's own numbers and… |  |
+| `grade.look_set` | edit | layer | Lay a ready-made look of the library (`look`, an id `grade.looks` lists) over the grade of a video, a picture or an adjustment layer (the target: a layer's id… |  |
+| `grade.looks` | read | layer | Read the ready-made looks of the library for a layer (the target: a layer's id, or `"selection"`): thirty looks made with the grade's own numbers, in five… |  |
+| `grade.curve` | read | layer | Read a curve of the grade of a layer (the target) at the edit head: `curve` 0 Luma (the lightness, the colour kept), 1 red, 2 green, 3 blue, 4 Hue vs Hue, 5… |  |
+| `grade.balance_auto` | edit | layer | Balance a layer's picture by itself (the target): the parts of its frame of least colour among its midtones (the layer alone, with its grade, without its look… |  |
+| `grade.match` | edit | layer | Bring a layer (the target) near another (`reference`, a layer's id), shot in other light: the engine measures both frames (each alone, with its grade, without… |  |
+| `grade.inputs` | read | layer | Read the curves a layer's clip (the target: a video, a picture or an adjustment layer) may have been shot with, as the grade's first stage reads them: 0 as the… |  |
+| `grade.input_set` | edit | layer | Read a layer's clip (the target) by the curve it was shot with (`curve`, a code `grade.inputs` lists; 0 as the file says): the grade's first stage turns the… |  |
 
 ## guide
 
@@ -305,6 +312,12 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `scene.motion` | call | scene | Read, along the whole composition, where a layer moves far between two frames and is drawn sharp: it then shows as separate copies, not as a movement, and the… |  |
 | `scene.survey` | read | scene | Read how the composition's motion is made, counted from the session and not drawn: what a piece does by habit, before you look at it. |  |
 
+## scope
+
+| Tool | Use | Target | What it does | Notes |
+|---|---|---|---|---|
+| `scope.read` | read | - | Read the picture at the edit head as a colourist reads the scopes: the project drawn as a file is drawn, counted by the scopes' own kernels on the GPU, and the… |  |
+
 ## session
 
 | Tool | Use | Target | What it does | Notes |
@@ -373,7 +386,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `vector.set_item` | edit | layer | Change the fill colour, the stroke colour or the stroke width of one part of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner… |  |
 | `vector.items` | read | layer | Read the parts of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in drawing order: each part's name, how… |  |
 
-## Not offered to an agent (148)
+## Not offered to an agent (157)
 
 Do not look for another way to do these: they are the owner's, and each has the engine's reason.
 
@@ -397,6 +410,14 @@ Do not look for another way to do these: they are the owner's, and each has the 
 - `text.motion_copy`: the owner's selection or clipboard (what they chose to edit, what they copied): an agent builds a text or a motion with the edit tools instead
 - `grade.copy`: the owner's selection or clipboard (what they chose to edit, what they copied): an agent builds a text or a motion with the edit tools instead
 - `grade.lut_set`: not declared an agent's tool: a new tool is withheld until `agent_use_of` names it (a default, not a decision)
+- `grade.lut_keep`: keeps tables in the person's own library on the device, from a file the person opened with the app: the person's own
+- `grade.balance_at`: a finger of the owner's on the picture in the viewport: an agent balances with grade.balance_auto, or sets temperature and tint with property.set
+- `grade.selection_pick`: a finger of the owner's on the picture in the viewport: an agent sets a selection's key with property.set (`grade.selectN_hue`, its width and the ranges)…
+- `scope.open`: a preview or an audition that the owner's interface asks for, drawn on a shared image or played on the device's output: `media.look` and `render.look` show an…
+- `scope.close`: a preview or an audition that the owner's interface asks for, drawn on a shared image or played on the device's output: `media.look` and `render.look` show an…
+- `grade.looks_open`: a preview or an audition that the owner's interface asks for, drawn on a shared image or played on the device's output: `media.look` and `render.look` show an…
+- `grade.look_save`: keeps a look in the person's own library on the device: the person's, made from the colour sheet
+- `grade.lut_export`: writes a file of the owner's device outside the project's folder, at a place the owner chose with the system's picker or share sheet: an agent has no picker…
 - `recipe.run`: opens, creates, saves, renames, copies or closes a project of the owner's library, or sets how the session saves: the owner's own work, not an edit of the…
 - `shelf.state`: the library of the person's account (the results it generated, its own add-ons) and what the person takes from it into the open project: the person's own, not…
 - `shelf.ask`: the library of the person's account (the results it generated, its own add-ons) and what the person takes from it into the open project: the person's own, not…
@@ -431,6 +452,7 @@ Do not look for another way to do these: they are the owner's, and each has the 
 - `timeline.step_frame`: the transport and the playhead are the owner's: playing, pausing and seeking move what the owner is looking at, and are not an edit that a history step can…
 - `timeline.seek_to_key`: the transport and the playhead are the owner's: playing, pausing and seeking move what the owner is looking at, and are not an edit that a history step can…
 - `addon.remove`: takes an add-on the owner installed off the device, for every project: the owner's library, emptied by the owner (an agent installs, with the owner's yes for…
+- `grade.look_forget`: deletes a look the person kept on the device, for every project: the person's own, emptied by the person
 - `addon.preview_open`: a preview or an audition that the owner's interface asks for, drawn on a shared image or played on the device's output: `media.look` and `render.look` show an…
 - `addon.export`: writes an add-on's file at a place the owner chose with the system's picker: an agent has no picker and never names a path (it reads an add-on's definition…
 - `addon.account_state`: the add-ons of the person's platform account: kept, brought to their devices and removed by the person with their account, not an agent's (an add-on an agent…

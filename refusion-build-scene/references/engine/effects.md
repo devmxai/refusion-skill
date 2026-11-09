@@ -1,19 +1,16 @@
 # Effects
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `9ae0c39b5a2353ba`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `27ab39d2d5312bce`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 An effect is added to a layer with `effect.add`, or with `inspector.add` and the item `fx.effect`. Its settings are properties of the layer, keyed like any other (`fx.<kind>.<setting>[<id>]`), and every effect has a `mix`.
 
-22 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
+19 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
 
 | Item | Id | Category |
 |---|---|---|
 | Gaussian Blur | `fx.effect:blur.gaussian_blur` | Blur |
-| Hue / Saturation | `fx.effect:color.hue_saturation` | Color |
-| Levels | `fx.effect:color.levels` | Color |
 | Black & White | `fx.effect:color.black_white` | Color |
 | Invert | `fx.effect:color.invert` | Color |
-| Curves | `fx.effect:color.curves` | Color |
 | Directional Blur | `fx.effect:blur.directional_blur` | Blur |
 | Zoom Blur | `fx.effect:blur.zoom_blur` | Blur |
 | Spin Blur | `fx.effect:blur.spin_blur` | Blur |
@@ -52,42 +49,6 @@ Softens the picture evenly, in light, along either or both axes.
 
 ## Color
 
-### Hue / Saturation — `fx.effect:color.hue_saturation`
-
-Color · suits video, shape, vector, text, background, scene, adjustment · cost unmeasured · available
-
-Turns the hue about the grey axis and shifts the saturation and the lightness.
-
-**Use:** Recolour a graphic, mute a loud picture, push the colour for a poster look.
-
-**Found by:** hue, saturation, colour, color, vibrance, تشبع, لون, صبغة, effect, fx, تأثير, مؤثر, افكت
-
-**Add:** `inspector.add item=library kind=fx.effect:color.hue_saturation`
-
-- `hue` (number, degrees): -180 to 180, default 0
-- `saturation` (number, percent): -100 to 100, default 0
-- `lightness` (number, percent): -100 to 100, default 0
-- `mix` (number, percent): 0 to 100, default 100
-
-### Levels — `fx.effect:color.levels`
-
-Color · suits video, shape, vector, text, background, scene, adjustment · cost unmeasured · available
-
-Sets the black and white points, a gamma between them, and the output points, for all the channels or one.
-
-**Use:** Restore a washed-out picture, or crush the blacks for a graphic look.
-
-**Found by:** levels, gamma, black point, white point, histogram, مستويات, جاما, أسود, أبيض, effect, fx, تأثير, مؤثر, افكت
-
-**Add:** `inspector.add item=library kind=fx.effect:color.levels`
-
-- `input_black` (number, none): 0 to 254, default 0
-- `input_white` (number, none): 1 to 255, default 255
-- `gamma` (number, none): 0.1 to 10, default 1
-- `output_black` (number, none): 0 to 255, default 0
-- `output_white` (number, none): 0 to 255, default 255
-- `mix` (number, percent): 0 to 100, default 100
-
 ### Black & White — `fx.effect:color.black_white`
 
 Color · suits video, shape, vector, text, background, scene, adjustment · cost unmeasured · available
@@ -116,40 +77,6 @@ Reverses the picture's colours.
 **Add:** `inspector.add item=library kind=fx.effect:color.invert`
 
 - `amount` (number, percent): 0 to 100, default 100
-- `mix` (number, percent): 0 to 100, default 100
-
-### Curves — `fx.effect:color.curves`
-
-Color · suits video, shape, vector, text, background, scene, adjustment · cost unmeasured · available
-
-A curve for each colour channel and one for all of them, each through five points.
-
-**Use:** Fine grading: lift the shadows, roll off the highlights, cross-process the colour.
-
-**Found by:** curves, tone, contrast, grade, منحنيات, منحنى, تدرج, effect, fx, تأثير, مؤثر, افكت
-
-**Add:** `inspector.add item=library kind=fx.effect:color.curves`
-
-- `master_black` (number, percent): 0 to 100, default 0
-- `master_shadow` (number, percent): 0 to 100, default 25
-- `master_mid` (number, percent): 0 to 100, default 50
-- `master_light` (number, percent): 0 to 100, default 75
-- `master_white` (number, percent): 0 to 100, default 100
-- `red_black` (number, percent): 0 to 100, default 0
-- `red_shadow` (number, percent): 0 to 100, default 25
-- `red_mid` (number, percent): 0 to 100, default 50
-- `red_light` (number, percent): 0 to 100, default 75
-- `red_white` (number, percent): 0 to 100, default 100
-- `green_black` (number, percent): 0 to 100, default 0
-- `green_shadow` (number, percent): 0 to 100, default 25
-- `green_mid` (number, percent): 0 to 100, default 50
-- `green_light` (number, percent): 0 to 100, default 75
-- `green_white` (number, percent): 0 to 100, default 100
-- `blue_black` (number, percent): 0 to 100, default 0
-- `blue_shadow` (number, percent): 0 to 100, default 25
-- `blue_mid` (number, percent): 0 to 100, default 50
-- `blue_light` (number, percent): 0 to 100, default 75
-- `blue_white` (number, percent): 0 to 100, default 100
 - `mix` (number, percent): 0 to 100, default 100
 
 ## Blur
