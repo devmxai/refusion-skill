@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.47 (2026-11-10)
+
+- A batch is read whole before it runs (`session.batch` and `session.validate`, version 3): every item whose tool, arguments or earlier item (`target_from`, `composition_from`, `key_from`, which must name an item before it) is not right is refused in one reply, each in `errors` with its place, tool, code and words, and the parameters of each tool at fault once (`items_invalid` for two or more). Mend them all, then send the batch once.
+- `guide.find`: a few words (`keyframe ease`, `scene template`) name the tools that do it, best first, each with its first sentence and its parameters typed. It finds tools; a property's path is in `property.schema`.
+- The formula edits (`property.expression_set`, `_bake`, `_detach`, `_clear`) answer without the language's reference (`reference` empty): `property.expression` and `guide.read` with topic `formulas` carry it, and a formula refused for its language names that topic.
+- Refusals say how to mend: a formula that ends in the wrong unit says how to write it (`(...)/1s*1deg`), and a key outside its layer names the time asked and the layer's span.
+- `guide.read` has a `templates` page, and its `workflow` asks you to look before you say a piece is done (`render.strip`, `scene.layout`, `render.compare` against a reference).
+- An instance's template values are properties of it (ADDONS AD2d-2a): `inspector.read` shows them in a tab of their own, Template (`tab_codes` 14, first, the one an instance opens on), in the item `template.controls`, each at `pkg.template.<control>` under its designer's name; `property.set` and `property.set_text` on that path set the instance's value as `template.value_set` does, in one history step.
+
 ## 0.2.46 (2026-11-10)
 
 - Template controls of a colour and a number (ADDONS AD2d-1b): `template.control_add` with `kind` `colour` or `number` and the `property` they give a value (`fill.color`, `font.size`; one with no keys); `template.value_set` with `colour` (`#RRGGBBAA`) or `number` (inside the property's range). An instance draws them from a store of its own; a property that has keys takes no value.

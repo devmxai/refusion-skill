@@ -1,6 +1,6 @@
 # Transitions
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `40d96d44493deab3`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `66b67182c3b8df2e`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 A transition lies on a cut between two layers: `transition.add` with the kind's code. The settings are besides the length and the curve every transition has.
 

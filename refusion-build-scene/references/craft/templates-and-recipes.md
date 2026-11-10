@@ -51,5 +51,6 @@ A scene can be a template: a person or an agent uses it many times, each instanc
 - **Give an instance its values.** Call `template.value_set` on the layer that shows the scene.
   - Its parameters: `control`, then `text`, `font`, `on` (1 or 0), `source` (a picture of the library), `colour` (`#RRGGBBAA`) or `number`; `clear` 1 gives back the designer's value.
   - Only that instance changes. The scene and its other instances do not.
+  - The person sets the same values in the instance's inspector, in its own tab, Template, where each control is a row at the path `pkg.template.<control>`. An instance that gives a control its own value keeps it when the designer changes the scene; `clear` gives it back the designer's. `property.set` (a colour, a number, a switch) and `property.set_text` (a text, a font, a picture's source id) on that path do what `template.value_set` does.
 - **Read it back.** `template.state` gives the controls, the value each instance shows, why a control cannot take one, and the sections.
 - **Take an instance apart.** `template.detach` turns it into layers of its own with its values laid on, as `layer.ungroup` does.

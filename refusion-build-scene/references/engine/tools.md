@@ -1,12 +1,12 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `40d96d44493deab3`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `66b67182c3b8df2e`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
-211 tools in 36 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
+212 tools in 36 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
 ## Families
 
-`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `grade` (10) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (34) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `scope` (1) · `session` (4) · `slot` (5) · `template` (6) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
+`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `grade` (10) · `guide` (2) · `history` (3) · `inspector` (4) · `layer` (34) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `scope` (1) · `session` (4) · `slot` (5) · `template` (6) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
 
 Notes: **asks** means the owner is asked on the device for each call of a remote agent; **not in a scene** means the engine refuses the tool on a layer inside a scene.
 
@@ -149,6 +149,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 
 | Tool | Use | Target | What it does | Notes |
 |---|---|---|---|---|
+| `guide.find` | call | - | Find the tools a few words name (`words`), best first, at most `limit` (8 when absent): for each its name (`tools`), its first sentence (`summaries`) and its… |  |
 | `guide.read` | call | - | Read the engine's guide for an agent: how to work on a project (read, check, apply, look, mend), how time, layers, animation and text are written, what the… |  |
 
 ## history

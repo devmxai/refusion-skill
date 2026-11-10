@@ -1,10 +1,10 @@
 # The engine, as it is now
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `40d96d44493deab3`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `66b67182c3b8df2e`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 | what | how many |
 |---|---|
-| tools offered to an agent | 211 (direct 25 · read 47 · edit 139; direct tools that also go in a batch: 1) |
+| tools offered to an agent | 212 (direct 26 · read 47 · edit 139; direct tools that also go in a batch: 1) |
 | tools withheld from an agent, each with its reason | 156 |
 | library: effect | 16 |
 | library: look | 6 |
@@ -48,6 +48,7 @@ Read with `guide.read` (no topic lists them). They are the engine's own text for
 - `checks`: What the layout checks of `scene.layout` mean, and the numbers they use.
 - `motion`: How to make a movement read as smooth in the file: speed, motion blur, easing, and what a video encoder keeps.
 - `pool`: The designer's material: the pictures, sounds, drawings and clips in the project's library, how they are named and found, how to place them by name, and what to do when one is missing.
+- `templates`: A scene made a template: its controls (text, font, switch, picture, colour, number), an instance's own values, its sections, and taking an instance apart.
 - `recipes`: Batches that were run and looked at: a follow banner, a title a line reveals, a magnifier icon, a lower third, a group moved by a null, a pulse on the beat, a card as big as its text, a wheel that follows a car, a parallax; read one with `recipes:<name>`.
 - `recipes:<name>`: one recipe's batch, e.g. `recipes:follow-banner`.
 - `tool:<name>`: one tool's parameters, its reasons for refusal and an example, e.g. `tool:session.batch`.
@@ -77,12 +78,6 @@ You are offered these and no page above names them; `tool:<name>` gives each one
 - `slot.clear`: Empty a media slot (the target: a layer's id, or `"selection"` for the layer the owner has selected), in one history step with the revision checked: its…
 - `slot.remove`: Take the slot role off a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in one history step with the revision…
 - `slot.list`: Read every media slot of the project (its own composition and its scenes), so an agent or a person knows what a template asks for and what is still empty, as…
-- `template.set`: Make a scene (`scene`, or the one the owner has open) a template, change its sections, or make it a plain scene again (`on` false), in one history step with…
-- `template.control_add`: Declare a control of a template on a layer of its scene (the target: a layer's id, or `"selection"`), in one history step with the revision checked: what it…
-- `template.control_remove`: Take a control off a template, in one history step with the revision checked: the values its instances gave it are let go, and they show the designer's value.
-- `template.value_set`: Give an instance of a template (the target: a layer's id, or `"selection"`) a value of its own for one control, or give it back the designer's (`clear`), in…
-- `template.state`: Read the template an instance shows (the target: a layer's id, or `"selection"`): its controls as parallel lists (id, name, kind, layer, why it cannot take a…
-- `template.detach`: Turn an instance of a template (the target: a layer's id, or `"selection"`) into layers of its own, its values laid on, in one history step with the revision…
 - `library.catalog`: Read what the engine offers to add, as one list whatever the kind: the effects, the looks (ready-made chains of effects), the transitions, and the ready-made…
 - `library.look`: Look at what the library's cards show: the engine draws a page of its effects (`kind` 1), its transitions (`kind` 2), its kinds of background (`kind` 3) or its…
 - `morph.to`: Make a shape layer (the target: a layer's id, or `"selection"`) morph to another outline: a kind with its numbers, or another shape layer's own geometry.
