@@ -1,6 +1,6 @@
 # Ready-made motion
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `c1623f4685e29307`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `40d96d44493deab3`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 How a layer or a text comes in, goes out, and moves all the while it is there. Add one with `inspector.add` (the item and kind on its Add line), or give the same with `layer.motion_set` (any layer) or `text.motion_set` (the words of a text); a preset's numbers are then ordinary properties. A **preset** is one move; a **recipe** is a named look with its unit, its order, its delay and its pace set. What each does is read from the engine's tables, in the units named: for a text, ems of its size; for a layer, a share of the canvas's shorter side.
 

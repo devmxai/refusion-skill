@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.46 (2026-11-10)
+
+- Template controls of a colour and a number (ADDONS AD2d-1b): `template.control_add` with `kind` `colour` or `number` and the `property` they give a value (`fill.color`, `font.size`; one with no keys); `template.value_set` with `colour` (`#RRGGBBAA`) or `number` (inside the property's range). An instance draws them from a store of its own; a property that has keys takes no value.
+
 ## 0.2.45 (2026-11-10)
 
 - Scene templates (ADDONS AD2d-1a): `template.set` (a scene made a template, with sections: an intro and an outro at their own speed, the hold stretched, looped or frozen), `template.control_add` / `template.control_remove` (text, font, switch and media controls on the scene's layers), `template.value_set` (an instance's own value, or the designer's back), `template.state` (controls, values, sections) and `template.detach` (an instance into layers of its own with its values). A project keeps them from schema 80.

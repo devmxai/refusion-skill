@@ -45,10 +45,11 @@ A scene can be a template: a person or an agent uses it many times, each instanc
   - `font`: its family;
   - `switch`: whether a layer shows;
   - `media`: the picture a shape is filled with.
+  - `colour` and `number`: a property of the layer that has no keys, named by `property` as `property.set` names it (the fill colour **fill.color**, the size **font.size**). A number stays inside its property's range.
 
   A control binds what is fixed: the value is one for the whole instance, and the keys the designer set stay as made.
 - **Give an instance its values.** Call `template.value_set` on the layer that shows the scene.
-  - Its parameters: `control`, then `text`, `font`, `on` (1 or 0) or `source` (a picture of the library); `clear` 1 gives back the designer's value.
+  - Its parameters: `control`, then `text`, `font`, `on` (1 or 0), `source` (a picture of the library), `colour` (`#RRGGBBAA`) or `number`; `clear` 1 gives back the designer's value.
   - Only that instance changes. The scene and its other instances do not.
 - **Read it back.** `template.state` gives the controls, the value each instance shows, why a control cannot take one, and the sections.
 - **Take an instance apart.** `template.detach` turns it into layers of its own with its values laid on, as `layer.ungroup` does.
