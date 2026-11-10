@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.44 (2026-11-10)
+
+- The library's My has Looks (`my.looks`): the looks of this device, each a grade or a table and kept in the account or on this phone only, drawn over the reference picture of a look; `shelf.use` lays one on the selected clip (`grade.look_set`). The account keeps looks too, as the platform declares the kinds it keeps.
+
 ## 0.2.43 (2026-11-10)
 
 - A look is an add-on (ADDONS AD9): the kind `look`, a `.rfl` file of a grade's numbers (`look.json`) and its table (`.cube`). `grade.look_save` and `grade.lut_keep` keep a look as one; `addon.list`, `addon.export`, `addon.inspect`, `addon.install` and `addon.remove` take it like a transition. `grade.look_forget` is retired: `addon.remove` takes a look off. `addon.export` names the file by the add-on's name. `addon.account_state` names the add-ons the account does not keep yet (`here_only`, a look until the account takes looks) with the reason (`here_only_reason`).
