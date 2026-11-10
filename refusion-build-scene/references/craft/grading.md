@@ -73,6 +73,13 @@ Grade the shot first (balance, light), then the look on top. Applying one replac
 
 The person's own looks are listed by `grade.looks` in family 6, My looks, and laid on with `grade.look_set` like any other. The person keeps them from the colour sheet: each holds a grade's own numbers and the look that was over them, baked into a table. They show as they were saved when laid at an amount of 100.
 
+A look of the person's own is an add-on of the kind `look`, a `.rfl` file: `addon.list` lists it, `addon.export` writes it to share, `addon.remove` takes it off (a project that has it keeps its numbers and its table). To make a look for the owner as a file, author a folder and pack it with `rpro addon pack <folder>`, which checks it as an install would:
+
+- The manifest, **addon.json**: `"kind": "look"`, an id in a domain of your own (not `pro.refusion.`, and not the id of a library look such as `cinematic.drama`), a version, a name in English and Arabic, a licence, `"entry": "look.json"`, and the table listed in `assets` as `text/x-cube` when there is one.
+- The entry, **look.json**: `{"look": 1, "values": [[code, x, y], ...], "table": "assets/look.cube"}`. Each value is a number of the grade by its code (light, colour, the wheels, the curves, the mixer; not a selection, the look's amount or the film), named once and inside its range, `y` 0 for a number and the second axis for a wheel's puck. A table alone, or numbers alone, is a look; nothing at all is refused.
+
+Install it with `addon.inspect` then `addon.install`, with the owner's yes: it is then in My looks (with numbers) or Imported (a table alone).
+
 ## Log footage
 
 A clip shot in Log (Apple Log on an iPhone Pro, S-Log3, V-Log, LogC3) looks grey and flat as it is: that is the camera keeping the

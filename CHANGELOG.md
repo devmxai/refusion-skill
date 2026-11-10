@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.43 (2026-11-10)
+
+- A look is an add-on (ADDONS AD9): the kind `look`, a `.rfl` file of a grade's numbers (`look.json`) and its table (`.cube`). `grade.look_save` and `grade.lut_keep` keep a look as one; `addon.list`, `addon.export`, `addon.inspect`, `addon.install` and `addon.remove` take it like a transition. `grade.look_forget` is retired: `addon.remove` takes a look off. `addon.export` names the file by the add-on's name. `addon.account_state` names the add-ons the account does not keep yet (`here_only`, a look until the account takes looks) with the reason (`here_only_reason`).
+
 ## 0.2.42 (2026-11-09)
 
 - `layer.swap` (`later`: with the clip after it, else the one before): a layer and its neighbour on its row change places, the pair keeping its span and the gap between them; refused with no clip that side (`no_neighbour`). `layer.row_down`: a layer one row down, never under the main track (`row_down_bottom`); a picture just above the main track goes back into it, at its own time when that stretch is free, else at the nearest cut.

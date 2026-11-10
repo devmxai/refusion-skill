@@ -1,6 +1,6 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `f3503ac999036b71`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `ebb7f51b20998c2a`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 205 tools in 35 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
@@ -390,7 +390,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `vector.set_item` | edit | layer | Change the fill colour, the stroke colour or the stroke width of one part of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner… |  |
 | `vector.items` | read | layer | Read the parts of a vector layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in drawing order: each part's name, how… |  |
 
-## Not offered to an agent (157)
+## Not offered to an agent (156)
 
 Do not look for another way to do these: they are the owner's, and each has the engine's reason.
 
@@ -456,7 +456,6 @@ Do not look for another way to do these: they are the owner's, and each has the 
 - `timeline.step_frame`: the transport and the playhead are the owner's: playing, pausing and seeking move what the owner is looking at, and are not an edit that a history step can…
 - `timeline.seek_to_key`: the transport and the playhead are the owner's: playing, pausing and seeking move what the owner is looking at, and are not an edit that a history step can…
 - `addon.remove`: takes an add-on the owner installed off the device, for every project: the owner's library, emptied by the owner (an agent installs, with the owner's yes for…
-- `grade.look_forget`: deletes a look the person kept on the device, for every project: the person's own, emptied by the person
 - `addon.preview_open`: a preview or an audition that the owner's interface asks for, drawn on a shared image or played on the device's output: `media.look` and `render.look` show an…
 - `addon.export`: writes an add-on's file at a place the owner chose with the system's picker: an agent has no picker and never names a path (it reads an add-on's definition…
 - `addon.account_state`: the add-ons of the person's platform account: kept, brought to their devices and removed by the person with their account, not an agent's (an add-on an agent…

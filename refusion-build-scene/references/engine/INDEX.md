@@ -1,11 +1,11 @@
 # The engine, as it is now
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `f3503ac999036b71`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `ebb7f51b20998c2a`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 | what | how many |
 |---|---|
 | tools offered to an agent | 205 (direct 25 · read 46 · edit 134; direct tools that also go in a batch: 1) |
-| tools withheld from an agent, each with its reason | 157 |
+| tools withheld from an agent, each with its reason | 156 |
 | library: effect | 16 |
 | library: look | 6 |
 | library: transition | 24 |
