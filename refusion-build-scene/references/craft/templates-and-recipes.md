@@ -30,3 +30,25 @@ A recipe is one JSON object:
 - With a connection, `recipe.run` builds the same text, and `rpro recipe check FILE` proves one without leaving anything.
 
 A whole example, a vertical coffee ad with three assets and two texts: [examples/coffee-ad.rfr](../../examples/coffee-ad.rfr).
+
+## Scene templates: one design, a value per use
+
+A scene can be a template: a person or an agent uses it many times, each instance with its own text, font, pictures and what shows, while the design and its motion stay the designer's.
+
+- **Make the scene a template.** Call `template.set` with `on` true on the scene, either the one open (`timeline.enter`) or the one named by `scene`.
+  - Give it sections when its length will change: `intro` and `outro` are the lengths that play at their own speed, and the outro ends with the instance.
+  - `hold` says how the middle takes the rest: `stretch` (the default), `loop` or `freeze`.
+  - An instance as long as the scene shows it as it is.
+  - Sections do not apply to a scene that holds a video, a sound or a scene of its own (`template.state` says so).
+- **Declare its controls.** Call `template.control_add` with the target being a layer of the scene. The kinds:
+  - `text`: a text's words;
+  - `font`: its family;
+  - `switch`: whether a layer shows;
+  - `media`: the picture a shape is filled with.
+
+  A control binds what is fixed: the value is one for the whole instance, and the keys the designer set stay as made.
+- **Give an instance its values.** Call `template.value_set` on the layer that shows the scene.
+  - Its parameters: `control`, then `text`, `font`, `on` (1 or 0) or `source` (a picture of the library); `clear` 1 gives back the designer's value.
+  - Only that instance changes. The scene and its other instances do not.
+- **Read it back.** `template.state` gives the controls, the value each instance shows, why a control cannot take one, and the sections.
+- **Take an instance apart.** `template.detach` turns it into layers of its own with its values laid on, as `layer.ungroup` does.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.45 (2026-11-10)
+
+- Scene templates (ADDONS AD2d-1a): `template.set` (a scene made a template, with sections: an intro and an outro at their own speed, the hold stretched, looped or frozen), `template.control_add` / `template.control_remove` (text, font, switch and media controls on the scene's layers), `template.value_set` (an instance's own value, or the designer's back), `template.state` (controls, values, sections) and `template.detach` (an instance into layers of its own with its values). A project keeps them from schema 80.
+
 ## 0.2.44 (2026-11-10)
 
 - The library's My has Looks (`my.looks`): the looks of this device, each a grade or a table and kept in the account or on this phone only, drawn over the reference picture of a look; `shelf.use` lays one on the selected clip (`grade.look_set`). The account keeps looks too, as the platform declares the kinds it keeps.

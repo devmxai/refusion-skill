@@ -1,12 +1,12 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `ebb7f51b20998c2a`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `c1623f4685e29307`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
-205 tools in 35 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
+211 tools in 36 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
 ## Families
 
-`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `grade` (10) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (34) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `scope` (1) · `session` (4) · `slot` (5) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
+`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `grade` (10) · `guide` (1) · `history` (3) · `inspector` (4) · `layer` (34) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `scope` (1) · `session` (4) · `slot` (5) · `template` (6) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
 
 Notes: **asks** means the owner is asked on the device for each call of a remote agent; **not in a scene** means the engine refuses the tool on a layer inside a scene.
 
@@ -340,6 +340,17 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `slot.clear` | edit | layer | Empty a media slot (the target: a layer's id, or `"selection"` for the layer the owner has selected), in one history step with the revision checked: its… |  |
 | `slot.remove` | edit | layer | Take the slot role off a layer (the target: a layer's id, or `"selection"` for the layer the owner has selected), in one history step with the revision… |  |
 | `slot.list` | read | - | Read every media slot of the project (its own composition and its scenes), so an agent or a person knows what a template asks for and what is still empty, as… |  |
+
+## template
+
+| Tool | Use | Target | What it does | Notes |
+|---|---|---|---|---|
+| `template.set` | edit | - | Make a scene (`scene`, or the one the owner has open) a template, change its sections, or make it a plain scene again (`on` false), in one history step with… |  |
+| `template.control_add` | edit | layer | Declare a control of a template on a layer of its scene (the target: a layer's id, or `"selection"`), in one history step with the revision checked: what it… |  |
+| `template.control_remove` | edit | - | Take a control off a template, in one history step with the revision checked: the values its instances gave it are let go, and they show the designer's value. |  |
+| `template.value_set` | edit | layer | Give an instance of a template (the target: a layer's id, or `"selection"`) a value of its own for one control, or give it back the designer's (`clear`), in… |  |
+| `template.state` | read | layer | Read the template an instance shows (the target: a layer's id, or `"selection"`): its controls as parallel lists (id, name, kind, layer, why it cannot take a… |  |
+| `template.detach` | edit | layer | Turn an instance of a template (the target: a layer's id, or `"selection"`) into layers of its own, its values laid on, in one history step with the revision… |  |
 
 ## text
 
