@@ -1,0 +1,15 @@
+{
+  "name": "refusion",
+  "owner": {
+    "name": "Refusion"
+  },
+  "description": "The Refusion skill and connector for Claude Code: an assistant that designs, builds and polishes video in the Refusion project open on your device.",
+  "plugins": [
+    {
+      "name": "refusion",
+      "source": "./",
+      "description": "The Refusion skill and connector: design, build and polish video in the project open in Refusion on your device.",
+      "version": "0.2.48"
+    }
+  ]
+}

@@ -44,7 +44,7 @@ Check the plan before building: Is anything arriving at the same instant as some
 
 ## 5. Units, then batches
 
-Split the plan into design units (a title and its line, a banner, an icon, a lower third): each is one scene built in one batch and placed as one layer (`guide.read` topics `units` and `recipes`). The background that lasts and a global adjustment layer stay on the main timeline. One batch for one idea, `session.validate` first, then `session.batch`; the owner can take it back in one step.
+Split the plan into design units (a title and its line, a banner, an icon, a lower third): each is one scene built in one batch and placed as one layer (`guide.read` topics `units` and `recipes`). The background that lasts and a global adjustment layer stay on the main timeline. One description for one idea, every layer with a key: `session.plan` first, then `session.apply`; the owner can take it back in one step, and a change later is the items that change, not the build again.
 
 ## 6. Design the still before the motion
 

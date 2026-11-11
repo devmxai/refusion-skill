@@ -1,0 +1,9 @@
+{
+  "name": "refusion",
+  "description": "Design, build and polish video in the Refusion project open on your device: the Refusion skill (the craft, and an index of the engine) and the Refusion connector.",
+  "version": "0.2.48",
+  "author": { "name": "Refusion" },
+  "homepage": "https://github.com/devmxai/refusion-skill",
+  "repository": "https://github.com/devmxai/refusion-skill",
+  "license": "Apache-2.0"
+}

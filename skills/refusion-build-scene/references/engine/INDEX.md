@@ -1,10 +1,10 @@
 # The engine, as it is now
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `66b67182c3b8df2e`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `bd7a190fe5dee30c`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 | what | how many |
 |---|---|
-| tools offered to an agent | 212 (direct 26 · read 47 · edit 139; direct tools that also go in a batch: 1) |
+| tools offered to an agent | 214 (direct 27 · read 47 · edit 140; direct tools that also go in a batch: 1) |
 | tools withheld from an agent, each with its reason | 156 |
 | library: effect | 16 |
 | library: look | 6 |
@@ -48,6 +48,7 @@ Read with `guide.read` (no topic lists them). They are the engine's own text for
 - `checks`: What the layout checks of `scene.layout` mean, and the numbers they use.
 - `motion`: How to make a movement read as smooth in the file: speed, motion blur, easing, and what a video encoder keeps.
 - `pool`: The designer's material: the pictures, sounds, drawings and clips in the project's library, how they are named and found, how to place them by name, and what to do when one is missing.
+- `craft`: The craft of the Refusion skill as this engine carries it: direction, timing, choreography, checks, styles, Arabic and text, grading, templates and recipes; `craft:<page>` reads one.
 - `templates`: A scene made a template: its controls (text, font, switch, picture, colour, number), an instance's own values, its sections, and taking an instance apart.
 - `recipes`: Batches that were run and looked at: a follow banner, a title a line reveals, a magnifier icon, a lower third, a group moved by a null, a pulse on the beat, a card as big as its text, a wheel that follows a car, a parallax; read one with `recipes:<name>`.
 - `recipes:<name>`: one recipe's batch, e.g. `recipes:follow-banner`.

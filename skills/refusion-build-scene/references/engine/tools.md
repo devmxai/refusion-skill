@@ -1,12 +1,12 @@
 # Tools an agent is offered
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `66b67182c3b8df2e`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `bd7a190fe5dee30c`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
-212 tools in 36 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
+214 tools in 36 families. A tool's arguments, its reasons for refusal and an example are its own page: `guide.read` with `tool:<name>`.
 
 ## Families
 
-`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `grade` (10) · `guide` (2) · `history` (3) · `inspector` (4) · `layer` (34) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `scope` (1) · `session` (4) · `slot` (5) · `template` (6) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
+`addon` (3) · `anim` (14) · `asset` (4) · `audio` (2) · `beat` (3) · `camera` (1) · `caption` (16) · `composition` (5) · `effect` (8) · `export` (5) · `font` (4) · `grade` (10) · `guide` (2) · `history` (3) · `inspector` (4) · `layer` (35) · `library` (3) · `marker` (4) · `mask` (7) · `media` (7) · `morph` (2) · `motion` (3) · `path` (5) · `project` (4) · `property` (9) · `render` (5) · `scene` (5) · `scope` (1) · `session` (5) · `slot` (5) · `template` (6) · `text` (11) · `timeline` (1) · `transition` (9) · `transport` (1) · `vector` (2)
 
 Notes: **asks** means the owner is asked on the device for each call of a remote agent; **not in a scene** means the engine refuses the tool on a layer inside a scene.
 
@@ -207,6 +207,7 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 | `layer.remove_fill_stop` | edit | layer | Remove a stop of the gradient of a background, a shape, a text or a caption layer, or of the colour ramp of an evolving field, named by its id; it keeps at… |  |
 | `layer.insert_shape` | edit | inside a scene | Insert a shape (rectangle, ellipse, polygon, star or line) at the canvas centre on a new top track and select it. |  |
 | `layer.insert_path` | edit | inside a scene | Insert a path layer on a new top track at a canvas point, with its first node there, and select it. |  |
+| `layer.set_key` | edit | layer | Give a layer (the target: a layer's id, its key written `"@title"`, or `"selection"`) its key, the stable name a tool then names it by as `"@title"` wherever… |  |
 
 ## library
 
@@ -329,7 +330,8 @@ Notes: **asks** means the owner is asked on the device for each call of a remote
 |---|---|---|---|---|
 | `session.handshake` | read | - | Read the engine's version, what it can do on this device (each capability available or not, with the engine's reason when not), the project's revision and the… |  |
 | `session.batch` | call | - | Apply several edits as one transaction: in order, all or none, one revision, one report per item. |  |
-| `session.validate` | call | - | Run a batch and undo it: the reports it would give or the first item that stops it, with the project and its revision unchanged. |  |
+| `session.plan` | call | - | What these items would do, every refusal at once, with the project and its revision unchanged (it replaced `session.validate`). |  |
+| `session.apply` | call | - | Make the project as these items describe it, in one history step and one revision (AB2b). |  |
 | `session.events` | read | - | Read what changed in the session after a sequence number: kind, revision, generation and cause of each event, never state. |  |
 
 ## slot
@@ -425,7 +427,7 @@ Do not look for another way to do these: they are the owner's, and each has the 
 - `context.nav`: a view of the owner's interface (what the canvas shows or catches, the timeline's compact view, a slider's ruler, the bottom bar), not part of the project: the…
 - `text.motion_copy`: the owner's selection or clipboard (what they chose to edit, what they copied): an agent builds a text or a motion with the edit tools instead
 - `grade.copy`: the owner's selection or clipboard (what they chose to edit, what they copied): an agent builds a text or a motion with the edit tools instead
-- `grade.lut_set`: not declared an agent's tool: a new tool is withheld until `agent_use_of` names it (a default, not a decision)
+- `grade.lut_set`: reads a file of tables the person chose and opened with the app (its handle): whether an agent may, with the owner's yes for each file, waits for the owner's…
 - `grade.lut_keep`: keeps tables in the person's own library on the device, from a file the person opened with the app: the person's own
 - `grade.balance_at`: a finger of the owner's on the picture in the viewport: an agent balances with grade.balance_auto, or sets temperature and tint with property.set
 - `grade.selection_pick`: a finger of the owner's on the picture in the viewport: an agent sets a selection's key with property.set (`grade.selectN_hue`, its width and the ranges)…
