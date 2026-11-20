@@ -8,7 +8,7 @@ Refusion shapes text itself, Arabic and other right-to-left scripts included. Yo
 - **Mixed text.** For Arabic with English words or numbers, look at the picture: the order of the pieces in the line is what the viewer reads. Fix the text, not the letters.
 - **Size and room.** Arabic often needs a slightly larger size than Latin text to read as equally strong, and more room for its line. `scene.layout` reports text that is too small (`text_below_legible`), that leaves the canvas or the safe area, and two texts that overlap by the lines they ink; fix those before anything else. `guide.read` with the topic `checks` explains each check; do not guess the numbers.
 - **Reading time.** A line in Arabic competes with the eye's travel from the right; give it its full reading time ([timing.md](timing.md)) and do not shorten the hold to fit more words.
-- **Captions.** Captions are a layer of their own with cues of words and times (`caption.create`; `guide.read` topic `text`). Their timing belongs to the speech; do not stretch a caption to fill space.
+- **Captions.** Captions are a layer of their own with cues of words and times (`kind` `caption` with its `captions` in the project's file; `guide.read` topic `text`). Their timing belongs to the speech; do not stretch a caption to fill space.
 - **Write for the viewer.** Keep on-screen Arabic short and in the register the user used. Do not translate the user's wording unless they ask.
 
 A highlighter sweeping a word goes along the way the text reads, so an Arabic word is swept from its right (`recipes:highlighter`). A card sized to its text follows an Arabic line as it does an English one (`recipes:card-sized-to-text` has both).

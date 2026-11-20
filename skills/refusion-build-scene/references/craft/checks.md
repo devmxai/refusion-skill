@@ -42,7 +42,7 @@ Then write two short lists: what to **keep**, and what to **fix**, ordered by ho
 | A word stops, then starts again | An ease in and out on each short segment, so the speed returns to zero at each key | Keep the speed through the key (`guide.read` topic `motion`); fewer keys |
 | The landing jumps | The last key lands off the end value, or two sources both write the property | `motion.trace` with `explain`; remove one source |
 | A fast move looks like separate copies | A long fast move drawn sharp | Motion blur on, or a slower move (`guide.read` topic `motion`) |
-| The lean or the blur is still there when the word stops | They resolve on the wrong clock | Resolve them with the brake: `motion.channel_set` on lean and blur ([timing.md](timing.md)) |
+| The lean or the blur is still there when the word stops | They resolve on the wrong clock | Resolve them with the brake: the phase's `channels` for lean and blur ([timing.md](timing.md)) |
 | Everything arrives as a block | No stagger, no order | Order by importance; a delay between units; overlap |
 | The text is gone before it can be read | The hold is the leftover | Give it its reading time ([timing.md](timing.md)); cut words |
 | A pulse that is late or early against the music | Hand-typed times | A formula on `beat`, or a length in beats |

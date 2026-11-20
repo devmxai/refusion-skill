@@ -15,9 +15,9 @@ A beat that looks designed has four parts with four different speeds. The defaul
 3. **Hold** (still). This is where the viewer reads. It is the longest part of the beat and the part most often missing. [start] Give a text its reading time (below) before anything else competes with it.
 4. **Release** (fast again, or a hard cut). [measured] Exits that lead into a cut accelerate for about 7 frames, then stop hard. [start] An exit takes 60% to 70% of the entrance's length, or the element simply ends with the scene.
 
-The engine builds the hit and the settle for a text or a layer with a channel's pace: `motion.channel_set` gives one channel (move, size, turn, lean, blur, fade) its own wait, travel and settle on a curve. [engine] Recipes 14 and 15 of the text's entrance do it: the move cruises to 81% of its way by a quarter of the time, then takes the Brake curve for the rest; blur and lean resolve by about half of the time; the text is opaque by 40% (`text.motion:recipe:14`, `text.motion:recipe:15`). A recipe is a starting point: read its numbers with `motion.channels`, then tune them.
+The engine builds the hit and the settle for a text or a layer with a channel's pace: a phase's `channels` in the project's file give one channel (move, size, turn, lean, blur, fade) its own wait, travel and settle on a curve. [engine] Recipes 14 and 15 of the text's entrance do it: the move cruises to 81% of its way by a quarter of the time, then takes the Brake curve for the rest; blur and lean resolve by about half of the time; the text is opaque by 40% (`"recipe": "letters_snap_up_from_a_blur"`, `"recipe": "snap_in_leaning_from_the_left"`). A recipe is a starting point: read its numbers with `motion.channels`, then tune them.
 
-The hold is a hold: a still stretch between two keys is a segment with the hold ease (`anim.set_segment_ease`), and the end of a piece rests on a deliberate hold, never a cut in the middle of a move.
+The hold is a hold: a still stretch between two keys is a segment with the hold ease (`"hold"` on its first key in the document), and the end of a piece rests on a deliberate hold, never a cut in the middle of a move.
 
 ## Lengths by character
 
@@ -40,7 +40,7 @@ Do not give every element the same duration. The slowest thing in a piece is sev
 
 ## Many things at once
 
-- **Stagger.** [start] Elements of a group arrive a few frames apart, in order of importance. A delay of 0.1 s to 0.2 s between words reads as one after another; under 0.05 s as all at once (`text.motion_set` with a `span` or a delay).
+- **Stagger.** [start] Elements of a group arrive a few frames apart, in order of importance. A delay of 0.1 s to 0.2 s between words reads as one after another; under 0.05 s as all at once (`text_motion` with a `span` or a `stagger`).
 - **A whole sentence** [start] takes about a tenth of a second per word, from 0.8 s to 2.5 s (`recipes:sentence-reveal` was run). One text layer whose words are the unit, never a layer per word.
 - **The whole stagger of a group** [start] stays under about half a second whatever the count: more is a slow queue, not a reveal.
 - **Overlap.** The next element starts before the last has finished settling. Waiting for each to stop makes a list; overlapping makes a sequence.
@@ -48,13 +48,13 @@ Do not give every element the same duration. The slowest thing in a piece is sev
 
 ## Easing is the meaning
 
-Ease out for what arrives (it starts fast and lands softly); ease in for what leaves (it gathers speed and is gone); ease in and out for what moves between two places. Linear only for a constant drift. [start] Use at least three different curve shapes in a piece and no more than two independent moves with the same shape in one beat. The shapes a segment can take are named in `guide.read` topic `animation` (ease in, ease out, ease in out, hold, a back shape that overshoots, a spring, a bounce, an elastic band); `anim.set_segment_bezier` takes any cubic.
+Ease out for what arrives (it starts fast and lands softly); ease in for what leaves (it gathers speed and is gone); ease in and out for what moves between two places. Linear only for a constant drift. [start] Use at least three different curve shapes in a piece and no more than two independent moves with the same shape in one beat. The shapes a segment can take are named in `guide.read` topic `animation` (ease in, ease out, ease in out, hold, a back shape that overshoots, a spring, a bounce, an elastic band); `cubic-bezier(x1, y1, x2, y2)` takes any cubic.
 
 A move that continues through a key must not stop at it: an ease in and out on every short segment makes a chain of stops. `motion.trace` shows it as a speed graph that returns to zero at each key.
 
 ## On the beat
 
-With music, put the hit on the beat and let the settle and the hold fill the space to the next one. [start] Anticipate the beat by about a tenth of a second so that the landing is felt on it. The grid is said once for the scene (`beat.set`); a formula reads `beat`, and a length can be said in beats so that it follows the tempo (`guide.read` topics `rhythm` and `formulas`). Put layers on beats with `beat.grid` (it gives the times) and `layer.move`.
+With music, put the hit on the beat and let the settle and the hold fill the space to the next one. [start] Anticipate the beat by about a tenth of a second so that the landing is felt on it. The grid is said once for the scene (its `beat`); a formula reads `beat`, and a length can be said in beats so that it follows the tempo (`guide.read` topics `rhythm` and `formulas`). Put layers on beats with the times `beat.grid` gives, as their `at`.
 
 ## What the engine does not do for you today
 

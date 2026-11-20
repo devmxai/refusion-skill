@@ -1,6 +1,6 @@
 # Example: a calm lower third
 
-**Status:** a plan with the engine's means named; its ids exist in this build. The batch it starts from, `recipes:lower-third`, was run and looked at; the changes named here were not.
+**Status:** a plan with the engine's means named; its ids exist in this build. The file it starts from, `recipes:lower-third`, was written into a project, read back unchanged and drawn; the changes named here were not.
 
 **The brief:** "A lower third for the speaker, name and title, 16:9, four seconds. Calm and clean."
 
@@ -20,7 +20,7 @@ The name takes the longer entrance because it matters more; the title starts aft
 
 ## The build
 
-One batch for the unit (a scene with its own canvas, about 1080 by 300, `guide.read` topic `units`) and the layer that shows it on the main timeline. Used for each speaker: a scene shown several times; `composition.duplicate` first when a use must differ.
+One write of the project's file for the unit (a scene with its own canvas, about 1080 by 300, `guide.read` topic `units`) and the layer that shows it on the main timeline. Used for each speaker: a scene shown several times; a copy of the scene's entry under another name when a use must differ.
 
 ## The check
 

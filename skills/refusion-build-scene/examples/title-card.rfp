@@ -1,0 +1,35 @@
+{
+  "refusion": "project",
+  "version": 2,
+  "canvas": [1920, 1080],
+  "fps": 30,
+  "for": "4s",
+  "motion_blur": { "enabled": true, "sample_limit": 64 },
+  "layers": [
+    { "key": "bg", "kind": "background", "at": "0s", "for": "4s", "color.color": "#0E0E12" },
+    {
+      "key": "title", "kind": "text", "at": "0.2s", "for": "3.6s",
+      "content.text": "MAKE IT MOVE",
+      "font.family": "Archivo Black", "font.size": 140, "fill.color": "#F2EFE9",
+      "transform.position": [240, 420],
+      "text_motion": {
+        "in": { "preset": "rise", "unit": "Letter", "duration": "0.5s", "stagger": "0.04s", "function": "out_back", "order": "Forward" },
+        "out": { "preset": "fade", "unit": "Word", "duration": "0.3s", "stagger": "0.1s", "function": "smooth", "order": "Forward" }
+      }
+    },
+    {
+      "key": "line", "kind": "shape", "at": "0.6s", "for": "3.4s",
+      "shape.size": [600, 8], "color.color": "#FF5A2C",
+      "transform.position": [540, 640],
+      "transform.scale": { "from": [0, 100], "to": [100, 100], "at": "0s", "for": "0.5s", "ease": "ease_out" },
+      "grade.contrast": 12, "grade.saturation": 20
+    },
+    {
+      "key": "dot", "kind": "shape", "shape.kind": "Ellipse", "at": "1s", "for": "3s",
+      "shape.size": [28, 28], "color.color": "#FF5A2C",
+      "transform.position": [880, 640],
+      "transform.scale": { "keys": [["0s", [0, 0], "spring(bounce 0.54, visual 0.412895)"], ["0.5s", [100, 100]]] },
+      "edges": { "loop": { "preset": "pulse", "duration": "0.5s", "function": "sine", "strength": 2, "hold": 0 } }
+    }
+  ]
+}

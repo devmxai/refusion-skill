@@ -1,17 +1,16 @@
 # Looks
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `bd7a190fe5dee30c`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `9aa4256683fb9560`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 A look is a chain of effects with their values, added in one step with `effect.look` (or `inspector.add` with the item `fx.look`). Each effect of it is then an ordinary effect.
 
-6 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
+5 items. Read one with its id in `library.catalog`; `library.look` draws a page of them.
 
 | Item | Id | Category |
 |---|---|---|
 | Liquid wobble | `fx.look:liquid_wobble` | Liquid |
 | Newsprint | `fx.look:newsprint` | Print |
 | Comic print | `fx.look:comic_print` | Print |
-| Vintage film | `fx.look:vintage_film` | Film |
 | Glitch split | `fx.look:glitch_split` | Glitch |
 | Dream glow | `fx.look:dream_glow` | Glow |
 
@@ -27,7 +26,7 @@ A ready-made chain of 2 effects, added in one step: Turbulent Displace, Wave War
 
 **Found by:** liquid, wobble, wave, water, underwater, ripple, jelly, wavy, heat haze, distort, melt, سائل, تموج, موجة, ماء, تحت الماء, اهتزاز, تشوه, ذوبان, هلامي, look, preset, style, مظهر, ستايل, تنسيق جاهز
 
-**Add:** `inspector.add item=library kind=fx.look:liquid_wobble`
+**Add:** `effect.look look=liquid_wobble (a batch item: the look's effects are then the layer's `fx` in the project's file)`
 
 ## Print
 
@@ -35,39 +34,25 @@ A ready-made chain of 2 effects, added in one step: Turbulent Displace, Wave War
 
 Print · suits video, shape, vector, text, background, scene, adjustment · cost unmeasured · available
 
-A ready-made chain of 2 effects, added in one step: Halftone, Film Grain.
+A ready-made chain of 1 effects, added in one step: Halftone.
 
-**Use:** Makes a photo or a clip look printed on old newspaper: black ink dots on warm paper, with a little grain. For a news clipping, a retro editorial or a documentary insert.
+**Use:** Makes a photo or a clip look printed on old newspaper: black ink dots on warm paper. For a news clipping, a retro editorial or a documentary insert.
 
 **Found by:** newsprint, newspaper, halftone, print, dots, ink, paper, retro, press, جريدة, صحيفة, طباعة, نقاط, حبر, ورق, طباعة قديمة, هاف تون, look, preset, style, مظهر, ستايل, تنسيق جاهز
 
-**Add:** `inspector.add item=library kind=fx.look:newsprint`
+**Add:** `effect.look look=newsprint (a batch item: the look's effects are then the layer's `fx` in the project's file)`
 
 ### Comic print — `fx.look:comic_print`
 
 Print · suits video, shape, vector, text, background, scene, adjustment · cost unmeasured · available
 
-A ready-made chain of 2 effects, added in one step: Hue / Saturation, Halftone.
+A ready-made chain of 1 effects, added in one step: Halftone.
 
-**Use:** A pop-art, comic-book look: stronger colour broken into dots of four inks. For a bold intro, a cut-in, a game or a young, loud style.
+**Use:** A pop-art, comic-book look: the colour broken into dots of four inks. For a bold intro, a cut-in, a game or a young, loud style; for stronger colour, raise the grade's saturation of a graded layer.
 
 **Found by:** comic, comic print, pop art, cartoon, halftone, dots, print, colour, color, كوميك, مجلة مصورة, كرتون, بوب آرت, نقاط, طباعة, ألوان, look, preset, style, مظهر, ستايل, تنسيق جاهز
 
-**Add:** `inspector.add item=library kind=fx.look:comic_print`
-
-## Film
-
-### Vintage film — `fx.look:vintage_film`
-
-Film · suits video, shape, vector, text, background, scene, adjustment · cost unmeasured · available
-
-A ready-made chain of 4 effects, added in one step: Temperature / Tint, Hue / Saturation, Exposure / Contrast, Film Grain.
-
-**Use:** Warm, slightly faded colour with film grain: an old home film, a memory, a period piece. Lay it on a whole clip, or on an adjustment layer over a scene.
-
-**Found by:** vintage, film, retro, old, nostalgia, grain, faded, warm, cinematic, فيلم, قديم, كلاسيكي, ريترو, حنين, نوستالجيا, حبيبات, دافئ, سينمائي, look, preset, style, مظهر, ستايل, تنسيق جاهز
-
-**Add:** `inspector.add item=library kind=fx.look:vintage_film`
+**Add:** `effect.look look=comic_print (a batch item: the look's effects are then the layer's `fx` in the project's file)`
 
 ## Glitch
 
@@ -81,7 +66,7 @@ A ready-made chain of 1 effects, added in one step: Chromatic Aberration.
 
 **Found by:** glitch, split, rgb split, chromatic, aberration, fringe, fault, error, distortion, خلل, تشويش, انفصال الألوان, انحراف لوني, تشوه, عطل, رقمي, look, preset, style, مظهر, ستايل, تنسيق جاهز
 
-**Add:** `inspector.add item=library kind=fx.look:glitch_split`
+**Add:** `effect.look look=glitch_split (a batch item: the look's effects are then the layer's `fx` in the project's file)`
 
 ## Glow
 
@@ -95,5 +80,5 @@ A ready-made chain of 2 effects, added in one step: Gaussian Blur, Glow.
 
 **Found by:** dream, dreamy, glow, soft, haze, bloom, romantic, glamour, soft focus, حلم, حالم, توهج, وهج, ناعم, ضبابي, رومانسي, بلوم, هالة, look, preset, style, مظهر, ستايل, تنسيق جاهز
 
-**Add:** `inspector.add item=library kind=fx.look:dream_glow`
+**Add:** `effect.look look=dream_glow (a batch item: the look's effects are then the layer's `fx` in the project's file)`
 

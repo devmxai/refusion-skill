@@ -16,10 +16,10 @@
 
 ## The means
 
-1. The headline is one text layer. `text.motion:recipe:15` (Snap in leaning from the left) is the nearest recipe: its move cruises to 81% of its way by a quarter of its time and then brakes, blur and lean clear by about half, the text is opaque by 40% of the time. Add it with `inspector.add` (`item=library`, `kind=text.motion:recipe:15`), or give the same with `text.motion_set` in a batch.
-2. Read what it does: `motion.channels` for its pace, `scene.snapshot` for its numbers. Change the duration and the distance to the piece with `property.set`; change a channel's pace with `motion.channel_set`.
+1. The headline is one text layer. `text.motion:recipe:15` (Snap in leaning from the left) is the nearest recipe: its move cruises to 81% of its way by a quarter of its time and then brakes, blur and lean clear by about half, the text is opaque by 40% of the time. Write it in the text's entry of the project's file: `"text_motion": {"in": {"recipe": "snap_in_leaning_from_the_left"}}`.
+2. Read what it does: `motion.channels` for its pace, the file for its numbers. Change the duration and the distance to the piece, and a channel's pace (`channels`), in the same entry.
 3. Release: `text.motion:recipe:26` (Gather out to the left), with its length shortened to the 0.25 s to 0.3 s the plan asks.
-4. Put the hit on the beat: get the times with `beat.grid` (`beat.set` first if the scene has none) and place the layer with `layer.move`.
+4. Put the hit on the beat: get the times with `beat.grid` (the scene's `beat` in the file first if it has none) and write the layer's `at` on one.
 5. Hold: do not key anything between the settle and the release.
 
 ## The check

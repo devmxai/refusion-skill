@@ -1,6 +1,6 @@
 # Effects
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `bd7a190fe5dee30c`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `9aa4256683fb9560`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 An effect is added to a layer with `effect.add`, or with `inspector.add` and the item `fx.effect`. Its settings are properties of the layer, keyed like any other (`fx.<kind>.<setting>[<id>]`), and every effect has a `mix`.
 
@@ -37,7 +37,7 @@ Softens the picture evenly, in light, along either or both axes.
 
 **Found by:** blur, gaussian, soften, defocus, focus, تمويه, ضبابية, غاوسي, نعومة, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:blur.gaussian_blur`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "blur.gaussian_blur"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `radius` (number, pixels): 0 to 250, default 0
 - `horizontal` (number, percent): 0 to 100, default 100
@@ -56,7 +56,7 @@ Draws the picture toward its own grey.
 
 **Found by:** black and white, grayscale, greyscale, monochrome, desaturate, أبيض وأسود, رمادي, تدرج رمادي, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:color.black_white`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "color.black_white"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `amount` (number, percent): 0 to 100, default 100
 - `mix` (number, percent): 0 to 100, default 100
@@ -71,7 +71,7 @@ Reverses the picture's colours.
 
 **Found by:** invert, negative, reverse, معكوس, عكس, نيجاتيف, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:color.invert`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "color.invert"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `amount` (number, percent): 0 to 100, default 100
 - `mix` (number, percent): 0 to 100, default 100
@@ -88,7 +88,7 @@ Blurs along one direction, both ways from each pixel.
 
 **Found by:** directional, motion blur, streak, speed, smear, تمويه اتجاهي, حركة, خطوط سرعة, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:blur.directional_blur`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "blur.directional_blur"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `length` (number, pixels): 0 to 1000, default 0
 - `angle` (number, degrees): -360 to 360, default 0
@@ -104,7 +104,7 @@ Blurs toward a point, as if zooming through the picture.
 
 **Found by:** zoom blur, radial blur, punch, rush, تمويه شعاعي, تكبير, اندفاع, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:blur.zoom_blur`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "blur.zoom_blur"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `amount` (number, percent): 0 to 100, default 0
 - `centre` (point, pixels): -10000 to 10000, default 0
@@ -120,7 +120,7 @@ Blurs about a point along arcs, as if the picture spun.
 
 **Found by:** spin, rotate, radial, whirl, دوران, تمويه دوّار, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:blur.spin_blur`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "blur.spin_blur"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `angle` (number, degrees): 0 to 360, default 0
 - `centre` (point, pixels): -10000 to 10000, default 0
@@ -138,7 +138,7 @@ Repeats the picture in tiles over a larger or smaller output, with mirrored edge
 
 **Found by:** tile, repeat, pattern, mirror, wallpaper, تكرار, بلاط, نمط, مرآة, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:stylize.motion_tile`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "stylize.motion_tile"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `centre` (point, pixels): -10000 to 10000, default 0
 - `tile_width` (number, percent): 1 to 10000, default 100
@@ -161,7 +161,7 @@ A soft shadow of the picture's alpha, moved, softened and coloured, under the pi
 
 **Found by:** shadow, drop shadow, depth, lift, ظل, عمق, ظل ساقط, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:stylize.drop_shadow`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "stylize.drop_shadow"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `color` (color, none): 0 to 1, default 0
 - `opacity` (number, percent): 0 to 100, default 50
@@ -181,7 +181,7 @@ Spreads the bright parts of the picture by a pyramid of blurs and adds them back
 
 **Found by:** glow, bloom, neon, light, halo, توهج, نيون, ضوء, هالة, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:stylize.glow`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "stylize.glow"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `threshold` (number, percent): 0 to 100, default 60
 - `radius` (number, pixels): 0 to 100, default 10
@@ -204,7 +204,7 @@ Holds each colour channel to a number of levels.
 
 **Found by:** posterize, levels, poster, flat colour, بوستر, مستويات, تبسيط ألوان, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:color.posterize`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "color.posterize"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `levels` (number, none): 2 to 255, default 6
 - `mix` (number, percent): 0 to 100, default 100
@@ -221,7 +221,7 @@ Draws the picture in cells of one colour each.
 
 **Found by:** mosaic, pixelate, pixel, censor, blocks, بكسلة, فسيفساء, تشويش, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:stylize.mosaic`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "stylize.mosaic"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `cell_width` (number, pixels): 1 to 1000, default 16
 - `cell_height` (number, pixels): 1 to 1000, default 16
@@ -238,7 +238,7 @@ Moves the red and the blue of the picture apart: away from a point, or along an 
 
 **Found by:** chromatic, aberration, rgb split, fringe, glitch, انحراف لوني, تقسيم ألوان, خلل, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:stylize.chromatic_aberration`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "stylize.chromatic_aberration"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `amount` (number, pixels): 0 to 200, default 4
 - `mode` (choice, none): 0 to 1, default 0 [Radial, Linear]
@@ -258,7 +258,7 @@ Maps the picture's brightness between two colours.
 
 **Found by:** tint, duotone, sepia, gradient map, colorize, صبغة, لونين, سيبيا, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:color.tint`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "color.tint"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `black` (color, none): 0 to 1, default 0
 - `white` (color, none): 0 to 1, default 0
@@ -277,7 +277,7 @@ Moves the picture from place to place by a smooth noise; the evolution turns the
 
 **Found by:** turbulent, displace, wobble, liquid, distort, wave, heat, تشويه, اهتزاز, سائل, تموج, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:stylize.turbulent_displace`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "stylize.turbulent_displace"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `amount` (number, pixels): 0 to 1000, default 20
 - `size` (number, pixels): 1 to 5000, default 100
@@ -297,7 +297,7 @@ Moves the picture across a wave: sine, triangle, sawtooth or square.
 
 **Found by:** wave, warp, ripple, flag, water, موجة, تموج, ماء, علم, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:stylize.wave_warp`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "stylize.wave_warp"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `wave` (choice, none): 0 to 3, default 0 [Sine, Triangle, Sawtooth, Square]
 - `height` (number, pixels): 0 to 1000, default 10
@@ -317,7 +317,7 @@ Prints the picture as dots, lines or crosses on paper, in one ink or in four at 
 
 **Found by:** halftone, dots, print, comic, newspaper, screen, نقاط, طباعة, نصف تدرج, كوميك, جريدة, effect, fx, تأثير, مؤثر, افكت
 
-**Add:** `inspector.add item=library kind=fx.effect:stylize.halftone`
+**Add:** `in the layer's entry of the project's file: "fx": [{"kind": "stylize.halftone"}], one entry more, in the order they are drawn, each setting by its key`
 
 - `mode` (choice, none): 0 to 1, default 0 [One ink, Four inks]
 - `shape` (choice, none): 0 to 2, default 0 [Dots, Lines, Crosses]

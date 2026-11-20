@@ -1,0 +1,42 @@
+{
+  "refusion": "project",
+  "version": 2,
+  "canvas": [1920, 1080],
+  "fps": 30,
+  "for": "6s",
+  "scenes": [
+    {
+      "name": "Lower third", "canvas": [900, 220], "for": "5s",
+      "layers": [
+        {
+          "key": "card", "kind": "shape", "at": "0s", "for": "5s",
+          "shape.size": [860, 180], "shape.corner_tl": 18, "shape.corner_tr": 18, "shape.corner_br": 18, "shape.corner_bl": 18,
+          "color.color": "#16161D", "transform.position": [450, 110],
+          "transform.scale": { "from": [0, 100], "to": [100, 100], "at": "0s", "for": "0.4s", "ease": "in_out_quart" }
+        },
+        {
+          "key": "name", "kind": "text", "at": "0.2s", "for": "4.8s",
+          "content.text": "Layla Haddad", "font.family": "Archivo Black", "font.size": 56, "fill.color": "#F2EFE9",
+          "transform.position": [60, 40],
+          "text_motion": { "in": { "preset": "slide", "unit": "Word", "duration": "0.4s", "stagger": "0.08s", "function": "out_expo", "order": "Forward" } }
+        },
+        {
+          "key": "role", "kind": "text", "at": "0.4s", "for": "4.6s",
+          "content.text": "Motion designer", "font.family": "JetBrains Mono", "font.size": 30, "fill.color": "#FF5A2C",
+          "transform.position": [62, 116],
+          "transform.opacity": { "keys": [["0s", 0, "smooth"], ["0.4s", 100]] }
+        }
+      ]
+    }
+  ],
+  "layers": [
+    { "key": "bg", "kind": "background", "at": "0s", "for": "6s", "color.color": "#2A2F3A" },
+    { "key": "rig", "kind": "null", "at": "0s", "for": "6s", "transform.position": [120, 760] },
+    {
+      "key": "lower_third", "kind": "scene", "scene": "Lower third", "at": "0.5s", "for": "5s",
+      "parent": "rig", "transform.inherit_opacity": "On", "transform.anchor": [0, 0],
+      "transform.opacity": { "keys": [["0s", 100, "hold"], ["4.5s", 100, "smooth"], ["5s", 0]] },
+      "motion_blur": true
+    }
+  ]
+}

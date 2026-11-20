@@ -1,0 +1,13 @@
+{
+  "description": "Refusion: after each save of a project's file (project.rfp, scenes/<name>.rfs), the engine's reply to that very save, in the same turn. Needs `rpro` on the PATH; any other file says nothing.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "command -v rpro >/dev/null 2>&1 && rpro file-reply || true", "timeout": 15 }
+        ]
+      }
+    ]
+  }
+}

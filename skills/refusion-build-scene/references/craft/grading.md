@@ -1,6 +1,6 @@
 # Grading a picture
 
-A layer's grade is how its picture is lit and coloured: one object on a video, a picture or an adjustment layer, drawn before the layer's effects. Its numbers are properties of the layer, so they are set, keyed and undone as any property is. There is no grading tool to call: `property.set` sets a number, keys animate it, `scene.snapshot` and the inspector read it.
+A layer's grade is how its picture is lit and coloured: one object on a video, a picture or an adjustment layer, drawn before the layer's effects. Its numbers are properties of the layer, so they are set, keyed and undone as any property is. There is no grading tool to call: the grade's numbers are written in the project's file by their paths (`"grade.exposure": 0.3`), keys animate them, and `scene.snapshot` and the inspector read them.
 
 ## The numbers
 
@@ -50,7 +50,7 @@ The curves come after the wheels, on the colour as it is shown. A smooth line pa
 
   A hue curve's input is the hue all the way round, as a share of a turn, read the way the wheels read colour (BT.709 YCbCr). `grade.curve` gives the colour of each input under it. To change one colour, put a point on it and a point at the middle either side, as the colour sheet does when a finger adds one.
 
-A point is set with `property.set` on its path, and keys animate it. Points can sit in any slots, and the engine reads them in order of their input. Take a point out of use with (-1, -1).
+A point is written in the file by its path, and keys animate it. Points can sit in any slots, and the engine reads them in order of their input. Take a point out of use with (-1, -1).
 
 ## The mixer
 
@@ -64,14 +64,14 @@ Skin lies between red and orange. Before pushing orange or red, set `skin_protec
 
 ## Looks
 
-A look sits on top of the grade, as its last stage, and `look_amount` (0 to 100) blends it in. It never changes the grade's own numbers, and taking it off (`grade.look_clear`) leaves them as they were. A grade carries one look:
+A look sits on top of the grade, as its last stage, and `look_amount` (0 to 100) blends it in. It never changes the grade's own numbers, and taking it off (`"grade.look": null` in the project's file) leaves them as they were. A grade carries one look:
 
-- **A ready look of the library:** `grade.looks` lists thirty, in five families (Cinematic, Film, Moody, Black & White, Teal & Orange), with their ids; `grade.look_set` lays one on. Each is made of the grade's own numbers, run again on the graded picture.
+- **A ready look of the library:** `grade.looks` lists thirty, in five families (Cinematic, Film, Moody, Black & White, Teal & Orange), with their ids; the project's file lays one on in the layer's entry (`"grade.look": "cinematic.drama"`). Each is made of the grade's own numbers, run again on the graded picture.
 - **A look-up table (`.cube`) the owner picked:** `grade.lut_set`. A creative table is usually best between 40 and 80; a table made for Log footage needs a Log shot.
 
 Grade the shot first (balance, light), then the look on top. Applying one replaces the other. To see what a look does to the shot, lay it on and look with `render.look`.
 
-The person's own looks are listed by `grade.looks` in family 6, My looks, and laid on with `grade.look_set` like any other. The person keeps them from the colour sheet: each holds a grade's own numbers and the look that was over them, baked into a table. They show as they were saved when laid at an amount of 100.
+The person's own looks are listed by `grade.looks` in family 6, My looks, and laid on the same way, by their ids (`own.…`). The person keeps them from the colour sheet: each holds a grade's own numbers and the look that was over them, baked into a table. They show as they were saved when laid at an amount of 100.
 
 A look of the person's own is an add-on of the kind `look`, a `.rfl` file: `addon.list` lists it, `addon.export` writes it to share, `addon.remove` takes it off (a project that has it keeps its numbers and its table). To make a look for the owner as a file, author a folder and pack it with `rpro addon pack <folder>`, which checks it as an install would:
 
@@ -112,7 +112,7 @@ A grade has four selections (`grade.select1_…` to `grade.select4_…`): each h
 
 ## The film
 
-The last stage, set with `property.set` on the grade's numbers: `vignette_amount` (-15 to -35 draws the eye in; past -50 it shows), `vignette_midpoint` (where it begins),
+The last stage, written in the file by the grade's numbers: `vignette_amount` (-15 to -35 draws the eye in; past -50 it shows), `vignette_midpoint` (where it begins),
 `vignette_roundness`, `vignette_feather` (soft, 50 to 80); `grain_amount` (8 to 20 reads as film on a phone; more is a look),
 `grain_size`, `grain_roughness`, `grain_colour` (0 for black and white film). The grain changes every frame and lies over everything.
 Detail comes first: `clarity` +10 to +30 gives faces and landscapes body (negative softens skin, a dreamy look), `texture` +10 to +25

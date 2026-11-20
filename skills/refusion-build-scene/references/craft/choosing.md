@@ -2,11 +2,11 @@
 
 Look here for which item fits the job, then read its numbers in the index. The ids are the engine's and never change; the index ([engine/INDEX.md](../engine/INDEX.md)) says what each does today, and `library.catalog` (with `query`, `kind`, `layer`) is the live list for the build that answers. The choice of *when* is the judgement of this page; the *what it does* is the engine's.
 
-Every id below is applied the same way: `inspector.add` with `item=library` and `kind` the id (`text.motion:1:1`, `layer.edge:recipe:4`, `fx.effect:blur.gaussian_blur`). It is also a batch item: name the layer with `target` or `target_from`. A motion is applied whole and takes the place of what its phase held; the reply's `replaced` names that, and `history.undo` brings it back. The motion remembers its item: `text.motion` and `layer.motion` give `phase_origin` for each phase ("Rise", or "Rise — modified" once a number was changed), and `library.restore` (`item` is text.motion for the words or layer.edge for the layer, and `phase`) puts it back as it was applied. Inside a batch a caption's motion is over every sentence of the layer, never the sentences the owner chose on the device.
+Every id below is applied by its line in the project's file, which its `applies_with` in `library.catalog` gives: a motion is a phase's `preset` or `recipe` in the layer's `edges` or the text's `text_motion`, an effect an entry of `fx`, a transition the `transition` on the layer that goes out of the cut; a look of effects is `effect.look`, an item of `session.batch`. A recipe is applied whole and takes the place of what its phase held, and `history.undo` brings it back. The motion remembers its item: `text.motion` and `layer.motion` give `phase_origin` for each phase ("Rise", or "Rise — modified" once a number was changed), and `library.restore` (`item` is text.motion for the words or layer.edge for the layer, and `phase`) puts it back as it was applied. A caption's motion in the file is over every sentence of the layer, or the sentences its entry names, never the sentences the owner chose on the device.
 
 ## Coming in
 
-| You want | Text (`inspector.add item=text.motion`) | Layer (`inspector.add item=layer.edge`) |
+| You want | Text (`text_motion`) | Layer (`edges`) |
 |---|---|---|
 | Quiet and clean | `text.motion:1:1` Fade · `text.motion:1:4` Rise | `layer.edge:1:1` Fade · `layer.edge:recipe:4` Rise in |
 | From a side, with direction | `text.motion:recipe:5` Slide in from the left · `text.motion:recipe:6` right | `layer.edge:recipe:1` left · `layer.edge:recipe:2` right |
@@ -50,7 +50,7 @@ One per scene ([choreography.md](choreography.md)). Text: `text.motion:3:11` Wav
 | Digital, broken | `transition:110` Glitch · `transition:106` Noise Dissolve |
 | Wake up | A hard cut: no transition, on a beat |
 
-A transition is added to a cut between two layers with `transition.add`. See [choreography.md](choreography.md) for matching it to the motion that leaves.
+A transition is written on the layer that goes out of a cut, as its `transition` in the project's file. See [choreography.md](choreography.md) for matching it to the motion that leaves.
 
 None fits and the owner wants one of their own: [designing-a-transition.md](designing-a-transition.md).
 
@@ -66,7 +66,7 @@ None fits and the owner wants one of their own: [designing-a-transition.md](desi
 | Lift a card off the ground | `fx.effect:stylize.drop_shadow` |
 | Glow | `fx.effect:stylize.glow` (look at it: it hides faults and makes text soft) |
 | Frame the eye | the grade's vignette (`vignette_amount`, in the Film tab; see grading.md) |
-| Texture or age | the grade's grain (`grain_amount`) · `fx.look:vintage_film` |
+| Texture or age | the grade's grain (`grain_amount`) · the grade's look `film.vintage` (`"grade.look": "film.vintage"` in the layer's entry) |
 | A hit of digital damage | `fx.effect:stylize.chromatic_aberration` · `fx.look:glitch_split` |
 | Print, comic, newspaper | `fx.effect:stylize.halftone` · `fx.look:newsprint` · `fx.look:comic_print` |
 | Wobble, liquid, heat | `fx.effect:stylize.wave_warp` · `fx.effect:stylize.turbulent_displace` · `fx.look:liquid_wobble` |

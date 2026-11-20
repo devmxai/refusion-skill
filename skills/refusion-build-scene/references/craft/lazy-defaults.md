@@ -6,13 +6,13 @@ Count them before you judge them: `scene.survey` reads a piece's habits from the
 
 | The default | Why the result reads as machine-made | Do this instead |
 |---|---|---|
-| One curve on every move (ease out, everywhere) | Nothing has a character; weight and mood are the same for a headline and a footnote. | Vary the shape by role, at least three in a piece ([timing.md](timing.md)). Segments: `anim.set_segment_ease`, `anim.set_segment_bezier`; a motion's own pace: `motion.channel_set`. |
+| One curve on every move (ease out, everywhere) | Nothing has a character; weight and mood are the same for a headline and a footnote. | Vary the shape by role, at least three in a piece ([timing.md](timing.md)). Segments: each key's `ease` in the document (`out_quart`, `spring(bounce 0.2, visual 0.5)`, `out_back(12%)`, `cubic-bezier(...)`); a motion's own pace: its `channels`. |
 | One duration on every element | The piece has one speed, so it has no accent. | Durations by role; the slowest several times the fastest. |
 | Everything arrives together, or all from the same side | There is no order, so no hierarchy. | Arrivals by importance, overlapped; a direction per kind of element ([choreography.md](choreography.md)). |
 | Entrance only: no planned hold, no planned leave | The viewer has no time to read, and the end is a cut mid-move. | Plan hit, settle, hold, release for every element, and a deliberate rest on the last frame. |
-| The first preset, untouched | The preset is a starting point; its numbers are not your design. | Read its numbers (`motion.channels`, `scene.snapshot`), then change them with `property.set` or `motion.channel_set`; combine an entrance with a different loop. |
+| The first preset, untouched | The preset is a starting point; its numbers are not your design. | Read its numbers (`motion.channels`, the project's file), then change them in the file; combine an entrance with a different loop. |
 | Every element animated | Nothing is still, so nothing is emphasised. | Static text on a moving ground is often enough. Animate the focal element and one more. |
-| A layer for every word, or a flat build of twenty rows | The owner cannot edit it; a unit cannot be reused. | A sentence is one text layer (`text.motion_set`); units are scenes (`guide.read` topic `units`); `layer.precompose` when `scene.layout` says `crowded_main_timeline`. |
+| A layer for every word, or a flat build of twenty rows | The owner cannot edit it; a unit cannot be reused. | A sentence is one text layer (`text_motion`); units are scenes (`guide.read` topic `units`); move a flat group into a scene when `scene.layout` says `crowded_main_timeline`. |
 | Keys where a formula would follow | The motion breaks when the tempo, the text or the length changes. | A formula for what follows the beat, another layer or a text's size (`guide.read` topic `formulas`); keys for a move no formula says. |
 | Everything centred and equal | The eye is led nowhere. | Lead the eye: anchor to edges, split the frame into zones, make hero text fill 60% to 80% of the width of the frame [start]. A video frame is not a web page. |
 | Text on a busy picture | It cannot be read and the fix (smaller text) makes it worse. | A calm or darkened shape under the text; contrast first. |

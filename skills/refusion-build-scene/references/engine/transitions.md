@@ -1,6 +1,6 @@
 # Transitions
 
-Written by `rpro skill-reference --write` from catalog version 3, fingerprint `bd7a190fe5dee30c`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
+Written by `rpro skill-reference --write` from catalog version 3, fingerprint `9aa4256683fb9560`; do not edit. The gate compares this page with what the engine writes now, so a thing added to the engine and left out of it stops the save. The engine is the truth: when this page and a reply differ, the reply is right.
 
 A transition lies on a cut between two layers: `transition.add` with the kind's code. The settings are besides the length and the curve every transition has.
 
@@ -45,7 +45,7 @@ Mixes the two pictures straight across, one fading into the other. A new one las
 
 **Found by:** dissolve, cross dissolve, crossfade, cross fade, fade, blend, mix, smooth, soft, تلاشي, تداخل, مزج, ذوبان, انتقال ناعم, تمازج, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=1 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "dissolve.cross_dissolve", "for": "0.5s"}`
 
 ### Film Dissolve — `transition:2`
 
@@ -57,7 +57,7 @@ Mixes the two pictures in light-linear values, so there is no dip of brightness 
 
 **Found by:** film dissolve, film, dissolve, linear light, smooth, cinematic, even, تلاشي سينمائي, فيلم, سينمائي, ثبات الإضاءة, تداخل, مزج, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=2 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "dissolve.film_dissolve", "for": "0.5s"}`
 
 ### Additive Dissolve — `transition:3`
 
@@ -69,7 +69,7 @@ Adds the light of the two pictures: each is whole until its half and the sum bri
 
 **Found by:** additive, additive dissolve, add, glow, flash, double exposure, light, bright, إضافي, جمع الضوء, وميض, توهج, تعريض مزدوج, سطوع, تداخل, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=3 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "dissolve.additive_dissolve", "for": "0.5s"}`
 
 ### Dip to Black — `transition:4`
 
@@ -81,7 +81,7 @@ Takes the first picture to a colour (red 0, green 0, blue 0) and the colour to t
 
 **Found by:** dip to black, fade to black, fade out, black, end, chapter, close, open, تلاشي للأسود, اسوداد, أسود, ظلام, نهاية, فصل, إغلاق, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=4 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "dissolve.dip_to_black", "for": "0.5s"}`
 
 - `hold` (number, percent): 0 to 60, default 12
 
@@ -95,7 +95,7 @@ Takes the first picture to a colour (red 1, green 1, blue 1) and the colour to t
 
 **Found by:** dip to white, fade to white, white, flash, bright, flashback, airy, تلاشي للأبيض, أبيض, ابيضاض, وميض, سطوع, ذكرى, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=5 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "dissolve.dip_to_white", "for": "0.5s"}`
 
 - `hold` (number, percent): 0 to 60, default 12
 
@@ -111,7 +111,7 @@ It shows both pictures at once with no mix, takes the outgoing picture to -1 can
 
 **Found by:** push, push left, shove, shift, scroll, pan, next, left, push right, right, push up, up, push down, down, دفع, دفع لليسار, يسار, إزاحة, تمرير, التالي, دفع لليمين, يمين, دفع للأعلى, أعلى, دفع للأسفل, أسفل, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=10 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "motion.push", "for": "0.5s"}`
 
 - `blur` (number, degrees): 0 to 720, default 180
 - `direction` (choice, none): 0 to 3, default 0 [Left, Right, Up, Down]
@@ -128,7 +128,7 @@ It shows both pictures at once with no mix, leaves the outgoing picture still, b
 
 **Found by:** slide, slide left, swipe, cover, reveal, glide, card, left, slide right, right, slide up, up, slide down, down, انزلاق, انزلاق لليسار, سحب, تغطية, كشف, يسار, انزلاق لليمين, يمين, انزلاق للأعلى, أعلى, انزلاق للأسفل, أسفل, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=20 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "motion.slide", "for": "0.5s"}`
 
 - `blur` (number, degrees): 0 to 720, default 180
 - `direction` (choice, none): 0 to 3, default 0 [Left, Right, Up, Down]
@@ -145,7 +145,7 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 
 **Found by:** zoom, zoom in, rush, punch in, closer, scale up, dolly, تكبير, تقريب, اقتراب, زووم, اندفاع, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=30 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "motion.zoom_in", "for": "0.5s"}`
 
 - `strength` (number, times): 1.25 to 16, default 4
 - `blur` (number, degrees): 0 to 1440, default 900
@@ -167,7 +167,7 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 
 **Found by:** zoom, zoom out, pull back, away, scale down, reveal, wide, تصغير, ابتعاد, زووم, كشف, سحب للخلف, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=31 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "motion.zoom_out", "for": "0.5s"}`
 
 - `strength` (number, times): 1.25 to 16, default 4
 - `blur` (number, degrees): 0 to 1440, default 900
@@ -191,7 +191,7 @@ It shows one picture at a time, cut at the fastest instant of the motion, which 
 
 **Found by:** spin, rotate, turn, twirl, whirl, swirl, circle, دوران, تدوير, لف, دوامة, دائرة, يدور, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=32 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "motion.spin", "for": "0.5s"}`
 
 - `strength` (number, degrees): 45 to 1440, default 360
 - `blur` (number, degrees): 0 to 1440, default 720
@@ -217,7 +217,7 @@ It shows both pictures at once with no mix, takes the outgoing picture to -1 can
 
 **Found by:** whip, whip pan, swish, swish pan, fast, quick, speed, pan, left, right, tilt, up, down, سريع, خاطف, سحب سريع, سرعة, بان, يسار, يمين, تيلت, أعلى, أسفل, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=40 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "motion.whip", "for": "0.5s"}`
 
 - `strength` (number, times): 1 to 2.5, default 1.15
 - `blur` (number, degrees): 0 to 1440, default 720
@@ -235,7 +235,7 @@ Changes from the first picture to the second along an edge that crosses the canv
 
 **Found by:** wipe, linear wipe, slide in, reveal, edge, line, مسح, مسح خطي, كشف, حافة, خط, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=100 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.wipe", "for": "0.5s"}`
 
 - `angle` (number, degrees): 0 to 345, default 0
 - `softness` (number, percent): 0 to 50, default 6
@@ -251,7 +251,7 @@ Changes from the first picture to the second along a hand that turns once round 
 
 **Found by:** clock, clock wipe, radial wipe, sweep, timer, countdown, hand, ساعة, مسح دائري, عقرب, عد تنازلي, مؤقت, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=102 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.clock", "for": "0.5s"}`
 
 - `start` (number, degrees): 0 to 345, default 270
 - `direction` (choice, none): 0 to 1, default 0 [Clockwise, Counter-clockwise]
@@ -270,7 +270,7 @@ Changes from the first picture to the second along bands across the canvas, each
 
 **Found by:** blinds, venetian blinds, stripes, bands, slats, shutters, ستائر, شرائح, خطوط, أشرطة, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=103 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.blinds", "for": "0.5s"}`
 
 - `angle` (number, degrees): 0 to 345, default 0
 - `count` (number, none): 2 to 40, default 8
@@ -289,7 +289,7 @@ Changes from the first picture to the second along a circle that opens from a po
 
 **Found by:** iris, circle, circle wipe, open, close, spotlight, round, قزحية, دائرة, فتح, إغلاق, بقعة ضوء, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=101 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.iris", "for": "0.5s"}`
 
 - `direction` (choice, none): 0 to 1, default 0 [Open, Close]
 - `centre_x` (number, percent): 0 to 100, default 50
@@ -307,7 +307,7 @@ Changes from the first picture to the second along a shape that grows from a poi
 
 **Found by:** shape, shape reveal, star, diamond, square, hexagon, circle, mask, grow, شكل, كشف, نجمة, معين, مربع, سداسي, دائرة, قناع, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=104 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.shape_reveal", "for": "0.5s"}`
 
 - `shape` (choice, none): 0 to 4, default 3 [Circle, Square, Diamond, Star, Hexagon]
 - `rotation` (number, degrees): -180 to 180, default 0
@@ -328,7 +328,7 @@ Changes from the first picture to the second along the brightness of a picture, 
 
 **Found by:** luma, luma fade, luminance, brightness, light, dreamy, fade, إضاءة, سطوع, ضوء, تلاشي, حالم, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=105 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.luma_fade", "for": "0.5s"}`
 
 - `order` (choice, none): 0 to 1, default 0 [Bright first, Dark first]
 - `softness` (number, percent): 0 to 50, default 20
@@ -343,7 +343,7 @@ Changes from the first picture to the second along grains of noise, each changin
 
 **Found by:** noise, noise dissolve, grain, pixel dissolve, particles, organic, texture, حبيبات, ضجيج, تلاشي, ملمس, جزيئات, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=106 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.noise_dissolve", "for": "0.5s"}`
 
 - `grain` (number, percent): 0.5 to 20, default 3
 - `softness` (number, percent): 0 to 50, default 10
@@ -358,7 +358,7 @@ Mixes the two pictures in light-linear values, so there is no dip of brightness 
 
 **Found by:** blur, blur dissolve, defocus, soft, dreamy, out of focus, fade, ضبابي, تشويش, تلاشي, حالم, ناعم, خارج التركيز, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=108 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.blur_dissolve", "for": "0.5s"}`
 
 - `blur` (number, percent): 0.5 to 10, default 3
 
@@ -374,7 +374,7 @@ Mixes the two pictures in light-linear values, so there is no dip of brightness 
 
 **Found by:** flash, white flash, camera flash, burst, bright, light, pop, وميض, فلاش, ومضة, ضوء, سطوع, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=107 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.flash", "for": "0.5s"}`
 
 - `strength` (number, none): 0 to 6, default 3
 - `cut` (number, percent): 2 to 100, default 20
@@ -389,7 +389,7 @@ Dissolves the two pictures in light under a warm light that sweeps across the fr
 
 **Found by:** light leak, leak, film, warm, glow, flare, vintage, analog, تسرب ضوئي, ضوء, فيلم, دافئ, توهج, كلاسيكي, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=109 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.light_leak", "for": "0.5s"}`
 
 - `strength` (number, percent): 0 to 300, default 180
 
@@ -405,7 +405,7 @@ Tears the change into slices that jump sideways, the colours read apart, then se
 
 **Found by:** glitch, digital, rgb split, error, tear, distortion, cyber, tech, تشويش رقمي, خلل, رقمي, تمزق, تقني, سايبر, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=110 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.glitch", "for": "0.5s"}`
 
 - `strength` (number, percent): 0 to 100, default 70
 - `split` (number, percent): 0 to 100, default 50
@@ -422,7 +422,7 @@ Twists or ripples both pictures about a point as they dissolve into each other, 
 
 **Found by:** swirl, twirl, twist, vortex, spiral, whirlpool, warp, دوامة, التواء, لف, حلزون, إعصار, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=111 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.swirl", "for": "0.5s"}`
 
 - `twist` (number, degrees): 0 to 1440, default 540
 - `centre_x` (number, percent): 0 to 100, default 50
@@ -438,7 +438,7 @@ Twists or ripples both pictures about a point as they dissolve into each other, 
 
 **Found by:** ripple, wave, water, liquid, rings, dream, warp, تموج, موجة, ماء, سائل, حلقات, حلم, transition, cut, between clips, انتقال, انتقالات, قطع, بين المقاطع
 
-**Add:** `transition.add kind=112 (on a cut between two layers)`
+**Add:** `in the project's file, on the layer that goes out of the cut: "transition": {"kind": "pro.refusion.ripple", "for": "0.5s"}`
 
 - `height` (number, percent): 0 to 10, default 2.5
 - `centre_x` (number, percent): 0 to 100, default 50

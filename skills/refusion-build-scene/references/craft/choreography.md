@@ -11,7 +11,7 @@ Timing says how long one thing takes. Choreography says how several things share
 
 ## One grid for everything that has a beat
 
-When there is music, say the rhythm once (`beat.set` for the scene) and let everything read it. A formula on a scale, a length said in beats, a layer placed on a beat with the times `beat.grid` gives, a marker (`marker.add`) for a moment that is not on the grid: all of these follow the tempo when it changes; hand-typed times do not. See `guide.read` topics `rhythm` and `formulas`, and `recipes:pulse-on-beat`, `recipes:enter-on-beats`, `recipes:appear-from-marker`.
+When there is music, say the rhythm once (the scene's `beat` in the project's file) and let everything read it. A formula on a scale, a length said in beats, a layer placed on a beat with the times `beat.grid` gives, a marker (the scene's `markers`) for a moment that is not on the grid: all of these follow the tempo when it changes; hand-typed times do not. See `guide.read` topics `rhythm` and `formulas`, and `recipes:pulse-on-beat`, `recipes:enter-on-beats`, `recipes:appear-from-marker`.
 
 - Put the hit on a beat or a half beat. Put the hold across the space to the next one. Put the cut on a downbeat.
 - Do not hit on every beat. A pulse on each beat is a metronome; hit on the beats that carry meaning and let the others pass.
@@ -33,8 +33,8 @@ When there is music, say the rhythm once (`beat.set` for the scene) and let ever
 ## Text on a beat, and on speech
 
 - A sentence is one text layer whose words are the unit; its reveal is a span or a delay, the same for every sentence in a scene.
-- Captions follow speech: their timing belongs to the speech, not to the layout. Match a spoken line with a caption layer (`caption.create`), do not stretch a caption to fill space.
+- Captions follow speech: their timing belongs to the speech, not to the layout. Match a spoken line with a caption layer (`kind` `caption`), do not stretch a caption to fill space.
 
 ## Repeating pieces
 
-A piece used again (a lower third for each speaker, a banner twice) is a scene shown several times, not copied layers. When one use must differ, `composition.duplicate` the scene first and edit the copy.
+A piece used again (a lower third for each speaker, a banner twice) is a scene shown several times, not copied layers. When one use must differ, copy the scene's entry under another name and edit the copy, or make the scene a template and give each use its `values`.

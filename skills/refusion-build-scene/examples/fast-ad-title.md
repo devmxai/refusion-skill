@@ -23,9 +23,9 @@ Reading time check: the headline has three words, so about two seconds of hold f
 ## The build
 
 1. `media.library_snapshot` first: the logo and any picture the designer brought.
-2. One batch for the ground (a background layer with colour points), set the beat grid on the scene (`beat.set`), read the times (`beat.grid`).
-3. One batch for the headline, one for the English line, one for the badge as a unit (a scene), with `session.plan` before each `session.apply`.
-4. Place the logo on beat 8 with `layer.insert_source` on a row of its own above the others (`new_row: 0`: a picture put in with no row goes on the main track, in line with the clips there) and `layer.move`.
+2. Write the project's file: the ground (a background of colour points, `recipes:colour-points`) and the scene's beat grid (`"beat": {"bpm": 120}`); read the beats' times with `beat.grid`.
+3. The headline, the English line and the badge (a unit, a scene of its own) in the same file, each motion by its line from `library.catalog` (`applies_with`), tried first with `"plan": true` in the head, then written without it.
+4. The logo on beat 8: a shape with its `fill_source` (its name in the library) at `"at": "4s"`, on a row of its own above the others (its `track`).
 
 ## The check
 
